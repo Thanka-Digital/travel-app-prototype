@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#3490dc",
-        secondary: "#ffed4a",
+        primary: "#FF7920",
+        secondary: "#A0A0A0",
         accent: "#ff3860",
         danger: "#e3342f",
         success: "#38c172",
@@ -13,6 +13,13 @@ export default {
         info: "#6cb2eb",
         neutral: "#3d4451",
       },
+    },
+    backgroundImage: {
+      'splash0': 'url("/SplashImg/s1.png")',
+      'splash1': 'url("/SplashImg/s2.png")',
+      'splash2': 'url("/SplashImg/s3.png")',
+      'splash3': 'url("/SplashImg/s4.png")',
+      'splash4': 'url("/SplashImg/s5.png")',
     },
   },
   plugins: [],
