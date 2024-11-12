@@ -1,4 +1,3 @@
-import HotelCard from "@/components/card/HotelCard";
 import BackButton from "@/components/global/BackButton";
 import Tabs from "@/components/global/tabs/Tabs";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
@@ -8,7 +7,9 @@ export default function LocationDetails() {
     <div className="relative bg-white h-screen">
       <BackButton />
       <div>
-        <img src="/SplashImg/s3.png" alt="location images" height={50} />
+        <div className="bg-gradient-to-r from-indigo-500">
+          <img src="/SplashImg/s3.png" alt="location images" height={50} />
+        </div>
         <MaxWidthWrapper>
           <div className="text-center my-4">
             <p className="text-2xl font-bold my-2">Phewa Lake</p>

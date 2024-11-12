@@ -6,6 +6,7 @@ import BoardingPage2 from "@/pages/BoardingPage2";
 import BoardingPage3 from "@/pages/BoardingPage3";
 import BoardingPage4 from "@/pages/BoardingPage4";
 import LocationDetails from "@/pages/location/LocationDetails";
+import PostDetails from "@/pages/post/PostDetails";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -36,6 +37,10 @@ const routes: RouteObject[] = [
   {
     path: "/location-details",
     element: <LocationDetails />,
+  },
+  {
+    path: "/post-details",
+    element: <PostDetails />,
   },
   {
     path: "/services",
