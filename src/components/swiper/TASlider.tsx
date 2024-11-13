@@ -1,29 +1,32 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-const imgs = [
-  "SplashImg/s1.png",
-  "SplashImg/s2.png",
-  "SplashImg/s3.png",
-  "SplashImg/s4.png",
-  "SplashImg/s5.png",
-];
-export default function TASlider() {
+
+interface TASliderProps {
+  children: React.ReactNode;
+  isDotsShow?: boolean;
+  isArrowsShow?: boolean;
+  slideSpeed?: number;
+  slidesToShow?: number;
+  slidesToScroll?: number;
+}
+
+export default function TASlider(props: TASliderProps) {
+  const {
+    children,
+    isDotsShow = true,
+    isArrowsShow = false,
+    slideSpeed = 500,
+    slidesToScroll = 1,
+    slidesToShow = 1,
+  } = props;
   var settings = {
-    dots: true,
+    dots: isDotsShow,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // arrow={false}
+    speed: slideSpeed,
+    slidesToShow: slidesToShow,
+    slidesToScroll: slidesToScroll,
+    arrows: isArrowsShow,
   };
-  return (
-    <Slider {...settings}>
-      {imgs.map((img, i) => (
-        <div key={i} className="h-80 relative">
-          <img src={img} alt="images" />
-        </div>
-      ))}
-    </Slider>
-  );
+  return <Slider {...settings}>{children}</Slider>;
 }
