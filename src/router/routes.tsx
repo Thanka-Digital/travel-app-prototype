@@ -7,7 +7,10 @@ import BoardingPage3 from "@/pages/Splash-Screen/BoardingPage3";
 import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import LocationDetails from "@/pages/location/LocationDetails";
 import PostDetails from "@/pages/post/PostDetails";
+<<<<<<< HEAD
 import ProfileLayout from "@/layout/profile/ProfileLayout";
+=======
+>>>>>>> 4838681 (wip : ui)
 import ExplorePage from "@/pages/ExplorePage";
 
 // Routes in application
