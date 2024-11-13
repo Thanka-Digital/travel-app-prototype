@@ -4,7 +4,13 @@ import TASlider from "@/components/swiper/TASlider";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsData } from "@/utils/locationDetailsData";
 import { Heart, MessageCircleMore } from "lucide-react";
-
+const imgs = [
+  "SplashImg/s1.png",
+  "SplashImg/s2.png",
+  "SplashImg/s3.png",
+  "SplashImg/s4.png",
+  "SplashImg/s5.png",
+];
 export default function PostDetails() {
   return (
     <MaxWidthWrapper>
@@ -25,7 +31,13 @@ export default function PostDetails() {
           Went to the phewa lake, was fun. 👋
         </p>
       </section>
-      <TASlider />
+      <TASlider>
+        {imgs.map((img, i) => (
+          <div key={i} className="h-80 relative">
+            <img src={img} alt="images" />
+          </div>
+        ))}
+      </TASlider>
       <div className="flex gap-4 my-4">
         <div className="flex gap-1 items-center">
           <Heart size={32} fill="#FF7920" />
