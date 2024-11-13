@@ -1,11 +1,11 @@
 import Button from '@/components/form/button/Button'
-import { SplashScreen2Info } from '@/utils/splashScreenInfo';
+import { SplashScreen4Info } from '@/utils/splashScreenInfo';
 import { ChevronsRight } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SplashScreenHeader, SplashScreenTags } from './BoardingPage1';
+import { SplashScreenHeader, SplashScreenTags } from './Splash-Screen/BoardingPage1';
 
-export default function BoardingPage2() {
+export default function BoardingPage4() {
   const navigate = useNavigate();
   const [toggledArr, setToggleArr] = useState<string[]>([])
 
@@ -17,21 +17,20 @@ export default function BoardingPage2() {
   }
 
   return (
-    <main className='bg-splash2 h-screen'>
+    <main className='bg-splash4 h-screen'>
       <div className='mask-gradient flex flex-col gap-10 absolute bottom-0 bg-white py-12 px-8'>
         <section className='flex flex-col items-center'>
           <SplashScreenHeader
-            text='What Kind of Places'
+            text='How often do you'
           />
           <SplashScreenHeader
-            text='you like to visit?'
+            text='travel?'
           />
         </section>
         <section className='flex items-center justify-center flex-wrap gap-3 mb-20'>
           {
-            SplashScreen2Info.map((object) => (
+            SplashScreen4Info.map((object) => (
               <SplashScreenTags
-                icon={object.icon}
                 text={object.text}
                 key={object.id}
                 handleClick={handleClick}
@@ -47,9 +46,9 @@ export default function BoardingPage2() {
           className='rounded-3xl'
           disabled={toggledArr.length <= 0}
           onClick={() => {
-            navigate('/3')
+            navigate('/')
           }}
-        >Next <ChevronsRight /></Button>
+        >Complete <ChevronsRight /></Button>
       </section>
     </main>
   )
