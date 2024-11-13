@@ -2,7 +2,7 @@ import LocationCard from "@/components/card/LocationCard";
 import BackButton from "@/components/global/BackButton";
 import TASlider from "@/components/swiper/TASlider";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
-import { locationDetailsData } from "@/utils/locationDetailsData";
+import { locationDetailsData, LocationInfo } from "@/utils/locationDetailsData";
 import { Heart, MessageCircleMore } from "lucide-react";
 
 export default function PostDetails() {
@@ -60,7 +60,18 @@ export default function PostDetails() {
 
       <div className="mt-6 mb-4 flex flex-col gap-4">
         <h1 className="text-xl font-bold">Posted About</h1>
-        <LocationCard />
+        {
+          LocationInfo.map((object, index) => (
+            <LocationCard
+              city={object.city}
+              image={object.image}
+              link={object.link}
+              placeName={object.placeName}
+              visitorsCount={object.visitorsCount}
+              key={index}
+            />
+          ))
+        }
       </div>
 
       <div className="min-w-full flex flex-col gap-2 my-4">

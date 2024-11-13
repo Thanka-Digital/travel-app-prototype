@@ -1,5 +1,15 @@
 import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
+export const LocationInfo = [
+  {
+    image: '/SplashImg/s1.png',
+    city: 'Pokhara',
+    visitorsCount: '100k+ visitors',
+    placeName: 'Fewa Tal',
+    link: '/'
+  }
+]
+
 export const locationDetailsData = [
   {
     icon: <SunSnow size={28} />,

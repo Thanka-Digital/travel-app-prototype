@@ -3,7 +3,7 @@ import { SplashScreen2Info } from '@/utils/splashScreenInfo';
 import { ChevronsRight } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SplashScreenHeader, SplashScreenTags } from './Splash-Screen/BoardingPage1';
+import { SplashScreenHeader, SplashScreenTags } from './BoardingPage1';
 
 export default function BoardingPage2() {
   const navigate = useNavigate();
