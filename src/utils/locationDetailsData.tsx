@@ -2,13 +2,13 @@ import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
 export const LocationInfo = [
   {
-    image: '/SplashImg/s1.png',
-    city: 'Pokhara',
-    visitorsCount: '100k+ visitors',
-    placeName: 'Fewa Tal',
-    link: '/'
-  }
-]
+    image: "/SplashImg/s1.png",
+    city: "Pokhara",
+    visitorsCount: "100k+ visitors",
+    placeName: "Fewa Tal",
+    link: "/",
+  },
+];
 
 export const locationDetailsData = [
   {
@@ -62,5 +62,32 @@ export const locationDetailsData = [
         label: "Cable car ride to sarankot",
       },
     ],
+  },
+];
+
+export const LocationMiniCarddatas = [
+  {
+    id: "lmd1",
+    name: "Pokhara Lake",
+    address: "Pokhara",
+    image: "/SplashImg/s3.png",
+  },
+  {
+    id: "lmd1",
+    name: "Rara Lake",
+    address: "Mugu",
+    image: "/SplashImg/s1.png",
+  },
+  {
+    id: "lmd1",
+    name: "Begnash Lake",
+    address: "Pokhara",
+    image: "/SplashImg/s4.png",
+  },
+  {
+    id: "lmd1",
+    name: "Machhapuchre",
+    address: "Pokhara",
+    image: "/SplashImg/s2.png",
   },
 ];
