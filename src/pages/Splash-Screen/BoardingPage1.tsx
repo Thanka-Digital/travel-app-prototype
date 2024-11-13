@@ -4,7 +4,7 @@ import { ChevronsRight } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-interface SplashScreenProps {
+export interface SplashScreenProps {
   icon?: React.ReactNode;
   text: string;
   handleClick: (val: string, isSelected: boolean) => void;
