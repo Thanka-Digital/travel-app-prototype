@@ -8,6 +8,7 @@ import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import LocationDetails from "@/pages/location/LocationDetails";
 import PostDetails from "@/pages/post/PostDetails";
 import ProfileLayout from "@/layout/profile/ProfileLayout";
+import ExplorePage from "@/pages/ExplorePage";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -34,6 +35,10 @@ const routes: RouteObject[] = [
   {
     path: "/profile",
     element: <ProfileLayout />,
+  },
+  {
+    path: "/explore",
+    element: <ExplorePage />,
   },
   {
     path: "/test",
