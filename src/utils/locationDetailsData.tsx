@@ -1,14 +1,17 @@
+import ExtraInfoTabContent from "@/components/global/tabs/components/location-details/ExtraInfoTabContent";
+import HotelTabContent from "@/components/global/tabs/components/location-details/HotelTabContent";
+import PostTabContent from "@/components/global/tabs/components/PostTabContent";
 import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
 export const LocationInfo = [
   {
-    image: '/SplashImg/s1.png',
-    city: 'Pokhara',
-    visitorsCount: '100k+ visitors',
-    placeName: 'Fewa Tal',
-    link: '/'
-  }
-]
+    image: "/SplashImg/s1.png",
+    city: "Pokhara",
+    visitorsCount: "100k+ visitors",
+    placeName: "Fewa Tal",
+    link: "/",
+  },
+];
 
 export const locationDetailsData = [
   {
@@ -62,5 +65,23 @@ export const locationDetailsData = [
         label: "Cable car ride to sarankot",
       },
     ],
+  },
+];
+
+export const locationDetailsTabsData = [
+  {
+    id: "posts",
+    label: "Posts",
+    component: PostTabContent,
+  },
+  {
+    id: "hotels",
+    label: "Hotels",
+    component: HotelTabContent,
+  },
+  {
+    id: "info",
+    label: "Extra Info",
+    component: ExtraInfoTabContent,
   },
 ];
