@@ -8,6 +8,7 @@ export default function ExplorePage() {
       <TASlider slidesToShow={2} slidesToScroll={1} isArrowsShow>
         {LocationMiniCarddatas?.map((LocationMiniCarddata) => (
           <LocationMiniCard
+            key={LocationMiniCarddata.id}
             id={LocationMiniCarddata.id}
             name={LocationMiniCarddata.name}
             address={LocationMiniCarddata.address}

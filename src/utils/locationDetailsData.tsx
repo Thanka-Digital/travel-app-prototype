@@ -68,10 +68,28 @@ export const locationDetailsData = [
   },
 ];
 
+export const locationDetailsTabsData = [
+  {
+    id: "posts",
+    label: "Posts",
+    component: PostTabContent,
+  },
+  {
+    id: "hotels",
+    label: "Hotels",
+    component: HotelTabContent,
+  },
+  {
+    id: "info",
+    label: "Extra Info",
+    component: ExtraInfoTabContent,
+  },
+];
+
 export const LocationMiniCarddatas = [
   {
     id: "lmd1",
-    name: "Pokhara Lake",
+    name: "Phewa Lake",
     address: "Pokhara",
     image: "/SplashImg/s3.png",
   },
@@ -92,23 +110,5 @@ export const LocationMiniCarddatas = [
     name: "Machhapuchre",
     address: "Pokhara",
     image: "/SplashImg/s2.png",
-  },
-];
-
-export const locationDetailsTabsData = [
-  {
-    id: "posts",
-    label: "Posts",
-    component: PostTabContent,
-  },
-  {
-    id: "hotels",
-    label: "Hotels",
-    component: HotelTabContent,
-  },
-  {
-    id: "info",
-    label: "Extra Info",
-    component: ExtraInfoTabContent,
   },
 ];
