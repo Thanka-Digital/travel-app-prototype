@@ -1,6 +1,7 @@
 import BackButton from "@/components/global/BackButton";
 import Tabs from "@/components/global/tabs/Tabs";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
+import { locationDetailsTabsData } from "@/utils/locationDetailsData";
 
 export default function LocationDetails() {
   return (
@@ -33,7 +34,7 @@ export default function LocationDetails() {
         </div>
         <hr className=" bg-slate-300" />
       </div>
-      <Tabs />
+      <Tabs tabsData={locationDetailsTabsData} />
     </div>
   );
 }
