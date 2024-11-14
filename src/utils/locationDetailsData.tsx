@@ -89,7 +89,7 @@ export const locationDetailsTabsData = [
 export const LocationMiniCarddatas = [
   {
     id: "lmd1",
-    name: "Pokhara Lake",
+    name: "Phewa Lake",
     address: "Pokhara",
     image: "/SplashImg/s3.png",
   },

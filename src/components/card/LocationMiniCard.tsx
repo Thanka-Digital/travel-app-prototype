@@ -1,7 +1,6 @@
-import { LocationMiniCarddatas } from "@/utils/locationDetailsData";
+import { useNavigate } from "react-router-dom";
 import Button from "../form/button/Button";
 import { ChevronsRight } from "lucide-react";
-import TASlider from "../swiper/TASlider";
 interface LocationMiniCardProps {
   id: string;
   name: string;
@@ -10,10 +9,12 @@ interface LocationMiniCardProps {
 }
 export default function LocationMiniCard(props: LocationMiniCardProps) {
   const { id, name, address, image } = props;
+  const navigate = useNavigate();
   return (
     <div
       className="relative w-fit min-w-[180px] max-w-[200px] p-2 aspect-square"
       key={id}
+      onClick={() => navigate("/location-details")}
     >
       <img
         src={image}
