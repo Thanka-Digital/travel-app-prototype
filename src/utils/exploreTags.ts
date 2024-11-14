@@ -1,7 +1,7 @@
 export const exploreTags = [
   {
     name: "All",
-    path: "/"
+    path: "/explore-page"
   },
   {
     name: "Hills",
