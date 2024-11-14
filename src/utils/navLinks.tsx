@@ -15,7 +15,7 @@ export const navLinks = [
   },
   {
     icon: <Play />,
-    path: "/play"
+    path: "/reels-page"
   },
   {
     icon: <UserRound />,

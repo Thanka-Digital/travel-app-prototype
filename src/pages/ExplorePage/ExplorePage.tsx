@@ -4,6 +4,7 @@ import { LocationInfo } from "@/utils/locationDetailsData";
 import LocationCard from "@/components/card/LocationCard";
 import { ExploreTabs } from "@/components/global/ExploreTabs";
 import Navbar from "@/components/global/Navbar";
+import { Search } from "lucide-react";
 
 export default function ExplorePage() {
   return (
@@ -11,9 +12,11 @@ export default function ExplorePage() {
       <Input
         className="bg-white"
         placeholder="seasrch..."
+        icon={<Search color="gray" />}
+        variant={"unstyled"}
       />
 
-      <section className="flex gap-6 mx-4 overflow-x-scroll no-scrollbar">
+      <section className="flex gap-2 mx-4 overflow-x-scroll no-scrollbar">
         {
           exploreTags.map((object, index) => (
             <ExploreTabs
@@ -25,7 +28,7 @@ export default function ExplorePage() {
         }
       </section>
 
-      <div className="flex flex-col gap-4 px-6 py-4">
+      <div className="flex flex-col gap-4 px-6 py-2">
         {
           LocationInfo.map((object, index) => (
             <LocationCard

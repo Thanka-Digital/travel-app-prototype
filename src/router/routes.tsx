@@ -7,6 +7,7 @@ import BoardingPage3 from "@/pages/Splash-Screen/BoardingPage3";
 import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import ExplorePage from "@/pages/ExplorePage/ExplorePage";
 import LocationDetails from "@/pages/location/LocationDetails";
+import ReelsPage from "@/pages/ReelsPage/ReelsPage";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -33,6 +34,10 @@ const routes: RouteObject[] = [
   {
     path: "/explore-page",
     element: <ExplorePage />
+  },
+  {
+    path: "/reels-page",
+    element: <ReelsPage />
   },
   {
     path: "/test",

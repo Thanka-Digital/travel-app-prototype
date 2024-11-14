@@ -1,4 +1,4 @@
-import { ComponentProps, forwardRef } from "react";
+import React, { ComponentProps, forwardRef } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
 import { cn } from "@/helpers/styles/cn";
@@ -30,6 +30,7 @@ interface IInputProps {
   className?: string;
   label?: string;
   id?: string;
+  icon?: React.ReactNode;
 }
 
 type InputProps = ComponentProps<"input"> &
@@ -44,6 +45,7 @@ export default forwardRef<HTMLInputElement, InputProps>(function Input(
     className = "",
     label = "",
     id = "",
+    icon,
     variant,
     padding,
     colorscheme,
@@ -57,22 +59,25 @@ export default forwardRef<HTMLInputElement, InputProps>(function Input(
       <label htmlFor={id} className="font-medium">
         {label} {required && <span className="text-danger">*</span>}
       </label>
-      <input
-        ref={ref}
-        id={id}
-        className={cn(
-          inputStyles({
-            variant,
-            padding,
-            colorscheme,
-            className,
-          })
-        )}
-        required={required}
-        disabled={disabled}
-        aria-disabled={disabled}
-        {...rest}
-      />
+      <div className="flex items-center gap-1">
+        {icon}
+        <input
+          ref={ref}
+          id={id}
+          className={cn(
+            inputStyles({
+              variant,
+              padding,
+              colorscheme,
+              className,
+            })
+          )}
+          required={required}
+          disabled={disabled}
+          aria-disabled={disabled}
+          {...rest}
+        />
+      </div>
     </div>
   );
 });

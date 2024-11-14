@@ -1,0 +1,38 @@
+export const reelsVidinfo = [
+  {
+    path: "/ReelsVid/Vid-1.mp4",
+    user: "Sunil-Sexy",
+    description: "Aja hami gako yah ghumna",
+    likes: "289",
+    saves: "24",
+    comments: "67",
+    shares: "21",
+  },
+  {
+    path: "/ReelsVid/Vid-2.mp4",
+    user: "Bipin",
+    description: "Aja hami gako yah ghumna",
+    likes: "289",
+    saves: "24",
+    comments: "67",
+    shares: "21",
+  },
+  {
+    path: "/ReelsVid/Vid-3.mp4",
+    user: "Alson-Hoty",
+    description: "Aja hami gako yah ghumna",
+    likes: "289",
+    saves: "24",
+    comments: "67",
+    shares: "21",
+  },
+  {
+    path: "/ReelsVid/Vid-1.mp4",
+    user: "Utsab-don",
+    description: "Aja hami gako yah ghumna",
+    likes: "289",
+    saves: "24",
+    comments: "67",
+    shares: "21",
+  },
+]
