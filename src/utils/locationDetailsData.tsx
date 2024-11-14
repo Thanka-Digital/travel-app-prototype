@@ -18,13 +18,6 @@ export const LocationInfo = [
     placeName: 'Fewa Tal',
     link: '/'
   },
-  {
-    image: '/SplashImg/s2.png',
-    city: 'Pokhara',
-    visitorsCount: '100k+ visitors',
-    placeName: 'Fewa Tal',
-    link: '/'
-  }
 ]
 
 export const locationDetailsData = [

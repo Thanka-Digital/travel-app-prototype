@@ -1,30 +1,22 @@
 import Input from "@/components/form/input/Input";
-import { useNavigate } from "react-router-dom";
-import Button from "@/components/form/button/Button";
 import { exploreTags } from "@/utils/exploreTags";
 import { LocationInfo } from "@/utils/locationDetailsData";
 import LocationCard from "@/components/card/LocationCard";
-
-export const ExploreTags = ({ text, path }: { text: string, path: string }) => {
-  const navigate = useNavigate();
-  return (
-    <Button
-      onClick={() => { navigate(path) }}
-      className="rounded-xl"
-    >{text}</Button>
-  )
-}
+import { ExploreTabs } from "@/components/global/ExploreTabs";
+import Navbar from "@/components/global/Navbar";
 
 export default function ExplorePage() {
   return (
-    <div className="bg-white h-screen">
+    <div className="bg-white">
       <Input
-        colorscheme={"gray"}
+        className="bg-white"
+        placeholder="seasrch..."
       />
-      <section className="flex gap-6 mx-4">
+
+      <section className="flex gap-6 mx-4 overflow-x-scroll no-scrollbar">
         {
           exploreTags.map((object, index) => (
-            <ExploreTags
+            <ExploreTabs
               text={object.name}
               key={index}
               path={object.path}
@@ -47,6 +39,8 @@ export default function ExplorePage() {
           ))
         }
       </div>
+
+      <Navbar />
 
     </div >
   )
