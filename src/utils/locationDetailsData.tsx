@@ -68,23 +68,6 @@ export const locationDetailsData = [
   },
 ];
 
-<<<<<<< HEAD
-export const locationDetailsTabsData = [
-  {
-    id: "posts",
-    label: "Posts",
-    component: PostTabContent,
-  },
-  {
-    id: "hotels",
-    label: "Hotels",
-    component: HotelTabContent,
-  },
-  {
-    id: "info",
-    label: "Extra Info",
-    component: ExtraInfoTabContent,
-=======
 export const LocationMiniCarddatas = [
   {
     id: "lmd1",
@@ -109,6 +92,23 @@ export const LocationMiniCarddatas = [
     name: "Machhapuchre",
     address: "Pokhara",
     image: "/SplashImg/s2.png",
->>>>>>> cf0d3286d5be1f6cd1a528717d3fc836250f5f81
+  },
+];
+
+export const locationDetailsTabsData = [
+  {
+    id: "posts",
+    label: "Posts",
+    component: PostTabContent,
+  },
+  {
+    id: "hotels",
+    label: "Hotels",
+    component: HotelTabContent,
+  },
+  {
+    id: "info",
+    label: "Extra Info",
+    component: ExtraInfoTabContent,
   },
 ];
