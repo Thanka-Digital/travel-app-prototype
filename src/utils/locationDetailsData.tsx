@@ -68,6 +68,7 @@ export const locationDetailsData = [
   },
 ];
 
+<<<<<<< HEAD
 export const locationDetailsTabsData = [
   {
     id: "posts",
@@ -83,5 +84,31 @@ export const locationDetailsTabsData = [
     id: "info",
     label: "Extra Info",
     component: ExtraInfoTabContent,
+=======
+export const LocationMiniCarddatas = [
+  {
+    id: "lmd1",
+    name: "Pokhara Lake",
+    address: "Pokhara",
+    image: "/SplashImg/s3.png",
+  },
+  {
+    id: "lmd1",
+    name: "Rara Lake",
+    address: "Mugu",
+    image: "/SplashImg/s1.png",
+  },
+  {
+    id: "lmd1",
+    name: "Begnash Lake",
+    address: "Pokhara",
+    image: "/SplashImg/s4.png",
+  },
+  {
+    id: "lmd1",
+    name: "Machhapuchre",
+    address: "Pokhara",
+    image: "/SplashImg/s2.png",
+>>>>>>> cf0d3286d5be1f6cd1a528717d3fc836250f5f81
   },
 ];
