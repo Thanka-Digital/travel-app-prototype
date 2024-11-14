@@ -1,14 +1,15 @@
 import { navLinks } from '@/utils/navLinks'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <div className='bg-black w-[80%] rounded-xl py-2 px-4'>
+    <nav className='absolute bottom-6 left-1/2 -translate-x-1/2 bg-black w-[90%] rounded-3xl p-4 flex justify-between'>
       {
         navLinks.map((object, index) => (
-          <Link to={object.path} key={index}>{object.icon}</Link>
+          <NavLink to={object.path} key={index} className={({ isActive }) =>
+            isActive ? "text-white" : "text-gray-700"}>{object.icon}</NavLink>
         ))
       }
-    </div>
+    </nav>
   )
 }
