@@ -41,7 +41,7 @@ export default function BoardingPage4() {
       </div>
 
       <section className='flex w-full px-8 justify-between items-center absolute bottom-2'>
-        <p className='text-secondary'>1 of 4 steps</p>
+        <p className='text-secondary'>Last step to go</p>
         <Button
           className='rounded-3xl'
           disabled={toggledArr.length <= 0}

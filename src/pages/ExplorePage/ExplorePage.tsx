@@ -9,12 +9,14 @@ import { Search } from "lucide-react";
 export default function ExplorePage() {
   return (
     <div className="bg-white">
-      <Input
-        className="bg-white"
-        placeholder="seasrch..."
-        icon={<Search color="gray" />}
-        variant={"unstyled"}
-      />
+      <section className="px-3">
+        <Input
+          className="bg-white"
+          placeholder="Search..."
+          icon={<Search color="gray" />}
+          variant={"unstyled"}
+        />
+      </section>
 
       <section className="flex gap-2 mx-4 overflow-x-scroll no-scrollbar">
         {

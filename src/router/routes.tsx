@@ -8,6 +8,9 @@ import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import ExplorePage from "@/pages/ExplorePage/ExplorePage";
 import LocationDetails from "@/pages/location/LocationDetails";
 import ReelsPage from "@/pages/ReelsPage/ReelsPage";
+import AddPostPage from "@/pages/AddPost/AddPostPage";
+import NormalPostForm from "@/pages/AddPost/NormalPostForm";
+import ReelPostFrom from "@/pages/AddPost/ReelPostFrom";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -52,17 +55,26 @@ const routes: RouteObject[] = [
     element: <ExplorePage />
   },
   {
-    path: "/services",
-    children: [
-      {
-        path: "service-a",
-        element: <>Service A</>,
-      },
-      {
-        path: "service-b",
-        element: <>Service B</>,
-      },
-    ],
+    path: "/add-post",
+    element: <AddPostPage />,
+    // children: [
+    //   {
+    //     path: "normal-post",
+    //     element: <NormalPostForm />,
+    //   },
+    //   {
+    //     path: "reel-post",
+    //     element: <ReelPostFrom />,
+    //   },
+    // ],
+  },
+  {
+    path: "normal-post",
+    element: <NormalPostForm />,
+  },
+  {
+    path: "reel-post",
+    element: <ReelPostFrom />,
   },
 ];
 
