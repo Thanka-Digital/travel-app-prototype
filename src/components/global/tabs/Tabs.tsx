@@ -17,6 +17,7 @@ export default function Tabs({
 
   return (
     <div className="flex flex-col gap-4">
+      <hr className="bg-black" />
       <div className="flex justify-around items-center">
         {tabsData.map((tab) => (
           <button
@@ -32,7 +33,7 @@ export default function Tabs({
       </div>
 
       <div className="relative">
-        <hr className="bg-slate-300" />
+        <hr className="bg-black" />
         <div
           className="absolute -top-1 h-2 w-[33%] bg-orange-500 rounded-md"
           style={{
