@@ -6,7 +6,7 @@ interface PFriendCardProps {
 export default function PFriendCard(props: PFriendCardProps) {
   const { id, name, image } = props;
   return (
-    <div className="flex flex-col items-center gap-1" key={id}>
+    <div className="flex flex-col items-center mb-5" key={id}>
       <img
         src={image}
         alt="friend image"
