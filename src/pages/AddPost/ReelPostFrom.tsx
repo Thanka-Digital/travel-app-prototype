@@ -17,7 +17,7 @@ export default function ReelPostFrom() {
           placeholder="Caption"
         />
 
-        <FileInput />
+        <FileInput accept=".mp4,.mov,.avi" />
 
         <section className="flex justify-between w-full absolute bottom-10 px-5">
           <Button className="rounded-3xl mt-4 px-10 py-3 text-danger"

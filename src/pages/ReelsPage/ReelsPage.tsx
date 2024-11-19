@@ -1,26 +1,49 @@
 import Navbar from "@/components/global/Navbar";
-import { reelsVidinfo } from "@/utils/reelsVidinfo";
+import TASlider from "@/components/swiper/TASlider";
+import { ReelContext, ReelStateDispatch } from "@/providers/Context/context";
 import { Bookmark, LucideHeart, MessageCircleMore, Share2 } from "lucide-react";
+import { useContext } from "react";
 
 interface ReelStructureProps {
+  index: number;
   path: string;
   user: string;
   description: string;
-  likes: string;
-  saves: string;
-  comments: string;
-  shares: string;
+  likes: number;
+  saves: number;
+  comments: {
+    [key: string]: any
+  }[];
+  shares: number;
+  isLiked: boolean;
+  isSaved: boolean;
 }
 
 const ReelStructure = (props: ReelStructureProps) => {
+  const reelDispatch = useContext(ReelStateDispatch)
+
+  const handleLike = () => {
+    if (!props.isLiked) {
+      reelDispatch({
+        type: "LIKE",
+        payload: props.index,
+      })
+    } else {
+      reelDispatch({
+        type: "UNLIKE",
+        payload: props.index,
+      })
+    }
+  }
+
   const {
     path,
     user,
     description,
-    likes,
     saves,
     comments,
     shares,
+    likes,
   } = props;
 
   return (
@@ -38,17 +61,20 @@ const ReelStructure = (props: ReelStructureProps) => {
       </section>
 
       <section className="absolute bottom-32 right-4 flex flex-col gap-4">
-        <span className="flex flex-col gap-1 items-center">
-          <LucideHeart size={28} />
+        <button className="flex flex-col gap-1 items-center"
+          onClick={() => {
+            handleLike()
+          }}>
+          <LucideHeart size={28} color={props.isLiked ? "red" : "white"} fill={props.isLiked ? "red" : "transparent"} />
           {likes}
-        </span>
+        </button>
         <span className="flex flex-col gap-1 items-center">
           <Bookmark size={28} />
           {saves}
         </span>
         <span className="flex flex-col gap-1 items-center">
           <MessageCircleMore size={28} />
-          {comments}
+          {comments.length}
         </span>
         <span className="flex flex-col gap-1 items-center">
           <Share2 size={28} />
@@ -61,23 +87,21 @@ const ReelStructure = (props: ReelStructureProps) => {
 }
 
 export default function ReelsPage() {
+  const reels = useContext(ReelContext);
+
   return (
     <div className="h-full w-full">
-      {
-        reelsVidinfo.map((object, index) => (
-          <ReelStructure
-            path={object.path}
-            user={object.user}
-            description={object.description}
-            likes={object.likes}
-            saves={object.saves}
-            comments={object.comments}
-            shares={object.shares}
-            key={index}
-          />
-        ))
-      }
-
+      <TASlider vertical={true}>
+        {
+          reels.map((object, index) => (
+            <ReelStructure
+              {...object}
+              index={index}
+              key={index}
+            />
+          ))
+        }
+      </TASlider>
       <Navbar />
     </div>
   )

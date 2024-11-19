@@ -33,11 +33,11 @@ export default function AddPostPage() {
         <section className="flex justify-between mx-6">
           <PostNavigate
             text="Add Normal Post"
-            path="/normal-post"
+            path="/add-post/normal-post"
           />
           <PostNavigate
             text="Share Reel"
-            path="/reel-post"
+            path="/add-post/reel-post"
           />
         </section>
       </div>

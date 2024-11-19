@@ -3,14 +3,14 @@ import { PostHeading } from "./AddPostPage";
 import Button from "@/components/form/button/Button";
 import { ImageUp } from "lucide-react";
 
-export const FileInput = () => {
+export const FileInput = ({ accept }: { accept: string }) => {
   return (
     <form className='flex flex-col items-center'>
-      <div className='px-28 py-10 rounded-xl border-2 border-dashed'>
-        <input className="bg-white"
+      <label htmlFor="fileInput" className='px-28 py-10 rounded-xl border-2 border-dashed'>
+        <input type="file" multiple id="fileInput" accept={accept}
           style={{ display: "none" }} />
         <ImageUp size={92} color="#D2D2D2" />
-      </div>
+      </label>
     </form>
   )
 }
@@ -28,7 +28,7 @@ export default function NormalPostForm() {
           className="bg-white"
           placeholder="Caption"
         />
-        <FileInput />
+        <FileInput accept=".png,.jpg,.jpeg" />
 
         <section>
           <p className="text-xl font-semibold">Extra Information</p>
@@ -55,7 +55,7 @@ export default function NormalPostForm() {
           label="Activities to do"
         />
 
-        <Button className="rounded-3xl mt-4 px-10 py-3 text-white">Create Post</Button>
+        <Button className="rounded-3xl mt-4 px-10 py-3 text-white" type="submit">Create Post</Button>
       </section>
     </div>
   )

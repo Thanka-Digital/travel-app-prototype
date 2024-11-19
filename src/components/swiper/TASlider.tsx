@@ -9,6 +9,7 @@ interface TASliderProps {
   slideSpeed?: number;
   slidesToShow?: number;
   slidesToScroll?: number;
+  vertical?: boolean;
 }
 
 export default function TASlider(props: TASliderProps) {
@@ -19,6 +20,7 @@ export default function TASlider(props: TASliderProps) {
     slideSpeed = 500,
     slidesToScroll = 1,
     slidesToShow = 1,
+    vertical
   } = props;
   var settings = {
     dots: isDotsShow,
@@ -28,5 +30,5 @@ export default function TASlider(props: TASliderProps) {
     slidesToScroll: slidesToScroll,
     arrows: isArrowsShow,
   };
-  return <Slider {...settings}>{children}</Slider>;
+  return <Slider vertical={vertical} {...settings}>{children}</Slider>;
 }

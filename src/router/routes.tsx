@@ -56,25 +56,20 @@ const routes: RouteObject[] = [
   },
   {
     path: "/add-post",
-    element: <AddPostPage />,
-    // children: [
-    //   {
-    //     path: "normal-post",
-    //     element: <NormalPostForm />,
-    //   },
-    //   {
-    //     path: "reel-post",
-    //     element: <ReelPostFrom />,
-    //   },
-    // ],
-  },
-  {
-    path: "normal-post",
-    element: <NormalPostForm />,
-  },
-  {
-    path: "reel-post",
-    element: <ReelPostFrom />,
+    children: [
+      {
+        path: "",
+        element: <AddPostPage />,
+      },
+      {
+        path: "normal-post",
+        element: <NormalPostForm />,
+      },
+      {
+        path: "reel-post",
+        element: <ReelPostFrom />,
+      },
+    ],
   },
 ];
 
