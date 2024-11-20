@@ -23,15 +23,29 @@ const ReelStructure = (props: ReelStructureProps) => {
   const reelDispatch = useContext(ReelStateDispatch)
 
   const handleLike = () => {
-    if (!props.isLiked) {
+    if (props.isLiked) {
       reelDispatch({
-        type: "LIKE",
+        type: "UNLIKE",
         payload: props.index,
       })
     } else {
       reelDispatch({
-        type: "UNLIKE",
+        type: "LIKE",
         payload: props.index,
+      })
+    }
+  }
+
+  const handleSave = () => {
+    if (props.isSaved) {
+      reelDispatch({
+        type: "UNSAVE",
+        payload: props.index,
+      })
+    } else {
+      reelDispatch({
+        type: "SAVE",
+        payload: props.index
       })
     }
   }
@@ -68,18 +82,22 @@ const ReelStructure = (props: ReelStructureProps) => {
           <LucideHeart size={28} color={props.isLiked ? "red" : "white"} fill={props.isLiked ? "red" : "transparent"} />
           {likes}
         </button>
-        <span className="flex flex-col gap-1 items-center">
-          <Bookmark size={28} />
+        <button className="flex flex-col gap-1 items-center"
+          onClick={() => {
+            handleSave()
+          }}
+        >
+          <Bookmark size={28} color={props.isSaved ? "red" : "white"} fill={props.isSaved ? "red" : "transparent"} />
           {saves}
-        </span>
-        <span className="flex flex-col gap-1 items-center">
+        </button>
+        <button className="flex flex-col gap-1 items-center">
           <MessageCircleMore size={28} />
           {comments.length}
-        </span>
-        <span className="flex flex-col gap-1 items-center">
+        </button>
+        <button className="flex flex-col gap-1 items-center">
           <Share2 size={28} />
           {shares}
-        </span>
+        </button>
       </section>
 
     </div>
@@ -88,7 +106,6 @@ const ReelStructure = (props: ReelStructureProps) => {
 
 export default function ReelsPage() {
   const reels = useContext(ReelContext);
-
   return (
     <div className="h-full w-full">
       <TASlider vertical={true}>
