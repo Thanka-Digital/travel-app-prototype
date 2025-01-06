@@ -22,11 +22,12 @@ export default function TASlider(props: TASliderProps) {
   } = props;
   var settings = {
     dots: isDotsShow,
-    infinite: true,
+    infinite: false,
     speed: slideSpeed,
     slidesToShow: slidesToShow,
     slidesToScroll: slidesToScroll,
     arrows: isArrowsShow,
+    centerMood: true,
   };
   return <Slider {...settings}>{children}</Slider>;
 }
