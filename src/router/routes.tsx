@@ -8,6 +8,9 @@ import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import LocationDetails from "@/pages/location/LocationDetails";
 import PostDetails from "@/pages/post/PostDetails";
 import ProfileLayout from "@/layout/profile/ProfileLayout";
+import FriendSearchPage from "@/pages/find-friends/FriendSearchPage";
+import FriendsNearYou from "@/pages/find-friends/FriendsNearYou";
+import FriendsWithSimilarInterests from "@/pages/find-friends/FriendsWithSimilarInterests";
 import ExplorePage from "@/pages/ExplorePage";
 
 // Routes in application
@@ -56,12 +59,16 @@ const routes: RouteObject[] = [
     path: "/services",
     children: [
       {
-        path: "service-a",
-        element: <>Service A</>,
+        path: "find-friends",
+        element: <FriendSearchPage />,
       },
       {
-        path: "service-b",
-        element: <>Service B</>,
+        path: "friends-near-you",
+        element: <FriendsNearYou />,
+      },
+      {
+        path: "friends-with-similar-interests",
+        element: <FriendsWithSimilarInterests />,
       },
     ],
   },

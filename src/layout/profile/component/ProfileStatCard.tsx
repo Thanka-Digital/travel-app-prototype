@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 interface ProfileStatCardProps {
   id: string;
   images: {
@@ -8,6 +10,7 @@ interface ProfileStatCardProps {
 }
 export default function ProfileStatCard(props: ProfileStatCardProps) {
   const { id, images, name } = props;
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center gap-1" key={id}>
       <div className="flex">
@@ -20,7 +23,12 @@ export default function ProfileStatCard(props: ProfileStatCardProps) {
           />
         ))}
       </div>
-      <p className="text-lg font-semibold">{name}</p>
+      <p
+        className="text-lg font-semibold"
+        onClick={() => navigate("/services/find-friends")}
+      >
+        {name}
+      </p>
     </div>
   );
 }
