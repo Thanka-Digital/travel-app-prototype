@@ -11,6 +11,9 @@ import ProfileLayout from "@/layout/profile/ProfileLayout";
 import FriendSearchPage from "@/pages/find-friends/FriendSearchPage";
 import FriendsNearYou from "@/pages/find-friends/FriendsNearYou";
 import FriendsWithSimilarInterests from "@/pages/find-friends/FriendsWithSimilarInterests";
+import TripPlanListPage from "@/pages/trip-plan/TripPlanListPage";
+import AddTripPlanPage from "@/pages/trip-plan/AddTripPlanPage";
+import ViewTripPlanDetailsPage from "@/pages/trip-plan/ViewTripPlanDetailsPage";
 import ExplorePage from "@/pages/ExplorePage";
 
 // Routes in application
@@ -69,6 +72,23 @@ const routes: RouteObject[] = [
       {
         path: "friends-with-similar-interests",
         element: <FriendsWithSimilarInterests />,
+      },
+    ],
+  },
+  {
+    path: "/trip-plan",
+    children: [
+      {
+        path: "",
+        element: <TripPlanListPage />,
+      },
+      {
+        path: "add",
+        element: <AddTripPlanPage />,
+      },
+      {
+        path: "details",
+        element: <ViewTripPlanDetailsPage />,
       },
     ],
   },
