@@ -7,8 +7,10 @@ import {
 import ProfileStatCard from "./component/ProfileStatCard";
 import MaxWidthWrapper from "../wrapper/MaxWidthWrapper";
 import Tabs from "@/components/global/tabs/Tabs";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfileLayout() {
+  const navigate = useNavigate();
   return (
     <main>
       <MaxWidthWrapper>
@@ -59,7 +61,10 @@ export default function ProfileLayout() {
             molestias quasi fuga animi quae harum incidunt? Suscipit quo
             corporis voluptate necessitatibus corruption.
           </p>
-          <div className="flex gap-4 flex-wrap text-[#FF7920] font-semibold my-4">
+          <div
+            className="flex gap-4 flex-wrap text-[#FF7920] font-semibold my-4"
+            onClick={() => navigate("/trip-plan/lists")}
+          >
             <p>#wanderer</p>
             <p>#nature</p>
             <p>#sunny</p>

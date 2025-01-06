@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 interface LocationCardProps {
   image: string;
   visitorsCount: string;
-  placeName: string;
-  city: string;
+  visitPlaceName: string;
+  locationOfVisitPlace: string;
   link: string;
+  cardHeight?: string;
 }
 
 export default function LocationCard(props: LocationCardProps) {
@@ -15,31 +16,34 @@ export default function LocationCard(props: LocationCardProps) {
   const {
     image,
     visitorsCount,
-    placeName,
-    city,
-    link
+    visitPlaceName,
+    locationOfVisitPlace,
+    link,
+    cardHeight = "40vh",
   } = props;
 
   return (
-    <div className="relative h-[40vh] shadow-sm">
+    <div className={`relative h-[${cardHeight}] shadow-sm`}>
       <img
         src={image}
         alt="hotel image"
         className="h-full w-full rounded-xl brightness-50"
       />
       <div className="absolute top-3 left-3 py-2 px-4 rounded-full bg-white flex items-center  opacity-70">
-        <p className=" text-black text-md font-semibold ">{visitorsCount}</p>
+        <p className=" text-black text-md font-semibold ">
+          {visitorsCount}+ visitors{" "}
+        </p>
       </div>
       <div className="absolute bottom-3 flex w-full justify-between px-4">
         <div>
-          <p className="text-xl text-white font-semibold">{placeName}</p>
-          <p className="text-[#FF7920] font-medium">{city}</p>
+          <p className="text-xl text-white font-semibold">{visitPlaceName}</p>
+          <p className="text-[#FF7920] font-medium">{locationOfVisitPlace}</p>
         </div>
         <Button
           variant="solid"
           className="h-11 rounded-full bg-white flex items-center"
           onClick={() => {
-            navigate(link)
+            navigate(link);
           }}
         >
           <p className=" text-black text-md font-semibold ">View</p>
