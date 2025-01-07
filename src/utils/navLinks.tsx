@@ -3,7 +3,7 @@ import { MapPinPlus, NotebookPen, Play, Telescope, UserRound } from "lucide-reac
 export const navLinks = [
   {
     icon: <Telescope />,
-    path: "/explore-page"
+    path: "/explore-page/all"
   },
   {
     icon: <NotebookPen />,

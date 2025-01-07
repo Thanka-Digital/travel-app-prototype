@@ -2,6 +2,7 @@ import Input from "@/components/form/input/Input";
 import { PostHeading } from "./AddPostPage";
 import Button from "@/components/form/button/Button";
 import { ImageUp } from "lucide-react";
+import BackButton from "@/components/global/BackButton";
 
 export const FileInput = ({ accept }: { accept: string }) => {
   return (
@@ -18,45 +19,49 @@ export const FileInput = ({ accept }: { accept: string }) => {
 export default function NormalPostForm() {
   return (
     <div className="bg-white text-black py-4">
-      <PostHeading
-        heading="Add Post"
-        bio="Share your joy with everyone else"
-      />
+      <BackButton />
 
-      <section className="mx-6 flex flex-col gap-4 items-center">
-        <Input
-          className="bg-white"
-          placeholder="Caption"
+      <div className="mt-6">
+        <PostHeading
+          heading="Add Post"
+          bio="Share your joy with everyone else"
         />
-        <FileInput accept=".png,.jpg,.jpeg" />
 
-        <section>
-          <p className="text-xl font-semibold">Extra Information</p>
-          <p className="text-[#7E7E7E] font-medium text-sm">This part will help the comunity to grow but you can skip it if you aren't interested.</p>
+        <section className="mx-6 flex flex-col gap-4 items-center">
+          <Input
+            className="bg-white"
+            placeholder="Caption"
+          />
+          <FileInput accept=".png,.jpg,.jpeg" />
+
+          <section>
+            <p className="text-xl font-semibold">Extra Information</p>
+            <p className="text-[#7E7E7E] font-medium text-sm">This part will help the comunity to grow but you can skip it if you aren't interested.</p>
+          </section>
+          <Input
+            className="bg-white"
+            placeholder="Recommended season"
+            label="Best season to visit"
+          />
+          <Input
+            className="bg-white"
+            placeholder="Available mode of transport"
+            label="Transportaion facility"
+          />
+          <Input
+            className="bg-white"
+            placeholder="Temperature of the place"
+            label="Temperature"
+          />
+          <Input
+            className="bg-white"
+            placeholder="List of activities to do"
+            label="Activities to do"
+          />
+
+          <Button className="rounded-3xl mt-4 px-10 py-3 text-white" type="submit">Create Post</Button>
         </section>
-        <Input
-          className="bg-white"
-          placeholder="Recommended season"
-          label="Best season to visit"
-        />
-        <Input
-          className="bg-white"
-          placeholder="Available mode of transport"
-          label="Transportaion facility"
-        />
-        <Input
-          className="bg-white"
-          placeholder="Temperature of the place"
-          label="Temperature"
-        />
-        <Input
-          className="bg-white"
-          placeholder="List of activities to do"
-          label="Activities to do"
-        />
-
-        <Button className="rounded-3xl mt-4 px-10 py-3 text-white" type="submit">Create Post</Button>
-      </section>
+      </div>
     </div>
   )
 }

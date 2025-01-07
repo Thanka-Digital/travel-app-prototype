@@ -21,7 +21,7 @@ export const ExplorePageLayout = ({ children }: { children: React.ReactNode }) =
           exploreTags.map((object, index) => (
             <NavLink to={object.path} className={({ isActive }) =>
               `rounded-2xl text-sm border-2 text-gray-700 px-6 py-1 my-2
-                 ${isActive ? "bg-primary text-white border-0" : null}`} key={index}>
+                 ${isActive ? "bg-primary text-white border-primary" : null}`} key={index}>
               {object.name}</NavLink>
           ))
         }
