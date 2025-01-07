@@ -38,7 +38,7 @@ export default function PostCard() {
             className="w-full rounded-md"
           />
         </div>
-        <div className=" row-span-1 relative">
+        <div className="row-span-1 relative">
           <img
             src="SplashImg/s3.png"
             alt="post image"

@@ -27,7 +27,7 @@ export default function LocationCard(props: LocationCardProps) {
         alt="hotel image"
         className="h-full w-full rounded-xl brightness-50"
       />
-      <div className="absolute top-3 left-3 py-2 px-4 rounded-full bg-white flex items-center  opacity-70">
+      <div className="absolute top-3 left-3 py-2 px-4 rounded-full bg-white flex items-center opacity-70">
         <p className=" text-black text-md font-semibold ">{visitorsCount}</p>
       </div>
       <div className="absolute bottom-3 flex w-full justify-between px-4">

@@ -5,12 +5,16 @@ import BoardingPage1 from "@/pages/Splash-Screen/BoardingPage1";
 import BoardingPage2 from "@/pages/Splash-Screen/BoardingPage2";
 import BoardingPage3 from "@/pages/Splash-Screen/BoardingPage3";
 import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
-import ExplorePage from "@/pages/ExplorePage/ExplorePage";
+import AllExplorePage from "@/pages/ExplorePage/AllExplorePage";
 import LocationDetails from "@/pages/location/LocationDetails";
 import ReelsPage from "@/pages/ReelsPage/ReelsPage";
 import AddPostPage from "@/pages/AddPost/AddPostPage";
 import NormalPostForm from "@/pages/AddPost/NormalPostForm";
 import ReelPostFrom from "@/pages/AddPost/ReelPostFrom";
+import HillsExplorePage from "@/pages/ExplorePage/HillsExplorePage";
+import UrbanExplorePage from "@/pages/ExplorePage/UrbanExplorePage";
+import MountainsExplorePage from "@/pages/ExplorePage/MountainsExplorePage";
+import OceanExplorePage from "@/pages/ExplorePage/OceanExplorePage";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -36,7 +40,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/explore-page",
-    element: <ExplorePage />
+    element: <AllExplorePage />
   },
   {
     path: "/reels-page",
@@ -52,7 +56,28 @@ const routes: RouteObject[] = [
   },
   {
     path: "/explore-page",
-    element: <ExplorePage />
+    children: [
+      {
+        path: "all",
+        element: <AllExplorePage />
+      },
+      {
+        path: "hills",
+        element: <HillsExplorePage />
+      },
+      {
+        path: "urban",
+        element: <UrbanExplorePage />
+      },
+      {
+        path: "mountains",
+        element: <MountainsExplorePage />
+      },
+      {
+        path: "ocean",
+        element: <OceanExplorePage />
+      },
+    ]
   },
   {
     path: "/add-post",
