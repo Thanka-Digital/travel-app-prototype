@@ -63,7 +63,7 @@ export default function ProfileLayout() {
           </p>
           <div
             className="flex gap-4 flex-wrap text-[#FF7920] font-semibold my-4"
-            onClick={() => navigate("/trip-plan/lists")}
+            onClick={() => navigate("/trip-plan")}
           >
             <p>#wanderer</p>
             <p>#nature</p>

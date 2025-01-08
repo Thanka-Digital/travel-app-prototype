@@ -1,14 +1,15 @@
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { createTripPlanListData } from "@/utils/tripPlanData";
 import TripPlanCard from "./components/TripPlanCard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AddTripPlanPage() {
+  const navigate = useNavigate();
   return (
     <MaxWidthWrapper className="mt-28">
       <div className="flex flex-col gap-1">
         <p className="text-2xl font-semibold">Create plans</p>
-        <p className=" text-neutral_gray font-semibold">
+        <p className="text-sm text-neutral_gray font-semibold">
           Plan trips you will likely able to go
         </p>
       </div>
@@ -38,9 +39,12 @@ export default function AddTripPlanPage() {
 
       <div>
         <p className="text-xl font-semibold my-6">Start new search</p>
-        <div className="w-full border-2 border-primary rounded-md p-11">
-          <p className="text-primary font-bold text-xl text-center">
-            Plan new trip with new attitude
+        <div
+          className="w-full border-2 border-primary rounded-md p-8"
+          onClick={() => navigate("/trip-plan/steps-1")}
+        >
+          <p className="text-primary font-semibold text-xl text-center">
+            Plan new trip with new <br /> attitude
           </p>
         </div>
       </div>

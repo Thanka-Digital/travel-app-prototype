@@ -3,8 +3,10 @@ import Button from "@/components/form/button/Button";
 import BackButton from "@/components/global/BackButton";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { viewTripPlanDetailsDatas } from "@/utils/tripPlanData";
+import { useNavigate } from "react-router-dom";
 
 export default function ViewTripPlanDetailsPage() {
+  const navigate = useNavigate();
   return (
     <div className="relative bg-white h-screen">
       <BackButton />
@@ -57,21 +59,18 @@ export default function ViewTripPlanDetailsPage() {
                 cardHeight="20vh"
               />
             </div>
-            <div className="justify-end">
-              <Button
-                className={`w-full flex justify-center rounded-full py-3 text-white my-6 ${
-                  viewTripPlanDetailsData.isTripSucess
-                    ? "bg-primary"
-                    : "bg-black"
-                }`}
-              >
-                {viewTripPlanDetailsData.isTripSucess ? (
-                  <p className="">Create a post for this trip?</p>
-                ) : (
-                  <p className="">Replan this trip?</p>
-                )}
-              </Button>
-            </div>
+            <Button
+              onClick={() => navigate("/trip-plan/add")}
+              className={`w-full flex justify-center rounded-full py-3 text-white my-6 ${
+                viewTripPlanDetailsData.isTripSucess ? "bg-primary" : "bg-black"
+              }`}
+            >
+              {viewTripPlanDetailsData.isTripSucess ? (
+                <p className="">Create a post for this trip?</p>
+              ) : (
+                <p className="">Replan this trip?</p>
+              )}
+            </Button>
           </MaxWidthWrapper>
         </div>
       ))}

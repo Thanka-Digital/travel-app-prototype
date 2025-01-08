@@ -5,11 +5,36 @@ import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
 export const LocationInfo = [
   {
-    image: "/SplashImg/s1.png",
-    city: "Pokhara",
-    visitorsCount: "100k+ visitors",
-    placeName: "Fewa Tal",
-    link: "/",
+    id: "lic1",
+    image: "/trip-plan/tpimg3.jpg",
+    visitorsCount: "300k",
+    visitPlaceName: "Phewa Lake",
+    locationOfVisitPlace: "Pokhara",
+    link: "/location-details",
+  },
+  {
+    id: "lic2",
+    image: "/trip-plan/tpimg2.jpg",
+    visitorsCount: "100k",
+    visitPlaceName: "Chinese Stupa",
+    locationOfVisitPlace: "Pokhara",
+    link: "/location-details",
+  },
+  {
+    id: "lic3",
+    image: "/trip-plan/tpimg1.jpg",
+    visitorsCount: "50k",
+    visitPlaceName: "Mount Everest",
+    locationOfVisitPlace: "Solukhumbu",
+    link: "/location-details",
+  },
+  {
+    id: "lic4",
+    image: "/trip-plan/tpimg4.jpg",
+    visitorsCount: "10k",
+    visitPlaceName: "Bali",
+    locationOfVisitPlace: "Indonesia",
+    link: "/location-details",
   },
 ];
 

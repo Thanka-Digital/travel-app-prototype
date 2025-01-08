@@ -10,6 +10,7 @@ export default {
         danger: "#e3342f",
         success: "#38c172",
         warning: "#f6993f",
+        tagsBg: "#fadfcc",
         info: "#6cb2eb",
         neutral: "#3d4451",
         black: "#000000",

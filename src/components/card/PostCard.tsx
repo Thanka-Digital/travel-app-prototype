@@ -4,7 +4,10 @@ import { useNavigate } from "react-router-dom";
 export default function PostCard() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col gap-3 bg-white shadow-xl p-3 rounded-2xl">
+    <div
+      className="flex flex-col gap-3 bg-white p-3 rounded-2xl"
+      style={{ boxShadow: "2px 2px 2px 2px #1F1F1F1F" }}
+    >
       <div className="flex gap-3 items-center">
         <img
           src="SplashImg/s3.png"

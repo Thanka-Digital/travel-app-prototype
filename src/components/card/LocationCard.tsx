@@ -19,15 +19,18 @@ export default function LocationCard(props: LocationCardProps) {
     visitPlaceName,
     locationOfVisitPlace,
     link,
-    cardHeight = "40vh",
+    cardHeight = "30vh",
   } = props;
 
   return (
-    <div className={`relative h-[${cardHeight}] shadow-sm`}>
+    <div
+      className={`relative shadow-sm rounded-xl overflow-hidden`}
+      style={{ height: cardHeight }}
+    >
       <img
         src={image}
         alt="hotel image"
-        className="h-full w-full rounded-xl brightness-50"
+        className="h-full w-full brightness-50"
       />
       <div className="absolute top-3 left-3 py-2 px-4 rounded-full bg-white flex items-center  opacity-70">
         <p className=" text-black text-md font-semibold ">

@@ -14,6 +14,12 @@ import FriendsWithSimilarInterests from "@/pages/find-friends/FriendsWithSimilar
 import TripPlanListPage from "@/pages/trip-plan/TripPlanListPage";
 import AddTripPlanPage from "@/pages/trip-plan/AddTripPlanPage";
 import ViewTripPlanDetailsPage from "@/pages/trip-plan/ViewTripPlanDetailsPage";
+import TripPlanStep1 from "@/pages/trip-plan/steps/TripPlanStep1";
+import TripPlanStep2 from "@/pages/trip-plan/steps/TripPlanStep2";
+import TripPlanStep3 from "@/pages/trip-plan/steps/TripPlanStep3";
+import TripPlanStep4 from "@/pages/trip-plan/steps/TripPlanStep4";
+import TripPlanStep5 from "@/pages/trip-plan/steps/TripPlanStep5";
+import TripPlanStep6 from "@/pages/trip-plan/steps/TripPlanStep6";
 import ExplorePage from "@/pages/ExplorePage";
 
 // Routes in application
@@ -37,6 +43,10 @@ const routes: RouteObject[] = [
   {
     path: "/4",
     element: <BoardingPage4 />,
+  },
+  {
+    path: "/explore",
+    element: <ExplorePage />,
   },
   {
     path: "/profile",
@@ -89,6 +99,30 @@ const routes: RouteObject[] = [
       {
         path: "details",
         element: <ViewTripPlanDetailsPage />,
+      },
+      {
+        path: "steps-1",
+        element: <TripPlanStep1 />,
+      },
+      {
+        path: "steps-2",
+        element: <TripPlanStep2 />,
+      },
+      {
+        path: "steps-3",
+        element: <TripPlanStep3 />,
+      },
+      {
+        path: "steps-4",
+        element: <TripPlanStep4 />,
+      },
+      {
+        path: "steps-5",
+        element: <TripPlanStep5 />,
+      },
+      {
+        path: "steps-6",
+        element: <TripPlanStep6 />,
       },
     ],
   },
