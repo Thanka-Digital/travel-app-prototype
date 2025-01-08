@@ -3,6 +3,7 @@ import TASlider from "@/components/swiper/TASlider";
 import { ReelContext, ReelStateDispatch } from "@/providers/Context/context";
 import { Bookmark, LucideHeart, MessageCircleMore, Share2 } from "lucide-react";
 import { useContext } from "react";
+import { ReelsPageLoadingState } from "./components/ReelsPageLoadingState";
 
 interface ReelStructureProps {
   index: number;
@@ -111,11 +112,13 @@ export default function ReelsPage() {
       <TASlider vertical={true}>
         {
           reels.map((object, index) => (
+
             <ReelStructure
               {...object}
               index={index}
               key={index}
             />
+
           ))
         }
       </TASlider>

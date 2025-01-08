@@ -1,7 +1,7 @@
 import { LocationInfo } from "@/utils/locationDetailsData";
 import LocationCard from "@/components/card/LocationCard";
-import { LoadingState } from "@/components/loading/LoadingState";
-import { ExplorePageLayout } from "./ExplorePageLayout";
+import { ExplorePageLoadingState } from "./components/ExplorePageLoadingState";
+import { ExplorePageLayout } from "./components/ExplorePageLayout";
 
 export default function UrbanExplorePage() {
   return (
@@ -9,7 +9,7 @@ export default function UrbanExplorePage() {
       <div className="flex flex-col gap-4 px-6 py-2 min-h-screen">
         {
           LocationInfo.map((object, index) => (
-            <LoadingState>
+            <ExplorePageLoadingState>
               <LocationCard
                 city={object.city}
                 image={object.image}
@@ -18,7 +18,7 @@ export default function UrbanExplorePage() {
                 visitorsCount={object.visitorsCount}
                 key={index}
               />
-            </LoadingState>
+            </ExplorePageLoadingState>
           ))
         }
       </div>

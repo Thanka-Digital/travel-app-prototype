@@ -46,7 +46,7 @@ export default function BoardingPage4() {
           className='rounded-3xl'
           disabled={toggledArr.length <= 0}
           onClick={() => {
-            navigate('/explore-page')
+            navigate('/explore-page/all')
           }}
         >Complete <ChevronsRight /></Button>
       </section>

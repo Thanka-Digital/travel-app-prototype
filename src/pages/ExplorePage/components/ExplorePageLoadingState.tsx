@@ -4,7 +4,7 @@ interface LoadingStateProps {
   children: React.ReactNode
 }
 
-export const LoadingState = (props: LoadingStateProps) => {
+export const ExplorePageLoadingState = (props: LoadingStateProps) => {
   const {
     children
   } = props;
