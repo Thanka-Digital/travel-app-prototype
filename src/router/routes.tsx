@@ -6,7 +6,6 @@ import BoardingPage2 from "@/pages/Splash-Screen/BoardingPage2";
 import BoardingPage3 from "@/pages/Splash-Screen/BoardingPage3";
 import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import LocationDetails from "@/pages/location/LocationDetails";
-import AddPostPage from "@/pages/AddPost/AddPostPage";
 import NormalPostForm from "@/pages/AddPost/NormalPostForm";
 
 // Routes in application
@@ -45,16 +44,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/add-post",
-    children: [
-      {
-        path: "",
-        element: <AddPostPage />,
-      },
-      {
-        path: "normal-post",
-        element: <NormalPostForm />,
-      },
-    ],
+    element: <NormalPostForm />
   },
 ];
 

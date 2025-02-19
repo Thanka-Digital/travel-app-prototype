@@ -1,8 +1,16 @@
 import Input from "@/components/form/input/Input";
-import { PostHeading } from "./AddPostPage";
 import Button from "@/components/form/button/Button";
 import { ImageUp } from "lucide-react";
 import BackButton from "@/components/global/BackButton";
+
+export function PostHeading({ heading, bio }: { heading: string, bio: string }) {
+  return (
+    <div className="flex flex-col py-4 mx-6">
+      <p className="text-2xl font-bold">{heading}</p>
+      <p className="text-[#7E7E7E] font-medium text-sm">{bio}</p>
+    </div>
+  )
+}
 
 export const FileInput = ({ accept }: { accept: string }) => {
   return (

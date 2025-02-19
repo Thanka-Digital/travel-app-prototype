@@ -25,7 +25,7 @@ export const AddPostLoadingState = (props: LoadingStateProps) => {
       {
         loading ?
           <div className="relative h-[40vh] rounded-md bg-gray-300">
-            Uploading
+            Uploading...
           </div>
           :
           <>{children}</>
