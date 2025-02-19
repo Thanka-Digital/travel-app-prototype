@@ -9,14 +9,13 @@ export default function UrbanExplorePage() {
       <div className="flex flex-col gap-4 px-6 py-2 min-h-screen">
         {
           LocationInfo.map((object, index) => (
-            <ExplorePageLoadingState>
+            <ExplorePageLoadingState key={index}>
               <LocationCard
                 city={object.city}
                 image={object.image}
                 link={object.link}
                 placeName={object.placeName}
                 visitorsCount={object.visitorsCount}
-                key={index}
               />
             </ExplorePageLoadingState>
           ))
