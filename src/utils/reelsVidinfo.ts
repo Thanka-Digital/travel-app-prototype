@@ -16,6 +16,7 @@ export const reelsVidinfo = [
     shares: 5,
     isLiked: false,
     isSaved: false,
+    isLoading: true,
   },
   {
     path: "/ReelsVid/Vid-2.mp4",
@@ -32,6 +33,7 @@ export const reelsVidinfo = [
     shares: 12,
     isLiked: true,
     isSaved: false,
+    isLoading: false,
 
   },
   {
@@ -48,6 +50,7 @@ export const reelsVidinfo = [
     shares: 13,
     isLiked: false,
     isSaved: false,
+    isLoading: false,
 
   },
   {
@@ -64,5 +67,6 @@ export const reelsVidinfo = [
     shares: 3,
     isLiked: false,
     isSaved: true,
+    isLoading: true,
   },
 ]

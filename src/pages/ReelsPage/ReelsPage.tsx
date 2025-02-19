@@ -1,9 +1,9 @@
 import Navbar from "@/components/global/Navbar";
 import TASlider from "@/components/swiper/TASlider";
 import { ReelContext, ReelStateDispatch } from "@/providers/Context/context";
-import { Bookmark, LucideHeart, MessageCircleMore, Share2 } from "lucide-react";
+import { Bookmark, Loader, LucideHeart, MessageCircleMore, Share2 } from "lucide-react";
 import { useContext } from "react";
-import { ReelsPageLoadingState } from "./components/ReelsPageLoadingState";
+import { useState, useEffect } from "react";
 
 interface ReelStructureProps {
   index: number;
@@ -18,10 +18,22 @@ interface ReelStructureProps {
   shares: number;
   isLiked: boolean;
   isSaved: boolean;
+  isLoading: boolean;
 }
 
 const ReelStructure = (props: ReelStructureProps) => {
+  const [loading, setLoading] = useState(false);
   const reelDispatch = useContext(ReelStateDispatch)
+  const {
+    path,
+    user,
+    description,
+    saves,
+    comments,
+    shares,
+    likes,
+    isLoading,
+  } = props;
 
   const handleLike = () => {
     if (props.isLiked) {
@@ -51,18 +63,24 @@ const ReelStructure = (props: ReelStructureProps) => {
     }
   }
 
-  const {
-    path,
-    user,
-    description,
-    saves,
-    comments,
-    shares,
-    likes,
-  } = props;
+  const handleLoad = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      isLoading
+    }, 400);
+  }
+
+  useEffect(handleLoad, [])
 
   return (
-    <div className="relative">
+    <div className="relative h-screen">
+      {
+        loading &&
+        <div className="bg-transparent h-full w-full flex items-center justify-center">
+          <Loader />
+        </div>
+      }
       <video
         src={path}
         autoPlay={true}
@@ -100,7 +118,6 @@ const ReelStructure = (props: ReelStructureProps) => {
           {shares}
         </button>
       </section>
-
     </div>
   )
 }
@@ -112,13 +129,11 @@ export default function ReelsPage() {
       <TASlider vertical={true}>
         {
           reels.map((object, index) => (
-
             <ReelStructure
               {...object}
               index={index}
               key={index}
             />
-
           ))
         }
       </TASlider>

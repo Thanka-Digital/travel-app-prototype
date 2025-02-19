@@ -1,11 +1,10 @@
-import { Loader } from "lucide-react";
 import { useEffect, useState } from "react"
 
 interface LoadingStateProps {
   children: React.ReactNode
 }
 
-export const ReelsPageLoadingState = (props: LoadingStateProps) => {
+export const AddPostLoadingState = (props: LoadingStateProps) => {
   const {
     children
   } = props;
@@ -16,7 +15,7 @@ export const ReelsPageLoadingState = (props: LoadingStateProps) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 400);
   }
 
   useEffect(handleLoad, [])
@@ -25,8 +24,8 @@ export const ReelsPageLoadingState = (props: LoadingStateProps) => {
     <div>
       {
         loading ?
-          <div className="bg-transparent flex items-center justify-center">
-            <Loader />
+          <div className="relative h-[40vh] rounded-md bg-gray-300">
+            Uploading
           </div>
           :
           <>{children}</>
