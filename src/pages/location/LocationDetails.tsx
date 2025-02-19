@@ -5,12 +5,10 @@ import { locationDetailsTabsData } from "@/utils/locationDetailsData";
 
 export default function LocationDetails() {
   return (
-    <div className="relative bg-white h-screen">
+    <div className="relative bg-white h-screen text-black">
       <BackButton />
       <div>
-        <div className="bg-gradient-to-r from-indigo-500">
-          <img src="/SplashImg/s3.png" alt="location images" height={50} />
-        </div>
+        <img src="/SplashImg/s3.png" alt="location images" className="w-full h-56" />
         <MaxWidthWrapper>
           <div className="text-center my-4">
             <p className="text-2xl font-bold my-2">Phewa Lake</p>
@@ -25,12 +23,10 @@ export default function LocationDetails() {
       </div>
       <div className="flex flex-col my-4 ">
         <hr className=" bg-black/35" />
-        <div className="my-3 flex gap-3 justify-center items-center">
-          <p className="text-md font-semibold">#Sightseeing</p>
-          <hr className="bg-black/35 w-[2px] h-7 " />
-          <p className="text-md font-semibold">Evening Time</p>
-          <hr className="bg-black/35 w-[2px] h-7 " />
-          <p className="text-md font-semibold">NPrs. 300</p>
+        <div className="my-3 flex gap-3 justify-center divide-x-2 text-md font-semibold">
+          <p>#Sightseeing</p>
+          <p className="pl-4">Evening Time</p>
+          <p className="pl-4">NPrs. 300</p>
         </div>
         <hr className=" bg-slate-300" />
       </div>
