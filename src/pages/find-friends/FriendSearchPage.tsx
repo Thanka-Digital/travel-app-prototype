@@ -1,4 +1,5 @@
 import FindFriendCard from "@/components/card/FindFriendCard";
+import Navbar from "@/components/global/Navbar";
 import TASlider from "@/components/swiper/TASlider";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import {
@@ -94,6 +95,9 @@ export default function FriendSearchPage() {
           ))}
         </TASlider>
       </div>
+      <MaxWidthWrapper>
+        <Navbar />
+      </MaxWidthWrapper>
     </main>
   );
 }

@@ -28,7 +28,7 @@ export default function TripPlanStep5() {
             placeholder="Select date range"
             className="p-3 border-2 border-neutral_gray2 rounded-md"
           /> */}
-          <TADateRange />
+          {/* <TADateRange /> */}
         </div>
 
         <section className="flex w-full justify-between items-center fixed bottom-0 left-0 px-6 py-4 bg-white">

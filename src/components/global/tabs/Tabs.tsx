@@ -16,7 +16,7 @@ export default function Tabs({
   )?.component;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mb-16">
       <hr className="bg-black" />
       <div className="flex justify-around items-center">
         {tabsData.map((tab) => (

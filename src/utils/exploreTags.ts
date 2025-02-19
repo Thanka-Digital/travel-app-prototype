@@ -1,18 +1,26 @@
 export const exploreTags = [
   {
     name: "All",
-    path: "/explore-page"
+    path: "/explore-page",
   },
   {
     name: "Hills",
-    path: "/"
+    path: "/@",
   },
   {
     name: "Mountains",
-    path: "/"
+    path: "/@",
   },
   {
     name: "Urban",
-    path: "/"
+    path: "/@",
   },
-]
+  {
+    name: "Wonderer",
+    path: "/@",
+  },
+  {
+    name: "Beach",
+    path: "/@",
+  },
+];

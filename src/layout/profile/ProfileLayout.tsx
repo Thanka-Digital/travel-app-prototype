@@ -8,6 +8,7 @@ import ProfileStatCard from "./component/ProfileStatCard";
 import MaxWidthWrapper from "../wrapper/MaxWidthWrapper";
 import Tabs from "@/components/global/tabs/Tabs";
 import { useNavigate } from "react-router-dom";
+import Navbar from "@/components/global/Navbar";
 
 export default function ProfileLayout() {
   const navigate = useNavigate();
@@ -72,6 +73,7 @@ export default function ProfileLayout() {
         </div>
       </MaxWidthWrapper>
       <Tabs tabsData={ProfileDetailsTabsData} />
+      <Navbar />
     </main>
   );
 }

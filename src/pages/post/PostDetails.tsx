@@ -74,10 +74,10 @@ export default function PostDetails() {
         <h1 className="text-xl font-bold">Posted About</h1>
         {LocationInfo.map((object, index) => (
           <LocationCard
-            city={object.city}
+            locationOfVisitPlace={object.locationOfVisitPlace}
             image={object.image}
             link={object.link}
-            placeName={object.placeName}
+            visitPlaceName={object.visitPlaceName}
             visitorsCount={object.visitorsCount}
             key={index}
           />

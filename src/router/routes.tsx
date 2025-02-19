@@ -53,7 +53,7 @@ const routes: RouteObject[] = [
     element: <ProfileLayout />,
   },
   {
-    path: "/explore",
+    path: "/explore-page",
     element: <ExplorePage />,
   },
   {

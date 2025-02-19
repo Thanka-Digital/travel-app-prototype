@@ -2,6 +2,7 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { createTripPlanListData } from "@/utils/tripPlanData";
 import TripPlanCard from "./components/TripPlanCard";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "@/components/global/Navbar";
 
 export default function AddTripPlanPage() {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ export default function AddTripPlanPage() {
           </p>
         </div>
       </div>
+      <Navbar />
     </MaxWidthWrapper>
   );
 }

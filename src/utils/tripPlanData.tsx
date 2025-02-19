@@ -1,11 +1,4 @@
-import {
-  BaggageClaim,
-  Mountain,
-  Snowflake,
-  Sun,
-  TicketsPlane,
-  TreePalm,
-} from "lucide-react";
+import { BaggageClaim, Mountain, Snowflake } from "lucide-react";
 
 export const tripPlanListData = [
   {
