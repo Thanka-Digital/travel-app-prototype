@@ -3,14 +3,11 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 
 export default function PostTabContent() {
   return (
-    <>
-      <MaxWidthWrapper>
-        <div className="flex flex-col gap-3 my-4">
-          <PostCard />
-          <PostCard />
-          <PostCard />
-        </div>
-      </MaxWidthWrapper>
-    </>
+    <MaxWidthWrapper>
+      <div className="flex flex-col gap-3 my-4">
+        <PostCard />
+        <PostCard />
+      </div>
+    </MaxWidthWrapper>
   );
 }

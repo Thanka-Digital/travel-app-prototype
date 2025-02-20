@@ -4,59 +4,51 @@ import { useNavigate } from "react-router-dom";
 export default function PostCard() {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col gap-3 bg-white shadow-xl p-3 rounded-2xl">
-      <div className="flex gap-3 items-center">
+    <div className="flex flex-col gap-2 bg-white shadow-lg p-3 rounded-2xl">
+      <div className="flex gap-2 items-center">
         <img
           src="SplashImg/s3.png"
           alt="profile image"
           className="h-12 w-12 rounded-full"
         />
         <div className="flex flex-col">
-          <p className="text-lg font-bold">Jane Doe</p>
-          <p className="text-gray-500 font-medium">Posted : 3 days ago</p>
+          <p className="font-medium">Jane Doe</p>
+          <p className="text-gray-500 text-sm font-medium">Posted : 3 days ago</p>
         </div>
       </div>
-      <p className="text-md font-semibold">
+      <p className="text-md">
         Went to the phewa lake, was fun. 👋
       </p>
 
       <div
-        className="grid grid-rows-2 grid-flow-col gap-2 "
+        className="grid grid-rows-2 grid-cols-5 gap-2 "
         onClick={() => navigate("/post-details")}
       >
-        <div className="w-full row-span-2">
-          <img
-            src="SplashImg/s1.png"
-            alt="post image"
-            className="w-full h-full rounded-md"
-          />
-        </div>
-        <div className=" row-span-1 ">
-          <img
-            src="SplashImg/s2.png"
-            alt="post image"
-            className="w-full rounded-md"
-          />
-        </div>
-        <div className="row-span-1 relative">
-          <img
-            src="SplashImg/s3.png"
-            alt="post image"
-            className="w-full rounded-md brightness-50"
-          />
-          <p className="absolute top-[45%] left-[40%] text-white text-xl font-semibold ">
-            +3
-          </p>
-        </div>
+        <img
+          src="SplashImg/s1.png"
+          alt="post image"
+          className="w-full h-[120px] rounded-md  row-span-2 col-span-3 object-cover"
+        />
+        <img
+          src="SplashImg/s2.png"
+          alt="post image"
+          className="w-full h-[56px] rounded-md row-span-1 col-span-2 object-cover"
+        />
+        <img
+          src="SplashImg/s3.png"
+          alt="post image"
+          className="w-full h-[56px] rounded-md row-span-1 col-span-2 object-cover"
+        />
       </div>
-      <div className="flex gap-4">
+
+      <div className="flex gap-4 font-medium">
         <div className="flex gap-1 items-center">
-          <Heart size={32} fill="#FF7920" />
-          <p className="text-lg font-medium">400k</p>
+          <Heart size={24} fill="#FF7920" color="#FF7920" />
+          <p>400k</p>
         </div>
         <div className="flex gap-1 items-center">
-          <MessageCircleMore size={32} />
-          <p className="text-lg font-medium">23.1k</p>
+          <MessageCircleMore size={24} />
+          <p>23.1k</p>
         </div>
       </div>
     </div>

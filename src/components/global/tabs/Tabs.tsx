@@ -16,15 +16,13 @@ export default function Tabs({
   )?.component;
 
   return (
-    <div className="flex flex-col gap-4">
-      <hr className="bg-black" />
-      <div className="flex justify-around items-center">
+    <div className="flex flex-col gap-2 bg-white mt-4">
+      <div className="flex justify-around items-center text-sm">
         {tabsData.map((tab) => (
           <button
             key={tab.id}
-            className={`font-semibold uppercase ${
-              activeTab === tab.id ? "text-[#FF7920]" : ""
-            }`}
+            className={`font-semibold uppercase ${activeTab === tab.id ? "text-[#FF7920]" : ""
+              }`}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
@@ -33,21 +31,21 @@ export default function Tabs({
       </div>
 
       <div className="relative">
-        <hr className="bg-black" />
+        <hr className="bg-black/35" />
         <div
-          className="absolute -top-1 h-2 w-[33%] bg-orange-500 rounded-md"
+          className="absolute -top-1 h-1 w-[33%] bg-orange-500 rounded-md"
           style={{
             left:
               activeTab === tabsData[0].id
                 ? "0%"
                 : activeTab === tabsData[1].id
-                ? "29%"
-                : "66%",
+                  ? "29%"
+                  : "66%",
           }}
         />
       </div>
 
-      <div className="py-4">
+      <div>
         {ActiveTabComponent ? (
           <ActiveTabComponent />
         ) : (
