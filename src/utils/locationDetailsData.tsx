@@ -16,14 +16,14 @@ export const LocationInfo = [
     city: 'Pokhara',
     visitorsCount: '100k+ visitors',
     placeName: 'Fewa Tal',
-    link: '/'
+    link: '/location-details'
   },
   {
     image: '/SplashImg/s2.png',
     city: 'Pokhara',
     visitorsCount: '100k+ visitors',
     placeName: 'Fewa Tal',
-    link: '/'
+    link: '/location-details'
   },
 ]
 

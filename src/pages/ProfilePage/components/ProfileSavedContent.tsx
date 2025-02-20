@@ -1,4 +1,4 @@
-import PostCard from "@/components/card/PostCard";
+import PostCard from "@/pages/post/components/PostCard";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 
 export default function ProfileSavedContent() {

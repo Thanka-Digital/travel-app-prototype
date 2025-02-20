@@ -22,7 +22,7 @@ export default function PostCard() {
 
       <div
         className="grid grid-rows-2 grid-cols-5 gap-2 "
-        onClick={() => navigate("/post-details")}
+        onClick={() => navigate("/post-detail")}
       >
         <img
           src="SplashImg/s1.png"

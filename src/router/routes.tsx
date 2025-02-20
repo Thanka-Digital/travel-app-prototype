@@ -1,5 +1,4 @@
 import { createBrowserRouter, type RouteObject } from "react-router-dom";
-import TestPage from "@/pages/TestPage";
 import BoardingPage0 from "@/pages/Splash-Screen/BoardingPage0";
 import BoardingPage1 from "@/pages/Splash-Screen/BoardingPage1";
 import BoardingPage2 from "@/pages/Splash-Screen/BoardingPage2";
@@ -16,6 +15,7 @@ import UrbanExplorePage from "@/pages/ExplorePage/UrbanExplorePage";
 import MountainsExplorePage from "@/pages/ExplorePage/MountainsExplorePage";
 import OceanExplorePage from "@/pages/ExplorePage/OceanExplorePage";
 import ProfileDetailsPage from "@/pages/ProfilePage/ProfileDetailsPage";
+import PostDetailsPage from "@/pages/post/PostDetailsPage";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -50,6 +50,10 @@ const routes: RouteObject[] = [
   {
     path: "/location-details",
     element: <LocationDetailsPage />,
+  },
+  {
+    path: "/post-detail",
+    element: <PostDetailsPage />,
   },
   {
     path: "/explore-page",
