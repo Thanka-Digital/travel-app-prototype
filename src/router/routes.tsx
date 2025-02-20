@@ -6,7 +6,7 @@ import BoardingPage2 from "@/pages/Splash-Screen/BoardingPage2";
 import BoardingPage3 from "@/pages/Splash-Screen/BoardingPage3";
 import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import AllExplorePage from "@/pages/ExplorePage/AllExplorePage";
-import LocationDetails from "@/pages/location/LocationDetails";
+import LocationDetailsPage from "@/pages/LocationPage/LocationDetailsPage";
 import ReelsPage from "@/pages/ReelsPage/ReelsPage";
 import AddPostPage from "@/pages/AddPost/AddPostPage";
 import NormalPostForm from "@/pages/AddPost/NormalPostForm";
@@ -52,7 +52,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/location-details",
-    element: <LocationDetails />,
+    element: <LocationDetailsPage />,
   },
   {
     path: "/explore-page",

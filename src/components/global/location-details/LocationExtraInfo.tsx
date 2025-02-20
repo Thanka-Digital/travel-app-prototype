@@ -2,7 +2,7 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsData } from "@/utils/locationDetailsData";
 import { CircleAlert } from "lucide-react";
 
-export default function ExtraInfoTabContent() {
+export default function LocationExtraInfo() {
   return (
     <MaxWidthWrapper>
       <div className="min-w-full flex flex-col gap-4 my-3">

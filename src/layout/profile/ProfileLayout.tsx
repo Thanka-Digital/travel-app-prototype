@@ -6,7 +6,7 @@ import {
 } from "@/utils/profileData";
 import ProfileStatCard from "./component/ProfileStatCard";
 import MaxWidthWrapper from "../wrapper/MaxWidthWrapper";
-import Tabs from "@/components/global/tabs/Tabs";
+import Tabs from "@/components/global/tabs/CustomTab";
 
 export default function ProfileLayout() {
   return (

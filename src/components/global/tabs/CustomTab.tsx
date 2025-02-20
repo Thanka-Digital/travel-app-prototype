@@ -1,10 +1,12 @@
 import { useState } from "react";
+
 interface LocationDetailsTabDataProps {
   id: string;
   label: string;
   component: () => JSX.Element;
 }
-export default function Tabs({
+
+export default function CustomTab({
   tabsData,
 }: {
   tabsData: LocationDetailsTabDataProps[];

@@ -1,5 +1,5 @@
-import ExtraInfoTabContent from "@/components/global/tabs/components/location-details/ExtraInfoTabContent";
-import HotelTabContent from "@/components/global/tabs/components/location-details/HotelTabContent";
+import LocationExtraInfo from "@/components/global/location-details/LocationExtraInfo";
+import LocationHotels from "@/components/global/location-details/LocationHotels";
 import PostTabContent from "@/components/global/tabs/components/PostTabContent";
 import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
@@ -91,11 +91,11 @@ export const locationDetailsTabsData = [
   {
     id: "hotels",
     label: "Hotels",
-    component: HotelTabContent,
+    component: LocationHotels,
   },
   {
     id: "info",
     label: "Extra Info",
-    component: ExtraInfoTabContent,
+    component: LocationExtraInfo,
   },
 ];

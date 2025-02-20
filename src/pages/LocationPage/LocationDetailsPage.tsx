@@ -1,9 +1,9 @@
 import BackButton from "@/components/global/BackButton";
-import Tabs from "@/components/global/tabs/Tabs";
+import Tabs from "@/components/global/tabs/CustomTab";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsTabsData } from "@/utils/locationDetailsData";
 
-export default function LocationDetails() {
+export default function LocationDetailsPage() {
   return (
     <div className="relative bg-white h-screen text-black">
       <BackButton />

@@ -1,5 +1,4 @@
 import PostTabContent from "@/components/global/tabs/components/PostTabContent";
-import FriendsTabContent from "@/components/global/tabs/components/taProfile/FriendsTabContent";
 
 export const profileFollowersData = [
   {
@@ -39,59 +38,6 @@ export const profileFollowingData = [
   },
 ];
 
-export const profileFriendsData = [
-  {
-    id: "fd1",
-    name: "Janney Doe",
-    image: "/profile/pp1.jfif",
-  },
-  {
-    id: "fd2",
-    name: "Rambo Boxer",
-    image: "/profile/pp2.jfif",
-  },
-  {
-    id: "fd3",
-    name: "Peter Parker",
-    image: "/profile/pp3.jfif",
-  },
-  {
-    id: "fd4",
-    name: "Wade Wilson",
-    image: "/profile/pp4.jfif",
-  },
-  {
-    id: "fd5",
-    name: "Penny Wade",
-    image: "/profile/pp5.jfif",
-  },
-  {
-    id: "fd6",
-    name: "DJ Night",
-    image: "/profile/pp6.jfif",
-  },
-  {
-    id: "fd7",
-    name: "Bob Cut",
-    image: "/profile/pp7.jfif",
-  },
-  {
-    id: "fd8",
-    name: "JMadam Curie",
-    image: "/profile/pp10.jfif",
-  },
-  {
-    id: "fd9",
-    name: "Von Neuman",
-    image: "/profile/pp8.jfif",
-  },
-  {
-    id: "fd10",
-    name: "Shelly Sea",
-    image: "/profile/pp9.jfif",
-  },
-];
-
 export const ProfileDetailsTabsData = [
   {
     id: "posts",
@@ -101,7 +47,7 @@ export const ProfileDetailsTabsData = [
   {
     id: "friends",
     label: "Friends",
-    component: FriendsTabContent,
+    component: PostTabContent,
   },
   {
     id: "saved",
