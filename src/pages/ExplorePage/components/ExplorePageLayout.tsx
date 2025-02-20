@@ -31,7 +31,10 @@ export const ExplorePageLayout = ({ children }: { children: React.ReactNode }) =
           ))
         }
       </section>
-      {children}
+
+      <section className="pb-24">
+        {children}
+      </section>
       <Navbar />
     </div >
   )
