@@ -1,4 +1,4 @@
-import LocationCard from "@/components/card/LocationCard";
+import LocationCard from "@/pages/LocationPage/components/LocationCard";
 import BackButton from "@/components/global/BackButton";
 import TASlider from "@/components/swiper/TASlider";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";

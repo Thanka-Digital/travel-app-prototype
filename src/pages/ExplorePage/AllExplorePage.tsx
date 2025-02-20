@@ -1,5 +1,5 @@
 import { LocationInfo } from "@/utils/locationDetailsData";
-import LocationCard from "@/components/card/LocationCard";
+import LocationCard from "@/pages/LocationPage/components/LocationCard";
 import { ExplorePageLayout } from "./components/ExplorePageLayout";
 import { ExplorePageLoadingState } from "./components/ExplorePageLoadingState";
 

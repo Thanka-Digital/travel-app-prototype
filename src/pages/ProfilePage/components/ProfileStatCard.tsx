@@ -13,16 +13,18 @@ export default function ProfileStatCard(props: ProfileStatCardProps) {
   return (
     <div className="flex flex-col items-center gap-1" key={id}>
       <div className="flex">
-        {images.map((img) => (
-          <img
-            key={img.id}
-            src={img.image}
-            alt="image"
-            className="h-10 w-10 rounded-full -ml-5 first:ml-0 border-2 border-white"
-          />
-        ))}
+        {
+          images.map((img) => (
+            <img
+              key={img.id}
+              src={img.image}
+              alt="image"
+              className="h-7 w-7 rounded-full -ml-3 first:ml-0 border-2 border-white"
+            />
+          ))
+        }
       </div>
-      <p className="text-lg font-semibold">{name}</p>
+      <p className="text-sm font-medium">{name}</p>
     </div>
   );
 }

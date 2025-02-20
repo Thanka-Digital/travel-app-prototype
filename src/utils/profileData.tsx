@@ -45,8 +45,8 @@ export const ProfileDetailsTabsData = [
     component: PostTabContent,
   },
   {
-    id: "friends",
-    label: "Friends",
+    id: "Reels",
+    label: "Reels",
     component: PostTabContent,
   },
   {

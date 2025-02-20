@@ -1,4 +1,4 @@
-import HotelCard from "@/components/card/HotelCard";
+import HotelCard from "@/pages/LocationPage/components/HotelCard";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 
 export default function LocationHotels() {

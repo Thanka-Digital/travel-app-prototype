@@ -15,6 +15,7 @@ import HillsExplorePage from "@/pages/ExplorePage/HillsExplorePage";
 import UrbanExplorePage from "@/pages/ExplorePage/UrbanExplorePage";
 import MountainsExplorePage from "@/pages/ExplorePage/MountainsExplorePage";
 import OceanExplorePage from "@/pages/ExplorePage/OceanExplorePage";
+import ProfileDetailsPage from "@/pages/ProfilePage/ProfileDetailsPage";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -39,16 +40,12 @@ const routes: RouteObject[] = [
     element: <BoardingPage4 />,
   },
   {
-    path: "/explore-page",
-    element: <AllExplorePage />
-  },
-  {
     path: "/reels-page",
     element: <ReelsPage />
   },
   {
-    path: "/test",
-    element: <TestPage />,
+    path: "/user-profile",
+    element: <ProfileDetailsPage />
   },
   {
     path: "/location-details",

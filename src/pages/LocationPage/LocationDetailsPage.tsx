@@ -25,7 +25,6 @@ export default function LocationDetailsPage() {
           <p className="pl-4">Evening Time</p>
           <p className="pl-4">NPrs. 300</p>
         </div>
-        <hr className=" bg-black/35" />
       </div>
       <Tabs tabsData={locationDetailsTabsData} />
     </div>
