@@ -7,7 +7,6 @@ export default function ProfileSavedContent() {
       <div className="flex flex-col gap-3 my-4">
         <PostCard />
         <PostCard />
-        <PostCard />
       </div>
     </MaxWidthWrapper>
   );

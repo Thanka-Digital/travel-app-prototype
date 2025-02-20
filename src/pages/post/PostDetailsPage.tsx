@@ -4,14 +4,8 @@ import TASlider from "@/components/swiper/TASlider";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsData, LocationInfo } from "@/utils/locationDetailsData";
 import { Heart, MessageCircleMore } from "lucide-react";
-const imgs = [
-  "SplashImg/s1.png",
-  "SplashImg/s2.png",
-  "SplashImg/s3.png",
-  "SplashImg/s4.png",
-  "SplashImg/s5.png",
-];
-export default function PostDetails() {
+
+export default function PostDetailsPage() {
   return (
     <MaxWidthWrapper>
       <BackButton />
@@ -32,11 +26,13 @@ export default function PostDetails() {
         </p>
       </section>
       <TASlider>
-        {imgs.map((img, i) => (
-          <div key={i} className="h-80 relative">
-            <img src={img} alt="images" />
-          </div>
-        ))}
+        {
+          imgs.map((img, i) => (
+            <div key={i} className="h-80 relative">
+              <img src={img} alt="images" />
+            </div>
+          ))
+        }
       </TASlider>
       <div className="flex gap-4 my-4">
         <div className="flex gap-1 items-center">
@@ -72,36 +68,48 @@ export default function PostDetails() {
 
       <div className="mt-6 mb-4 flex flex-col gap-4">
         <h1 className="text-xl font-bold">Posted About</h1>
-        {LocationInfo.map((object, index) => (
-          <LocationCard
-            city={object.city}
-            image={object.image}
-            link={object.link}
-            placeName={object.placeName}
-            visitorsCount={object.visitorsCount}
-            key={index}
-          />
-        ))}
+        {
+          LocationInfo.map((object, index) => (
+            <LocationCard
+              city={object.city}
+              image={object.image}
+              link={object.link}
+              placeName={object.placeName}
+              visitorsCount={object.visitorsCount}
+              key={index}
+            />
+          ))
+        }
       </div>
 
       <div className="min-w-full flex flex-col gap-2 my-4">
         <p className="text-xl font-bold">
           Information shared by <span className="text-[#FF7920]">@jane</span>
         </p>
-        {locationDetailsData.map((locationData, index) => (
-          <div className="flex gap-3 items-start" key={index}>
-            <span className="text-gray-500">{locationData.icon}</span>
-            <ul className="text-left list-disc">
-              <p className=" text-lg">{locationData.label}</p>
-              {locationData.types?.map((type) => (
-                <li key={type.id} className="">
-                  {type.label}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {
+          locationDetailsData.map((locationData, index) => (
+            <div className="flex gap-3 items-start" key={index}>
+              <span className="text-gray-500">{locationData.icon}</span>
+              <ul className="text-left list-disc">
+                <p className=" text-lg">{locationData.label}</p>
+                {locationData.types?.map((type) => (
+                  <li key={type.id} className="">
+                    {type.label}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
     </MaxWidthWrapper>
   );
 }
+
+const imgs = [
+  "SplashImg/s1.png",
+  "SplashImg/s2.png",
+  "SplashImg/s3.png",
+  "SplashImg/s4.png",
+  "SplashImg/s5.png",
+];

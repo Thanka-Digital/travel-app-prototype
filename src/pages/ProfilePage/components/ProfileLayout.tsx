@@ -4,8 +4,8 @@ import {
   profileFollowingData,
   profileTeamData,
 } from "@/utils/profileData";
-import ProfileStatCard from "./component/ProfileStatCard";
-import MaxWidthWrapper from "../wrapper/MaxWidthWrapper";
+import ProfileStatCard from "./ProfileStatCard";
+import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import Tabs from "@/components/global/tabs/CustomTab";
 
 export default function ProfileLayout() {

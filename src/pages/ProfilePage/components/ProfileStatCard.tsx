@@ -6,8 +6,10 @@ interface ProfileStatCardProps {
   }[];
   name: string;
 }
+
 export default function ProfileStatCard(props: ProfileStatCardProps) {
   const { id, images, name } = props;
+
   return (
     <div className="flex flex-col items-center gap-1" key={id}>
       <div className="flex">
