@@ -5,6 +5,7 @@ export const reelsVidinfo = [
     description: "Aja hami gako yah ghumna",
     likes: 49,
     saves: 14,
+    views: 2098,
     comments: [
       { comment: "djljdljs", like: 34, user: "alson" },
       { comment: "djljdljs", like: 34, user: "alson" },
@@ -24,6 +25,7 @@ export const reelsVidinfo = [
     description: "Aja hami gako yah ghumna",
     likes: 29,
     saves: 21,
+    views: 743,
     comments: [
       { comment: "djljdljs", like: 34, user: "alson" },
       { comment: "djljdljs", like: 34, user: "alson" },
@@ -42,6 +44,7 @@ export const reelsVidinfo = [
     description: "Aja hami gako yah ghumna",
     likes: 89,
     saves: 14,
+    views: 897,
     comments: [
       { comment: "djljdljs", like: 34, user: "alson" },
       { comment: "djljdljs", like: 34, user: "alson" },
@@ -59,6 +62,7 @@ export const reelsVidinfo = [
     description: "Aja hami gako yah ghumna",
     likes: 28,
     saves: 9,
+    views: 203,
     comments: [
       { comment: "djljdljs", like: 34, user: "alson" },
       { comment: "djljdljs", like: 34, user: "alson" },
