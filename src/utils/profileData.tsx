@@ -1,4 +1,6 @@
-import PostTabContent from "@/components/global/tabs/components/PostTabContent";
+import PostTabContent from "@/pages/ProfilePage/components/PostTabContent";
+import ReelsTabContent from "@/pages/ProfilePage/components/ReelsTabContent";
+import SavedTabContent from "@/pages/ProfilePage/components/SavedTabContent";
 
 export const profileFollowersData = [
   {
@@ -47,11 +49,11 @@ export const ProfileDetailsTabsData = [
   {
     id: "Reels",
     label: "Reels",
-    component: PostTabContent,
+    component: ReelsTabContent,
   },
   {
     id: "saved",
     label: "Saved",
-    component: PostTabContent,
+    component: SavedTabContent,
   },
 ];

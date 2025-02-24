@@ -49,7 +49,7 @@ export default forwardRef<HTMLInputElement, InputProps>(function Input(
     variant,
     padding,
     colorscheme,
-    required,
+    required = true,
     disabled,
     ...rest
   } = props;

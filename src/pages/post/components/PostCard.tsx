@@ -1,7 +1,17 @@
-import { Heart, MessageCircleMore } from "lucide-react";
+import { Heart } from "lucide-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function PostCard() {
+  const [like, setLike] = useState(false);
+  const [count, setCount] = useState(200);
+
+  const handleLike = () => {
+    like ? setCount(count - 1)
+      : setCount(count + 1);
+    setLike(!like);
+  }
+
   const navigate = useNavigate();
   return (
     <div className="flex flex-col gap-2 bg-white shadow-lg p-3 rounded-2xl">
@@ -42,14 +52,18 @@ export default function PostCard() {
       </div>
 
       <div className="flex gap-4 font-medium">
-        <div className="flex gap-1 items-center">
-          <Heart size={24} fill="#FF7920" color="#FF7920" />
-          <p>400k</p>
-        </div>
-        <div className="flex gap-1 items-center">
+        <span className="flex gap-1 items-center">
+          <Heart size={24}
+            fill={`${like ? "#FF7920" : "white"}`}
+            color={`${like ? "#FF7920" : "#000000"}`}
+            onClick={handleLike}
+          />
+          <p>{count}</p>
+        </span>
+        {/* <div className="flex gap-1 items-center">
           <MessageCircleMore size={24} />
           <p>23.1k</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

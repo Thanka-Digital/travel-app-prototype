@@ -1,6 +1,6 @@
 import LocationExtraInfo from "@/pages/LocationPage/components/LocationExtraInfo";
 import LocationHotels from "@/pages/LocationPage/components/LocationHotels";
-import PostTabContent from "@/components/global/tabs/components/PostTabContent";
+import PostTabContent from "@/pages/ProfilePage/components/PostTabContent";
 import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
 export const LocationInfo = [
