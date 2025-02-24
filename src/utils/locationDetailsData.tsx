@@ -1,6 +1,6 @@
 import LocationExtraInfo from "@/pages/LocationPage/components/LocationExtraInfo";
 import LocationHotels from "@/pages/LocationPage/components/LocationHotels";
-import PostTabContent from "@/pages/ProfilePage/components/PostTabContent";
+import LocationPosts from "@/pages/LocationPage/components/LocationPosts";
 import { AudioWaveform, Bike, SunSnow, TrendingUp } from "lucide-react";
 
 export const LocationInfo = [
@@ -86,7 +86,7 @@ export const locationDetailsTabsData = [
   {
     id: "posts",
     label: "Posts",
-    component: PostTabContent,
+    component: LocationPosts,
   },
   {
     id: "hotels",

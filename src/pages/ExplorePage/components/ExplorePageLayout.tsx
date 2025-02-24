@@ -18,6 +18,7 @@ export const ExplorePageLayout = ({ children }: { children: React.ReactNode }) =
           placeholder="Search..."
           icon={<Search color="gray" />}
           variant={"unstyled"}
+          required={false}
         />
       </section>
 

@@ -22,6 +22,7 @@ export default function ReelPostFrom() {
           <Input
             className="bg-white"
             placeholder="Caption"
+            label="Caption"
           />
 
           <FileInput accept=".mp4,.mov,.avi" />
