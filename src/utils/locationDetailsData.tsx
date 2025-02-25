@@ -7,7 +7,7 @@ export const locationInfo = [
   {
     id: 1,
     image: 'https://plus.unsplash.com/premium_photo-1661949303004-bab6b7a82912?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2hhbnRpJTIwc3R1cGF8ZW58MHx8MHx8fDA%3D',
-    city: 'Pokhara',
+    location: 'Pokhara',
     visitorsCount: '7k+ visitors',
     placeName: 'Shanti stupa',
     link: '/location-details',
@@ -17,7 +17,7 @@ export const locationInfo = [
   {
     id: 2,
     image: 'https://www.nepaltourhiking.com/wp-content/uploads/2024/01/Kahun-Danda-Pokhara.jpg',
-    city: 'Pokhara',
+    location: 'Pokhara',
     visitorsCount: '6k+ visitors',
     placeName: 'Kahundada',
     link: '/location-details',
@@ -27,7 +27,7 @@ export const locationInfo = [
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1687495423260-5466c1c83c1f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    city: 'Pokhara',
+    location: 'Pokhara',
     visitorsCount: '3k+ visitors',
     placeName: 'Sarangkot',
     link: '/location-details',
@@ -38,6 +38,7 @@ export const locationInfo = [
     id: 4,
     image: 'https://plus.unsplash.com/premium_photo-1700558685152-81f821a40724?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9vbmhpbGx8ZW58MHx8MHx8fDA%3D',
     visitorsCount: '8k+ visitors',
+    location: 'Kaski',
     placeName: 'Poon hill',
     link: '/location-details',
     category: "mountains",
@@ -46,7 +47,7 @@ export const locationInfo = [
   {
     id: 5,
     image: "https://images.unsplash.com/photo-1693030817674-31c8d701f364?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    city: "Kaski",
+    location: "Kaski",
     visitorsCount: "6k+ visitors",
     placeName: "Khumai Dada",
     link: "/location-details",
@@ -56,7 +57,7 @@ export const locationInfo = [
   {
     id: 6,
     image: "https://images.unsplash.com/photo-1731692017808-9c58c66e3cd9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a29yaXxlbnwwfHwwfHx8MA%3D%3D",
-    city: "Kaski",
+    location: "Kaski",
     visitorsCount: "10k+ visitors",
     placeName: "Kori",
     link: "/location-details",
@@ -66,7 +67,7 @@ export const locationInfo = [
   {
     id: 7,
     image: "https://images.unsplash.com/photo-1626548799631-11f8ee9b216c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    city: "Kathmandu",
+    location: "Kathmandu",
     visitorsCount: "27k+ visitors",
     placeName: "Basantapur",
     link: "/location-details",
@@ -76,7 +77,7 @@ export const locationInfo = [
   {
     id: 8,
     image: 'https://images.unsplash.com/photo-1722595631994-6de3b5318da1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxha2VzaWRlJTIwcG9raGFyYXxlbnwwfHwwfHx8MA%3D%3D',
-    city: 'Pokhara',
+    location: 'Pokhara',
     visitorsCount: '34k+ visitors',
     placeName: 'Fewa Tal',
     link: '/location-details',
@@ -86,7 +87,7 @@ export const locationInfo = [
   {
     id: 9,
     image: "https://plus.unsplash.com/premium_photo-1664302740919-e6645ba8c053?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpdHdhbiUyMG5hdGlvbmFsJTIwcGFya3xlbnwwfHwwfHx8MA%3D%3D",
-    city: "Chitwan",
+    location: "Chitwan",
     visitorsCount: "21k+ visitors",
     placeName: "Chitwan National Park",
     link: "/location-details",
@@ -96,7 +97,7 @@ export const locationInfo = [
   {
     id: 10,
     image: 'https://images.unsplash.com/photo-1523058941547-c2ffb39fe1df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXRsYW50aWMlMjBvY2VhbnxlbnwwfHwwfHx8MA%3D%3D',
-    city: 'Atlanta',
+    location: 'Atlanta',
     visitorsCount: '10k+ visitors',
     placeName: 'Atlantic Ocean',
     link: '/location-details',
@@ -106,7 +107,7 @@ export const locationInfo = [
   {
     id: 11,
     image: "https://images.unsplash.com/photo-1563377226776-1b0bd48458f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW50YXJ0aWMlMjBvY2VhbnxlbnwwfHwwfHx8MA%3D%3D",
-    city: "Antartica",
+    location: "Antartica",
     visitorsCount: "23k+ visitors",
     placeName: "Antartic Ocean",
     link: "/location-details",
@@ -116,7 +117,7 @@ export const locationInfo = [
   {
     id: 12,
     image: "https://images.unsplash.com/photo-1578325413871-62d979ef9629?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGFjaWZpYyUyMG9jZWFufGVufDB8fDB8fHww",
-    city: "Pacific",
+    location: "Pacific",
     visitorsCount: "23k+ visitors",
     placeName: "Pacific Ocean",
     link: "/location-details",

@@ -8,14 +8,10 @@ export default function HillsExplorePage() {
     <ExplorePageLayout>
       <div className="flex flex-col gap-4 px-6 py-2">
         {
-          locationInfo.filter((h) => h.category === "hills").map((object, index) => (
-            <ExplorePageLoadingState key={index}>
+          locationInfo.filter((h) => h.category === "hills").map((object) => (
+            <ExplorePageLoadingState key={object.id}>
               <LocationCard
-                city={object.city}
-                image={object.image}
-                link={object.link}
-                placeName={object.placeName}
-                visitorsCount={object.visitorsCount}
+                {...object}
               />
             </ExplorePageLoadingState>
           ))

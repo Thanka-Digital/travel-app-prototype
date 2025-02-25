@@ -6,7 +6,7 @@ interface LocationCardProps {
   image: string;
   visitorsCount: string;
   placeName: string;
-  city: string;
+  location: string;
   link: string;
 }
 
@@ -16,7 +16,7 @@ export default function LocationCard(props: LocationCardProps) {
     image,
     visitorsCount,
     placeName,
-    city,
+    location,
     link
   } = props;
 
@@ -33,7 +33,7 @@ export default function LocationCard(props: LocationCardProps) {
       <div className="absolute bottom-3 flex w-full justify-between px-4">
         <div>
           <p className="text-xl text-white font-semibold">{placeName}</p>
-          <p className="text-[#FF7920] font-medium">{city}</p>
+          <p className="text-[#FF7920] font-medium">{location}</p>
         </div>
         <Button
           variant="solid"

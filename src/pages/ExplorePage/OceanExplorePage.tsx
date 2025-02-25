@@ -8,14 +8,10 @@ export default function OceanExplorePage() {
     <ExplorePageLayout>
       <div className="flex flex-col gap-4 px-6 py-2">
         {
-          locationInfo.filter((o) => o.category === "ocean").map((object, index) => (
-            <ExplorePageLoadingState key={index}>
+          locationInfo.filter((o) => o.category === "ocean").map((object) => (
+            <ExplorePageLoadingState key={object.id}>
               <LocationCard
-                city={object.city}
-                image={object.image}
-                link={object.link}
-                placeName={object.placeName}
-                visitorsCount={object.visitorsCount}
+                {...object}
               />
             </ExplorePageLoadingState>
           ))
