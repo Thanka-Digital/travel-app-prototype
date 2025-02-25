@@ -74,14 +74,10 @@ export default function PostDetailsPage() {
         <div className="py-4 flex flex-col gap-4">
           <h1 className="text-lg font-medium">Posted About</h1>
           {
-            locationInfo.map((object, index) => (
+            locationInfo.map((object) => (
               <LocationCard
-                city={object.city}
-                image={object.image}
-                link={object.link}
-                placeName={object.placeName}
-                visitorsCount={object.visitorsCount}
-                key={index}
+                {...object}
+                key={object.id}
               />
             ))
           }

@@ -1,25 +1,38 @@
+interface HotelCardProps {
+  hotelName: string;
+  image: string;
+  price: number;
+  description: string;
+}
 
-export default function HotelCard() {
+export default function HotelCard(props: HotelCardProps) {
+  const {
+    hotelName,
+    image,
+    description,
+    price
+  } = props
+
   return (
     <div className="bg-white shadow-lg p-3 rounded-2xl">
       <div className="flex gap-3">
         <img
-          src="SplashImg/s5.png"
+          src={image}
           alt="hotel image"
           className="h-24 object-cover rounded-xl"
         />
         <div className="flex flex-col">
-          <p className="font-medium text-sm">Hotel Phewa</p>
+          <p className="font-medium text-sm">{hotelName}</p>
           <p className="text-xs">
-            Lorem ipsum dolor sit amet cons ectetur adipisicing elit.
+            {description}
           </p>
 
           <div className="flex flex-col mt-2">
-            <p className="text-orange-500 text-xs">NPrs. 600 / day</p>
-            <section className="flex gap-1 text-xs font-medium">
+            <p className="text-orange-500 text-xs">NPrs. {price}/ day</p>
+            {/* <section className="flex gap-1 text-xs font-medium">
               <p>#cleanrooms</p>
               <p>#lakeview</p>
-            </section>
+            </section> */}
           </div>
         </div>
       </div>

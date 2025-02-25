@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 
 export default function LocationPosts() {
   const { id } = useParams();
+
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col gap-3 mt-4 pb-28">
