@@ -48,7 +48,7 @@ const routes: RouteObject[] = [
     element: <ProfileDetailsPage />
   },
   {
-    path: "/location-details",
+    path: "/location-details/:id",
     element: <LocationDetailsPage />,
   },
   {

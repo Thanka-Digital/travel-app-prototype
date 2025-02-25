@@ -7,7 +7,7 @@ interface LocationCardProps {
   visitorsCount: string;
   placeName: string;
   location: string;
-  link: string;
+  id: number;
 }
 
 export default function LocationCard(props: LocationCardProps) {
@@ -17,7 +17,7 @@ export default function LocationCard(props: LocationCardProps) {
     visitorsCount,
     placeName,
     location,
-    link
+    id
   } = props;
 
   return (
@@ -39,7 +39,7 @@ export default function LocationCard(props: LocationCardProps) {
           variant="solid"
           className="h-11 rounded-full bg-white flex items-center"
           onClick={() => {
-            navigate(link)
+            navigate(`/location-details/${id}`)
           }}
         >
           <p className=" text-black text-md font-semibold ">View</p>

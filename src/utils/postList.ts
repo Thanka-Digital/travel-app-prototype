@@ -9,6 +9,7 @@ export const postList = [
     ],
     likeCount: 120,
     userId: 1,
+    locationId: 1,
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const postList = [
     ],
     likeCount: 250,
     userId: 2,
+    locationId: 2,
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const postList = [
     ],
     likeCount: 340,
     userId: 3,
+    locationId: 3,
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const postList = [
     ],
     likeCount: 175,
     userId: 4,
+    locationId: 4,
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const postList = [
     ],
     likeCount: 400,
     userId: 5,
+    locationId: 5,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ export const postList = [
     ],
     likeCount: 80,
     userId: 6,
+    locationId: 5,
   },
   {
     id: 7,
@@ -75,6 +81,7 @@ export const postList = [
     ],
     likeCount: 220,
     userId: 7,
+    locationId: 6,
   },
   {
     id: 8,
@@ -86,6 +93,7 @@ export const postList = [
     ],
     likeCount: 310,
     userId: 8,
+    locationId: 7,
   },
   {
     id: 9,
@@ -97,6 +105,7 @@ export const postList = [
     ],
     likeCount: 295,
     userId: 9,
+    locationId: 8,
   },
   {
     id: 10,
@@ -108,6 +117,7 @@ export const postList = [
     ],
     likeCount: 530,
     userId: 10,
+    locationId: 5,
   },
   {
     id: 11,
@@ -119,6 +129,7 @@ export const postList = [
     ],
     likeCount: 450,
     userId: 11,
+    locationId: 5,
   },
   {
     id: 12,
@@ -130,6 +141,7 @@ export const postList = [
     ],
     likeCount: 120,
     userId: 1,
+    locationId: 5,
   },
   {
     id: 13,
@@ -141,6 +153,7 @@ export const postList = [
     ],
     likeCount: 120,
     userId: 1,
+    locationId: 5,
   },
   {
     id: 14,
@@ -152,6 +165,7 @@ export const postList = [
     ],
     likeCount: 120,
     userId: 1,
+    locationId: 5,
   },
   {
     id: 15,
@@ -163,5 +177,6 @@ export const postList = [
     ],
     likeCount: 120,
     userId: 1,
+    locationId: 5,
   },
 ];

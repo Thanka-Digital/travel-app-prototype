@@ -17,12 +17,9 @@ export default function PostCard(props: PostCardProps) {
   } = props.post;
 
   const [like, setLike] = useState(false);
-  const [count, setCount] = useState(200);
   const [bookmark, setBookmark] = useState(false);
 
   const handleLike = () => {
-    like ? setCount(count - 1)
-      : setCount(count + 1);
     setLike(!like);
   }
 

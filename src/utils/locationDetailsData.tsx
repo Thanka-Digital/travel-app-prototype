@@ -10,7 +10,6 @@ export const locationInfo = [
     location: 'Pokhara',
     visitorsCount: '7k+ visitors',
     placeName: 'Shanti stupa',
-    link: '/location-details',
     category: "hills",
     description: "Hills are naturally elevated landforms with gentle slopes, rising above the surrounding terrain."
   },
@@ -20,7 +19,6 @@ export const locationInfo = [
     location: 'Pokhara',
     visitorsCount: '6k+ visitors',
     placeName: 'Kahundada',
-    link: '/location-details',
     category: "hills",
     description: "Hills are naturally elevated landforms with gentle slopes, rising above the surrounding terrain."
   },
@@ -30,7 +28,6 @@ export const locationInfo = [
     location: 'Pokhara',
     visitorsCount: '3k+ visitors',
     placeName: 'Sarangkot',
-    link: '/location-details',
     category: "hills",
     description: "Hills are naturally elevated landforms with gentle slopes, rising above the surrounding terrain."
   },
@@ -40,7 +37,6 @@ export const locationInfo = [
     visitorsCount: '8k+ visitors',
     location: 'Kaski',
     placeName: 'Poon hill',
-    link: '/location-details',
     category: "mountains",
     description: "Towering peaks rise majestically, cloaked in mist and rugged beauty."
   },
@@ -50,7 +46,6 @@ export const locationInfo = [
     location: "Kaski",
     visitorsCount: "6k+ visitors",
     placeName: "Khumai Dada",
-    link: "/location-details",
     category: "mountains",
     description: "Towering peaks rise majestically, cloaked in mist and rugged beauty."
   },
@@ -60,7 +55,6 @@ export const locationInfo = [
     location: "Kaski",
     visitorsCount: "10k+ visitors",
     placeName: "Kori",
-    link: "/location-details",
     category: "mountains",
     description: "Towering peaks rise majestically, cloaked in mist and rugged beauty."
   },
@@ -70,7 +64,6 @@ export const locationInfo = [
     location: "Kathmandu",
     visitorsCount: "27k+ visitors",
     placeName: "Basantapur",
-    link: "/location-details",
     category: "urban",
     description: "Bustling streets pulse with life, surrounded by towering skyscrapers and neon lights."
   },
@@ -80,7 +73,6 @@ export const locationInfo = [
     location: 'Pokhara',
     visitorsCount: '34k+ visitors',
     placeName: 'Fewa Tal',
-    link: '/location-details',
     category: "urban",
     description: "Bustling streets pulse with life, surrounded by towering skyscrapers and neon lights."
   },
@@ -90,7 +82,6 @@ export const locationInfo = [
     location: "Chitwan",
     visitorsCount: "21k+ visitors",
     placeName: "Chitwan National Park",
-    link: "/location-details",
     category: "urban",
     description: "Bustling streets pulse with life, surrounded by towering skyscrapers and neon lights."
   },
@@ -100,7 +91,6 @@ export const locationInfo = [
     location: 'Atlanta',
     visitorsCount: '10k+ visitors',
     placeName: 'Atlantic Ocean',
-    link: '/location-details',
     category: "ocean",
     description: "Endless waves shimmer under the sun, stretching into the serene horizon."
   },
@@ -110,7 +100,6 @@ export const locationInfo = [
     location: "Antartica",
     visitorsCount: "23k+ visitors",
     placeName: "Antartic Ocean",
-    link: "/location-details",
     category: "ocean",
     description: "Endless waves shimmer under the sun, stretching into the serene horizon."
   },
@@ -120,7 +109,6 @@ export const locationInfo = [
     location: "Pacific",
     visitorsCount: "23k+ visitors",
     placeName: "Pacific Ocean",
-    link: "/location-details",
     category: "ocean",
     description: "Endless waves shimmer under the sun, stretching into the serene horizon."
   },
