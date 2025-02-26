@@ -12,8 +12,8 @@ export function reelReducer(
 ): typeof initialReels {
   switch (action.type) {
     case "LIKE":
-      return state.map((reel, index) => {
-        if (index === action.payload) {
+      return state.map((reel) => {
+        if (reel.id === action.payload) {
           return {
             ...reel,
             isLiked: true,
@@ -23,8 +23,8 @@ export function reelReducer(
         return reel;
       });
     case "UNLIKE":
-      return state.map((reel, index) => {
-        if (index === action.payload) {
+      return state.map((reel) => {
+        if (reel.id === action.payload) {
           return {
             ...reel,
             isLiked: false,
@@ -34,8 +34,8 @@ export function reelReducer(
         return reel;
       });
     case "SAVE":
-      return state.map((reel, index) => {
-        if (index === action.payload) {
+      return state.map((reel) => {
+        if (reel.id === action.payload) {
           return {
             ...reel,
             isSaved: true,
@@ -45,8 +45,8 @@ export function reelReducer(
         return reel;
       });
     case "UNSAVE":
-      return state.map((reel, index) => {
-        if (index === action.payload) {
+      return state.map((reel) => {
+        if (reel.id === action.payload) {
           return {
             ...reel,
             isSaved: false,

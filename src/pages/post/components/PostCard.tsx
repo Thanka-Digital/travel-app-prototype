@@ -1,6 +1,7 @@
+import { PostStateDispatch } from "@/providers/Context/context";
 import { userList } from "@/utils/userList";
 import { Bookmark, Heart } from "lucide-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface PostCardProps {
@@ -8,6 +9,7 @@ interface PostCardProps {
 }
 
 export default function PostCard(props: PostCardProps) {
+  const postDispatch = useContext(PostStateDispatch)
   const {
     caption,
     userId,
@@ -16,12 +18,21 @@ export default function PostCard(props: PostCardProps) {
     profile = false
   } = props.post;
 
-  const [like, setLike] = useState(false);
-  const [bookmark, setBookmark] = useState(false);
-
   const handleLike = () => {
-    setLike(!like);
+    if (props.post.isLiked) {
+      postDispatch({
+        type: "UNLIKE",
+        payload: props.post.id,
+      })
+    } else {
+      postDispatch({
+        type: "LIKE",
+        payload: props.post.id,
+      })
+    }
   }
+
+  const [bookmark, setBookmark] = useState(false);
 
   const user = userList.find((user) => user.userId === userId)
 
@@ -69,8 +80,8 @@ export default function PostCard(props: PostCardProps) {
       <div className="flex gap-4 font-medium">
         <span className="flex gap-1 items-center">
           <Heart size={24}
-            fill={`${like ? "#FF7920" : "white"}`}
-            color={`${like ? "#FF7920" : "#000000"}`}
+            fill={`${props.post.isLiked ? "#FF7920" : "white"}`}
+            color={`${props.post.isLiked ? "#FF7920" : "#000000"}`}
             onClick={handleLike}
           />
           <p>{likeCount}</p>

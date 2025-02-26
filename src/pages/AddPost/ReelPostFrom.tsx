@@ -9,7 +9,7 @@ export default function ReelPostFrom() {
   const navigate = useNavigate()
 
   return (
-    <div className="bg-white text-black h-screen py-4">
+    <form className="bg-white text-black h-screen py-4">
       <BackButton />
 
       <div className="mt-6">
@@ -37,6 +37,6 @@ export default function ReelPostFrom() {
           </section>
         </section>
       </div>
-    </div>
+    </form>
   )
 }

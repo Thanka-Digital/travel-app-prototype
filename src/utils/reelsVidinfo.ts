@@ -1,7 +1,8 @@
 export const reelsVidinfo = [
   {
+    id: 1,
     path: "/ReelsVid/Vid-1.mp4",
-    user: "Sunil-Sexy",
+    user: "Sunil",
     description: "Aja hami gako yah ghumna",
     likes: 49,
     saves: 14,
@@ -20,6 +21,7 @@ export const reelsVidinfo = [
     isLoading: true,
   },
   {
+    id: 2,
     path: "/ReelsVid/Vid-2.mp4",
     user: "Bipin",
     description: "Aja hami gako yah ghumna",
@@ -39,8 +41,9 @@ export const reelsVidinfo = [
 
   },
   {
+    id: 3,
     path: "/ReelsVid/Vid-3.mp4",
-    user: "Alson-Hoty",
+    user: "Alson",
     description: "Aja hami gako yah ghumna",
     likes: 89,
     saves: 14,
@@ -57,8 +60,9 @@ export const reelsVidinfo = [
 
   },
   {
+    id: 4,
     path: "/ReelsVid/Vid-1.mp4",
-    user: "Utsab-don",
+    user: "Utsab",
     description: "Aja hami gako yah ghumna",
     likes: 28,
     saves: 9,

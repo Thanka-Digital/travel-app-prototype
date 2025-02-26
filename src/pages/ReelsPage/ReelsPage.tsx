@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { useState, useEffect } from "react";
 
 interface ReelStructureProps {
-  index: number;
+  id: number;
   path: string;
   user: string;
   description: string;
@@ -39,12 +39,12 @@ const ReelStructure = (props: ReelStructureProps) => {
     if (props.isLiked) {
       reelDispatch({
         type: "UNLIKE",
-        payload: props.index,
+        payload: props.id,
       })
     } else {
       reelDispatch({
         type: "LIKE",
-        payload: props.index,
+        payload: props.id,
       })
     }
   }
@@ -53,12 +53,12 @@ const ReelStructure = (props: ReelStructureProps) => {
     if (props.isSaved) {
       reelDispatch({
         type: "UNSAVE",
-        payload: props.index,
+        payload: props.id,
       })
     } else {
       reelDispatch({
         type: "SAVE",
-        payload: props.index
+        payload: props.id,
       })
     }
   }
@@ -128,11 +128,10 @@ export default function ReelsPage() {
     <div className="h-full w-full">
       <TASlider vertical={true}>
         {
-          reels.map((object, index) => (
+          reels.map((object) => (
             <ReelStructure
               {...object}
-              index={index}
-              key={index}
+              key={object.id}
             />
           ))
         }

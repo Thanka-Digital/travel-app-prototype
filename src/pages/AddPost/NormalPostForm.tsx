@@ -8,13 +8,13 @@ import { useNavigate } from "react-router-dom";
 
 export const FileInput = ({ accept }: { accept: string }) => {
   return (
-    <form className='flex flex-col items-center'>
+    <div className='flex flex-col items-center'>
       <label htmlFor="fileInput" className='px-28 py-10 rounded-xl border-2 border-dashed'>
         <input type="file" multiple id="fileInput" accept={accept}
           style={{ display: "none" }} required />
         <ImageUp size={92} color="#D2D2D2" />
       </label>
-    </form>
+    </div>
   )
 }
 
