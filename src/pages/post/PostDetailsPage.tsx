@@ -7,12 +7,14 @@ import { Heart, MessageCircleMore } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { PostContext, PostStateDispatch } from "@/providers/Context/context";
 import { useContext } from "react";
+import { userList } from "@/utils/userList";
 
 export default function PostDetailsPage() {
   const { id } = useParams();
   const postDispatch = useContext(PostStateDispatch)
   const finalePost = useContext(PostContext)
   const post = finalePost.find((p) => p.id === Number(id));
+  const user = userList.find((user) => user.userId === post?.userId)
 
   const handleLike = () => {
     if (post) {
@@ -38,12 +40,12 @@ export default function PostDetailsPage() {
         <div className="pt-16 flex flex-col gap-3">
           <div className="flex gap-2 items-center">
             <img
-              src="SplashImg/s3.png"
+              src={user?.userImage}
               alt="profile image"
               className="h-12 w-12 rounded-full"
             />
             <div className="flex flex-col">
-              <p className="font-medium">Jane Doe</p>
+              <p className="font-medium">{user?.userName}</p>
               <p className="text-gray-500 text-sm font-medium">Posted : 3 days ago</p>
             </div>
           </div>
@@ -78,7 +80,7 @@ export default function PostDetailsPage() {
 
           <div className="flex gap-3 items-center -mt-3">
             <img
-              src="SplashImg/s1.png"
+              src="/SplashImg/s1.png"
               alt="profile image"
               className="h-8 w-8 rounded-full"
             />

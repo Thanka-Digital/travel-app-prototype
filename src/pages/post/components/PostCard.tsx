@@ -52,7 +52,7 @@ export default function PostCard(props: PostCardProps) {
         <img
           src={user?.userImage}
           alt="profile image"
-          className="h-12 w-12 rounded-full"
+          className="h-12 w-12 rounded-full object-cover"
         />
         <div className="flex flex-col">
           <p className="font-medium">{user?.userName}</p>

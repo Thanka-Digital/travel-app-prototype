@@ -16,12 +16,12 @@ export default function ProfileDetailsPage() {
         <div className="pt-8">
           <div className="relative flex flex-col gap-1 items-center">
             <img
-              src="SplashImg/s3.png"
+              src="/logo.png"
               alt="profile image"
               className="h-[10vh] w-[10vh] rounded-full"
             />
-            <p className="font-semibold mt-1">Samuel Jackson</p>
-            <p className="text-gray-500 text-xs">@rocker231</p>
+            <p className="font-semibold mt-1">Thanka Digital</p>
+            <p className="text-gray-500 text-xs">@IT company</p>
           </div>
 
           <div className="flex w-full justify-evenly mt-4">
