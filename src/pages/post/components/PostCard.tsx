@@ -42,7 +42,10 @@ export default function PostCard(props: PostCardProps) {
 
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col gap-2 bg-white shadow-lg p-3 rounded-2xl">
+    <div
+      className="flex flex-col gap-2 bg-white shadow-lg p-3 rounded-2xl"
+      onClick={() => navigate("/post-detail")}
+    >
 
       <div className="flex gap-2 items-center">
         <img
@@ -60,24 +63,33 @@ export default function PostCard(props: PostCardProps) {
         {caption}
       </p>
 
-      <div
-        className="grid grid-rows-2 grid-cols-5 gap-2 "
-        onClick={() => navigate("/post-detail")}
-      >
+      <div className={`grid grid-rows-2 gap-2 grid-cols-4 max-h-[120px]`}>
         {
-          images.map((object, index) => (
-            <img
-              src={object}
-              alt={object}
-              className={`w-full rounded-md object-cover
-                 ${index == 0 ? "h-[120px] row-span-2 col-span-3" : "h-[56px] row-span-1 col-span-2"}`}
+          images.slice(0, 3).map((object, index) => (
+            <div
               key={index}
-            />
+              className={`relative
+                ${images.length === 1 && "row-span-2 col-span-4"} 
+                ${images.length === 2 && "row-span-2 col-span-2"}
+                ${images.length >= 3 && index === 0 ? "row-span-2 col-span-2" : "row-span-1 col-span-2"}
+                `}
+            >
+              <img
+                src={object}
+                alt={object}
+                className={`w-full rounded-md object-cover h-full`}
+              />
+              {(images.length > 3 && index === 2) && (
+                <span className="absolute rounded-md top-0 bottom-0 right-0 left-0 bg-black/35 flex items-center justify-center text-white text-xl">
+                  +{images.length - 3}
+                </span>
+              )}
+            </div>
           ))
         }
       </div>
 
-      <div className="flex gap-4 font-medium">
+      <div className="flex gap-4 font-medium" onClick={(e) => e.stopPropagation()}>
         <span className="flex gap-1 items-center">
           <Heart size={24}
             fill={`${props.post.isLiked ? "#FF7920" : "white"}`}

@@ -5,6 +5,9 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
       "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
     ],
     likeCount: 120,
@@ -18,7 +21,7 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
     ],
     likeCount: 250,
     userId: 2,
@@ -31,6 +34,10 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
       "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
     ],
     likeCount: 340,
@@ -44,6 +51,9 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
       "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
     ],
     likeCount: 175,
@@ -57,6 +67,8 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
       "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
     ],
     likeCount: 400,
@@ -70,7 +82,8 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
     ],
     likeCount: 80,
     userId: 6,
@@ -81,6 +94,9 @@ export const postList = [
     id: 7,
     caption: "Delicious homemade pizza 🍕",
     images: [
+      "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
+      "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
       "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
@@ -96,7 +112,8 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
     ],
     likeCount: 310,
     userId: 8,
@@ -109,7 +126,9 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
     ],
     likeCount: 295,
     userId: 9,
@@ -122,7 +141,8 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
     ],
     likeCount: 530,
     userId: 10,
@@ -133,6 +153,9 @@ export const postList = [
     id: 11,
     caption: "Night sky full of stars 🌌",
     images: [
+      "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
+      "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
       "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
@@ -148,7 +171,9 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
+      "https://api.dicebear.com/9.x/glass/svg?seed=hero",
     ],
     likeCount: 120,
     userId: 1,
@@ -174,7 +199,8 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=hero",
     ],
     likeCount: 120,
     userId: 1,
@@ -187,7 +213,10 @@ export const postList = [
     images: [
       "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
       "https://api.dicebear.com/9.x/glass/svg?seed=hero",
-      "https://api.dicebear.com/9.x/glass/svg?seed=nepali"
+      "https://api.dicebear.com/9.x/glass/svg?seed=nepali",
+      "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
+      "https://api.dicebear.com/9.x/glass/svg?seed=hero",
+      "https://api.dicebear.com/9.x/glass/svg?seed=Jack",
     ],
     likeCount: 120,
     userId: 1,
