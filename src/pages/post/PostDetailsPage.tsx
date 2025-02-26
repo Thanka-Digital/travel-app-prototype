@@ -4,8 +4,32 @@ import TASlider from "@/components/swiper/TASlider";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsData, locationInfo } from "@/utils/locationDetailsData";
 import { Heart, MessageCircleMore } from "lucide-react";
+import { useParams } from "react-router-dom";
+import { PostContext, PostStateDispatch } from "@/providers/Context/context";
+import { useContext } from "react";
 
 export default function PostDetailsPage() {
+  const { id } = useParams();
+  const postDispatch = useContext(PostStateDispatch)
+  const finalePost = useContext(PostContext)
+  const post = finalePost.find((p) => p.id === Number(id));
+
+  const handleLike = () => {
+    if (post) {
+      if (post.isLiked) {
+        postDispatch({
+          type: "UNLIKE",
+          payload: post?.id,
+        })
+      } else {
+        postDispatch({
+          type: "LIKE",
+          payload: post?.id,
+        })
+      }
+    }
+  }
+
   return (
     <main className="bg-white text-black">
       <MaxWidthWrapper>
@@ -24,12 +48,12 @@ export default function PostDetailsPage() {
             </div>
           </div>
           <p className="text-sm font-medium">
-            Went to the phewa lake, was fun. 👋
+            {post?.caption}
           </p>
 
           <TASlider>
             {
-              imgs.map((img, i) => (
+              post?.images.map((img, i) => (
                 <div key={i}>
                   <img src={img} alt="images" className="h-40 w-full object-cover" />
                 </div>
@@ -39,8 +63,12 @@ export default function PostDetailsPage() {
 
           <div className="flex gap-4 my-4 font-medium">
             <div className="flex gap-1 items-center">
-              <Heart size={24} fill="#FF7920" color="#FF7920" />
-              <p>400k</p>
+              <Heart size={24}
+                fill={`${post?.isLiked ? "#FF7920" : "white"}`}
+                color={`${post?.isLiked ? "#FF7920" : "#000000"}`}
+                onClick={handleLike}
+              />
+              <p>{post?.likeCount}</p>
             </div>
             <div className="flex gap-1 items-center">
               <MessageCircleMore size={24} />
@@ -48,27 +76,15 @@ export default function PostDetailsPage() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 -mt-3">
-            <div className="flex gap-3 items-center">
-              <img
-                src="SplashImg/s3.png"
-                alt="profile image"
-                className="h-8 w-8 rounded-full"
-              />
-              <p className="text-sm font-medium">
-                Wow what a beautiful beach.❤️
-              </p>
-            </div>
-            <div className="flex gap-3 items-center">
-              <img
-                src="SplashImg/s1.png"
-                alt="profile image"
-                className="h-8 w-8 rounded-full"
-              />
-              <p className="text-sm font-medium">Heaven is myth. This is real.😎</p>
-            </div>
-            <p className="text-gray-500 font-medium text-sm mt-1">View all comments</p>
+          <div className="flex gap-3 items-center -mt-3">
+            <img
+              src="SplashImg/s1.png"
+              alt="profile image"
+              className="h-8 w-8 rounded-full"
+            />
+            <p className="text-sm font-medium">Heaven is myth. This is real.😎</p>
           </div>
+          <p className="text-gray-500 font-medium text-sm mt-1">View all comments</p>
         </div>
 
         <div className="py-4 flex flex-col gap-4">
@@ -110,11 +126,3 @@ export default function PostDetailsPage() {
     </main>
   );
 }
-
-const imgs = [
-  "SplashImg/s1.png",
-  "SplashImg/s2.png",
-  "SplashImg/s3.png",
-  "SplashImg/s4.png",
-  "SplashImg/s5.png",
-];

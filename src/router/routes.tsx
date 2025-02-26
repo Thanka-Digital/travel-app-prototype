@@ -52,7 +52,7 @@ const routes: RouteObject[] = [
     element: <LocationDetailsPage />,
   },
   {
-    path: "/post-detail",
+    path: "/post-details/:id",
     element: <PostDetailsPage />,
   },
   {

@@ -9,8 +9,10 @@ interface PostCardProps {
 }
 
 export default function PostCard(props: PostCardProps) {
+  const navigate = useNavigate();
   const postDispatch = useContext(PostStateDispatch)
   const {
+    id,
     caption,
     userId,
     likeCount,
@@ -40,11 +42,10 @@ export default function PostCard(props: PostCardProps) {
     setBookmark(!bookmark)
   }
 
-  const navigate = useNavigate();
   return (
     <div
       className="flex flex-col gap-2 bg-white shadow-lg p-3 rounded-2xl"
-      onClick={() => navigate("/post-detail")}
+      onClick={() => navigate(`/post-details/${id}`)}
     >
 
       <div className="flex gap-2 items-center">

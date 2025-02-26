@@ -27,7 +27,7 @@ export default function TASlider(props: TASliderProps) {
 
   var settings = {
     dots: isDotsShow,
-    infinite: true,
+    infinite: false,
     speed: slideSpeed,
     slidesToShow: slidesToShow,
     slidesToScroll: slidesToScroll,
