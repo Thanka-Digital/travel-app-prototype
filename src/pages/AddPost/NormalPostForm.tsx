@@ -21,7 +21,7 @@ export const FileInput = ({ accept }: { accept: string }) => {
 const initialPost = {
   caption: "",
   season: "",
-  transportaion: "",
+  transportation: "",
   temperature: "",
   activities: "",
   location: "",
@@ -85,7 +85,7 @@ export default function NormalPostForm() {
             placeholder="Available mode of transport"
             label="Transportation facility"
             name="transportation"
-            value={normalPost.transportaion}
+            value={normalPost.transportation}
             onChange={handleChange}
           />
           <Input

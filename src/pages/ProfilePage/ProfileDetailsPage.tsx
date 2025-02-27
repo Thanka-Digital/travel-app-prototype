@@ -28,7 +28,7 @@ export default function ProfileDetailsPage() {
             <div>
               <section className="flex">
                 {
-                  userList.filter((u) => u.userId <= 4).map((object) => (
+                  userList.filter((u) => u.userId > 1 && u.userId <= 5).map((object) => (
                     <ProfileStatCard
                       {...object}
                       key={object.userId}
@@ -42,7 +42,7 @@ export default function ProfileDetailsPage() {
             <div>
               <section className="flex">
                 {
-                  userList.filter((u) => u.userId > 4 && u.userId <= 7).map((object) => (
+                  userList.filter((u) => u.userId > 5 && u.userId <= 8).map((object) => (
                     <ProfileStatCard
                       {...object}
                       key={object.userId}

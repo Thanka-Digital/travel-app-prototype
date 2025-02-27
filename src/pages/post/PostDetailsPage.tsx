@@ -74,7 +74,7 @@ export default function PostDetailsPage() {
             </div>
             <div className="flex gap-1 items-center">
               <MessageCircleMore size={24} />
-              <p>23.1k</p>
+              <p>{post?.comments?.length}</p>
             </div>
           </div>
 
@@ -84,7 +84,10 @@ export default function PostDetailsPage() {
               alt="profile image"
               className="h-8 w-8 rounded-full"
             />
-            <p className="text-sm font-medium">Heaven is myth. This is real.😎</p>
+            <section className="font-medium">
+              <p className="text-sm">{post?.comments?.[0].user}</p>
+              <p className="text-xs">{post?.comments?.[0].comment}</p>
+            </section>
           </div>
           <p className="text-gray-500 font-medium text-sm mt-1">View all comments</p>
         </div>

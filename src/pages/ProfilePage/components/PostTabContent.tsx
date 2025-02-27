@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { PostContext } from "@/providers/Context/context";
 
 export default function PostTabContent() {
+  // const[]
   const post = useContext(PostContext)
 
   return (
