@@ -1,13 +1,13 @@
-import {
-  ProfileDetailsTabsData,
-  profileFollowersData,
-  profileFollowingData,
-  profileTeamData,
-} from "@/utils/profileData";
-import ProfileStatCard from "./components/ProfileStatCard";
+import { ProfileDetailsTabsData } from "@/utils/profileData";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import Tabs from "@/components/global/tabs/CustomTab";
 import Navbar from "@/components/global/Navbar";
+import { userList } from "@/utils/userList";
+
+interface ProfileStatCardProps {
+  userId: number;
+  userImage: string;
+}
 
 export default function ProfileDetailsPage() {
   return (
@@ -24,52 +24,60 @@ export default function ProfileDetailsPage() {
             <p className="text-gray-500 text-xs">@IT company</p>
           </div>
 
-          <div className="flex w-full justify-evenly mt-4">
-            {
-              profileFollowersData?.map((profileFollower) => (
-                <ProfileStatCard
-                  key={profileFollower.id}
-                  id={profileFollower.id}
-                  images={profileFollower.images}
-                  name={profileFollower.name}
-                />
-              ))
-            }
+          <div className="flex w-full justify-evenly mt-4 text-sm font-medium text-center">
+            <div>
+              <section className="flex">
+                {
+                  userList.filter((u) => u.userId <= 4).map((object) => (
+                    <ProfileStatCard
+                      {...object}
+                      key={object.userId}
+                    />
+                  ))
+                }
+              </section>
+              <p className="mt-1">234 followers</p>
+            </div>
 
-            {
-              profileTeamData?.map((profileTeam) => (
-                <ProfileStatCard
-                  key={profileTeam.id}
-                  id={profileTeam.id}
-                  images={profileTeam.images}
-                  name={profileTeam.name}
-                />
-              ))
-            }
+            <div>
+              <section className="flex">
+                {
+                  userList.filter((u) => u.userId > 4 && u.userId <= 7).map((object) => (
+                    <ProfileStatCard
+                      {...object}
+                      key={object.userId}
+                    />
+                  ))
+                }
+              </section>
+              <p className="mt-1">8 teams</p>
+            </div>
 
-            {
-              profileFollowingData?.map((profileFollowing) => (
-                <ProfileStatCard
-                  key={profileFollowing.id}
-                  id={profileFollowing.id}
-                  images={profileFollowing.images}
-                  name={profileFollowing.name}
-                />
-              ))
-            }
+            <div>
+              <section className="flex">
+                {
+                  userList.filter((u) => u.userId > 7 && u.userId <= 11).map((object) => (
+                    <ProfileStatCard
+                      {...object}
+                      key={object.userId}
+                    />
+                  ))
+                }
+              </section>
+              <p className="mt-1">90 following</p>
+            </div>
           </div>
 
           <hr className="h-[2px] bg-gray-400 rounded-lg my-2" />
           <div className="px-3 mb-2">
             <p className="text-justify text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
-              molestias quasi fuga animi quae harum incidunt? Suscipit quo
-              corporis voluptate necessitatibus corruption.
+              Innovating with nature in mind. We blend technology and sustainability to build a greener future.
+              <span className="font-medium">🌿💻 #TechForNature</span>
             </p>
             <div className="flex gap-2 text-sm text-[#FF7920] font-medium my-1">
               <p>#wanderer</p>
               <p>#nature</p>
-              <p>#sunny</p>
+              <p>#technology</p>
             </div>
           </div>
         </div>
@@ -78,5 +86,19 @@ export default function ProfileDetailsPage() {
       <Tabs tabsData={ProfileDetailsTabsData} />
       <Navbar />
     </main>
+  );
+}
+
+const ProfileStatCard = (props: ProfileStatCardProps) => {
+  const { userId, userImage } = props;
+
+  return (
+    <div key={userId} className="first:ml-0 -ml-3">
+      <img
+        src={userImage}
+        alt="image"
+        className="h-7 w-7 rounded-full border-2 border-white object-cover"
+      />
+    </div>
   );
 }
