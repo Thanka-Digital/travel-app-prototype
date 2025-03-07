@@ -14,7 +14,12 @@ export const postList = [
     comments: [
       { comment: "The weather today is perfect for a hike!", user: "john_doe" },
       { comment: "I love the smell of fresh rain on the earth.", user: "emily_w" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 2,
@@ -31,7 +36,12 @@ export const postList = [
       { comment: "The sunset over the ocean was breathtaking.", user: "sarah_t" },
       { comment: "Bird watching is so peaceful, I could do it all day.", user: "mark_s" },
       { comment: "The flowers are blooming so beautifully this spring.", user: "lucas_32" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 3,
@@ -48,7 +58,12 @@ export const postList = [
     comments: [
       { comment: "The mountains are calling, I must go!", user: "anna_l" },
       { comment: "Fresh air and trees always make me feel so alive.", user: "michael_r" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 4,
@@ -66,7 +81,12 @@ export const postList = [
       { comment: "The sound of the river flowing is so calming.", user: "carla_g" },
       { comment: "I can never get enough of the stars on a clear night.", user: "olivia_d" },
       { comment: "Nothing beats a picnic by the lake.", user: "james_m" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 5,
@@ -83,7 +103,12 @@ export const postList = [
     comments: [
       { comment: "The mountains are calling, I must go!", user: "anna_l" },
       { comment: "Fresh air and trees always make me feel so alive.", user: "michael_r" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 6,
@@ -103,7 +128,12 @@ export const postList = [
       { comment: "The sound of the river flowing is so calming.", user: "carla_g" },
       { comment: "I can never get enough of the stars on a clear night.", user: "olivia_d" },
       { comment: "Nothing beats a picnic by the lake.", user: "james_m" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 7,
@@ -121,7 +151,12 @@ export const postList = [
     comments: [
       { comment: "Nature walks are the best way to clear your mind.", user: "noah_87" },
       { comment: "The autumn leaves are so vibrant this year!", user: "isabella_n" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 8,
@@ -140,7 +175,12 @@ export const postList = [
       { comment: "Have you ever watched the sunrise from a mountaintop?", user: "jackson_p" },
       { comment: "I love the sound of the wind rustling through the trees.", user: "zoe_w" },
       { comment: "It's amazing how much peace nature can bring.", user: "elijah_r" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 9,
@@ -158,7 +198,12 @@ export const postList = [
       { comment: "I spotted an eagle soaring above the lake today.", user: "sophia_v" },
       { comment: "Rainy days are perfect for cozying up with a good book.", user: "lily_f" },
       { comment: "The scent of pine trees always brings back memories of camping.", user: "liam_j" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 10,
@@ -175,7 +220,12 @@ export const postList = [
     comments: [
       { comment: "The forest feels like a magical place at dusk.", user: "charlotte_w" },
       { comment: "I’ve always wanted to try stargazing in a remote location.", user: "ethan_k" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 11,
@@ -196,7 +246,12 @@ export const postList = [
       { comment: "The waves crashing against the rocks are so soothing.", user: "oliver_f" },
       { comment: "I could spend hours watching squirrels play in the trees.", user: "amelia_s" },
       { comment: "The sight of fireflies at night never gets old.", user: "jack_l" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 12,
@@ -214,7 +269,12 @@ export const postList = [
       { comment: "I love the colors of the sky during sunset.", user: "avery_j" },
       { comment: "Nature has a way of making everything feel right again.", user: "lucas_h" },
       { comment: "I can’t get enough of the sound of rain on the roof.", user: "benjamin_w" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 13,
@@ -233,7 +293,12 @@ export const postList = [
       { comment: "Seeing the first flowers of spring always brightens my day.", user: "zoey_p" },
       { comment: "I love to watch the birds migrate in the fall.", user: "cameron_r" },
       { comment: "The forest after it rains smells so fresh.", user: "mason_t" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 14,
@@ -253,7 +318,12 @@ export const postList = [
       { comment: "The sky looks so different at dawn.", user: "emily_w" },
       { comment: "Every time I visit the mountains, I feel so small but so alive.", user: "oliver_d" },
       { comment: "Nature is truly the best escape from the world.", user: "lucy_b" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
   {
     id: 15,
@@ -274,6 +344,11 @@ export const postList = [
       { comment: "Seeing the first flowers of spring always brightens my day.", user: "zoey_p" },
       { comment: "I love to watch the birds migrate in the fall.", user: "cameron_r" },
       { comment: "The forest after it rains smells so fresh.", user: "mason_t" }
-    ]
+    ],
+    season: "Autumn",
+    transportation: "Bus",
+    temperature: "13 C",
+    activities: "JPT",
+    location: 'Pokhara',
   },
 ];

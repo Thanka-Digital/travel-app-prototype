@@ -3,22 +3,27 @@ import { PostHeading } from "./AddPostPage";
 import Button from "@/components/form/button/Button";
 import { ImageUp } from "lucide-react";
 import BackButton from "@/components/global/BackButton";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { PostStateDispatch } from "@/providers/Context/context";
 
 export const FileInput = ({ accept }: { accept: string }) => {
   return (
     <div className='flex flex-col items-center'>
       <label htmlFor="fileInput" className='px-28 py-10 rounded-xl border-2 border-dashed'>
         <input type="file" multiple id="fileInput" accept={accept}
-          style={{ display: "none" }} required />
+          style={{ display: "none" }} />
         <ImageUp size={92} color="#D2D2D2" />
       </label>
     </div>
   )
 }
 
-const initialPost = {
+const initialPost: Partial<Post> = {
+  userId: 1,
+  isLiked: false,
+  likeCount: 0,
+  images: [],
   caption: "",
   season: "",
   transportation: "",
@@ -29,7 +34,9 @@ const initialPost = {
 
 export default function NormalPostForm() {
   const navigate = useNavigate();
-  const [normalPost, setNormalPost] = useState(initialPost);
+  const [normalPost, setNormalPost] = useState<Partial<Post>>(initialPost);
+  const [postImages, setPostImages] = useState<string[]>([]);
+  const postDispatch = useContext(PostStateDispatch)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
@@ -41,8 +48,12 @@ export default function NormalPostForm() {
 
   const handlePostAdd = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // setNormalPost(prev => ({ ...prev, }));
+    postDispatch({
+      type: "ADD",
+      payload: {
+        ...normalPost, id: 200
+      } as Post,
+    })
     setNormalPost(initialPost);
     navigate('/user-profile')
   }
@@ -116,6 +127,7 @@ export default function NormalPostForm() {
           <Button
             className="rounded-3xl mt-4 px-10 py-3 text-white"
             type="submit"
+            onClick={() => handlePostAdd}
           >Create Post</Button>
         </section>
       </div>

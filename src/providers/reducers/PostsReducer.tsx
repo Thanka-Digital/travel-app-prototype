@@ -1,13 +1,13 @@
 import { postList } from "@/utils/postList";
 export type PostContextAction = {
-  type: "LIKE" | "UNLIKE"
-  payload: number;
+  type: "LIKE" | "UNLIKE" | "ADD"
+  payload: number | Post;
 }
 
-export const initialPosts = postList
+export const initialPosts: Post[] = postList
 
 export function postReducer(
-  state: typeof postList,
+  state: typeof initialPosts,
   action: PostContextAction
 ): typeof initialPosts {
   switch (action.type) {
@@ -33,6 +33,10 @@ export function postReducer(
         }
         return post;
       });
+    case "ADD":
+      const newPosts = state;
+      newPosts.push(action.payload as Post)
+      return newPosts;
     default:
       return state;
   }
