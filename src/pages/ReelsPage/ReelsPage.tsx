@@ -1,29 +1,13 @@
 import Navbar from "@/components/global/Navbar";
 import TASlider from "@/components/swiper/TASlider";
-import { ReelContext, ReelStateDispatch } from "@/providers/Context/context";
+import { ReelContext } from "@/providers/Context/context";
 import { Bookmark, Loader, LucideHeart, MessageCircleMore, Share2 } from "lucide-react";
 import { useContext } from "react";
 import { useState, useEffect } from "react";
 
-interface ReelStructureProps {
-  id: number;
-  path: string;
-  user: string;
-  description: string;
-  likes: number;
-  saves: number;
-  comments: {
-    [key: string]: any
-  }[];
-  shares: number;
-  isLiked: boolean;
-  isSaved: boolean;
-  isLoading: boolean;
-}
-
-const ReelStructure = (props: ReelStructureProps) => {
+const ReelStructure = (props: Reel) => {
   const [loading, setLoading] = useState(false);
-  const reelDispatch = useContext(ReelStateDispatch)
+  const { reelDispatch } = useContext(ReelContext)
   const {
     path,
     user,
@@ -123,7 +107,7 @@ const ReelStructure = (props: ReelStructureProps) => {
 }
 
 export default function ReelsPage() {
-  const reels = useContext(ReelContext);
+  const { reels } = useContext(ReelContext);
   return (
     <div className="h-full w-full">
       <TASlider vertical={true}>

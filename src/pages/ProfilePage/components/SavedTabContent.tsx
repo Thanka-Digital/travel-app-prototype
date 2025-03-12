@@ -5,13 +5,13 @@ import { useContext } from "react";
 import { PostContext } from "@/providers/Context/context";
 
 export default function SavedTabContent() {
-  const post = useContext(PostContext)
+  const { posts } = useContext(PostContext)
 
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col gap-3 mt-4 pb-28">
         {
-          post.filter((p) => userList[0].savedPost.includes(p.id)).map((object) => (
+          posts.filter((p) => userList[0].savedPost.includes(p.id)).map((object) => (
             <PostCard
               post={object}
               key={object.id}

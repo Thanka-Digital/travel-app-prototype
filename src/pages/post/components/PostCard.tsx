@@ -1,4 +1,4 @@
-import { PostStateDispatch } from "@/providers/Context/context";
+import { PostContext } from "@/providers/Context/context";
 import { userList } from "@/utils/userList";
 import { Bookmark, Heart } from "lucide-react";
 import { useContext, useState } from "react";
@@ -10,7 +10,7 @@ interface PostCardProps {
 
 export default function PostCard(props: PostCardProps) {
   const navigate = useNavigate();
-  const postDispatch = useContext(PostStateDispatch)
+  const { postDispatch } = useContext(PostContext)
   const {
     id,
     caption,

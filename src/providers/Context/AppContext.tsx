@@ -1,6 +1,6 @@
 import { type PropsWithChildren, useReducer } from "react";
 
-import { AppContext, AppStateDispatch, PostContext, PostStateDispatch, ReelContext, ReelStateDispatch } from "./context";
+import { AppContext, AppStateDispatch, PostContext, ReelContext } from "./context";
 import { appReducer, initialAppState } from "../reducers/AppReducer";
 import { initialReels, reelReducer } from "../reducers/ReelReducer";
 import { initialPosts, postReducer } from "../reducers/PostsReducer";
@@ -13,14 +13,16 @@ export default function AppProvider({ children }: PropsWithChildren) {
   return (
     <AppContext.Provider value={appState}>
       <AppStateDispatch.Provider value={appStateDispatch}>
-        <PostContext.Provider value={postState}>
-          <PostStateDispatch.Provider value={postStateDispatch}>
-            <ReelContext.Provider value={reelState}>
-              <ReelStateDispatch.Provider value={reelStateDispatch}>
-                {children}
-              </ReelStateDispatch.Provider>
-            </ReelContext.Provider>
-          </PostStateDispatch.Provider>
+        <PostContext.Provider value={{
+          posts: postState,
+          postDispatch: postStateDispatch
+        }}>
+          <ReelContext.Provider value={{
+            reels: reelState,
+            reelDispatch: reelStateDispatch
+          }}>
+            {children}
+          </ReelContext.Provider>
         </PostContext.Provider>
       </AppStateDispatch.Provider>
     </AppContext.Provider>

@@ -1,3 +1,19 @@
+interface Reel {
+  id: number;
+  path: string;
+  user: string;
+  description: string;
+  likes: number;
+  saves: number;
+  comments: {
+    [key: string]: any
+  }[];
+  shares: number;
+  isLiked: boolean;
+  isSaved: boolean;
+  isLoading: boolean;
+}
+
 interface Post {
   id: number;
   userId: number;

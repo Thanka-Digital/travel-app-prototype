@@ -34,7 +34,7 @@ export function postReducer(
         return post;
       });
     case "ADD":
-      const newPosts = state;
+      const newPosts = [...state];
       newPosts.push(action.payload as Post)
       return newPosts;
     default:

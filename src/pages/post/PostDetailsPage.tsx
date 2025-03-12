@@ -5,15 +5,14 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsData, locationInfo } from "@/utils/locationDetailsData";
 import { Heart, MessageCircleMore } from "lucide-react";
 import { useParams } from "react-router-dom";
-import { PostContext, PostStateDispatch } from "@/providers/Context/context";
+import { PostContext } from "@/providers/Context/context";
 import { useContext } from "react";
 import { userList } from "@/utils/userList";
 
 export default function PostDetailsPage() {
   const { id } = useParams();
-  const postDispatch = useContext(PostStateDispatch)
-  const finalePost = useContext(PostContext)
-  const post = finalePost.find((p) => p.id === Number(id));
+  const { posts, postDispatch } = useContext(PostContext)
+  const post = posts.find((p) => p.id === Number(id));
   const user = userList.find((user) => user.userId === post?.userId)
 
   const handleLike = () => {

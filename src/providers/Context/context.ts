@@ -7,8 +7,18 @@ import { initialPosts, PostContextAction } from "../reducers/PostsReducer";
 export const AppContext = createContext<AppContextState>(initialAppState);
 export const AppStateDispatch = createContext<Dispatch<AppContextAction>>(() => { });
 
-export const ReelContext = createContext(initialReels);
-export const ReelStateDispatch = createContext<Dispatch<ReelContextAction>>(() => { });
+export const ReelContext = createContext<{
+  reels: Reel[],
+  reelDispatch: Dispatch<ReelContextAction>
+}>({
+  reels: initialReels,
+  reelDispatch: () => { }
+});
 
-export const PostContext = createContext(initialPosts);
-export const PostStateDispatch = createContext<Dispatch<PostContextAction>>(() => { });
+export const PostContext = createContext<{
+  posts: Post[],
+  postDispatch: Dispatch<PostContextAction>
+}>({
+  posts: initialPosts,
+  postDispatch: () => { }
+});

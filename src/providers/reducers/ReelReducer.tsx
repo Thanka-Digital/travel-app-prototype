@@ -4,7 +4,7 @@ export type ReelContextAction = {
   payload: number;
 }
 
-export const initialReels = reelsVidinfo
+export const initialReels: Reel[] = reelsVidinfo
 
 export function reelReducer(
   state: typeof initialReels,
