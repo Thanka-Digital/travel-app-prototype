@@ -6,13 +6,13 @@ import { PostContext } from "@/providers/Context/context";
 
 export default function LocationPosts() {
   const { id } = useParams();
-  const post = useContext(PostContext);
+  const { posts } = useContext(PostContext);
 
   return (
     <MaxWidthWrapper>
       <div className="flex flex-col gap-3 mt-4 pb-28">
         {
-          post.filter((p) => p.locationId === Number(id)).map((object) => (
+          posts.filter((p) => p.locationId === Number(id)).map((object) => (
             <PostCard
               post={object}
               key={object.id}

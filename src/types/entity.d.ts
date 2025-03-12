@@ -17,6 +17,7 @@ interface Reel {
 interface Post {
   id: number;
   userId: number;
+  locationId: number;
   season: string;
   transportation: string,
   temperature: string,
