@@ -30,3 +30,8 @@ interface Post {
   comments?: { comment: string, user: string }[];
   profile?: boolean;
 }
+
+interface PostImage {
+  id: number;
+  base64: string;
+}

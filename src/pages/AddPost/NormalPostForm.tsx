@@ -1,62 +1,28 @@
 import Input from "@/components/form/input/Input";
 import { PostHeading } from "./AddPostPage";
 import Button from "@/components/form/button/Button";
-import { ImageUp } from "lucide-react";
 import BackButton from "@/components/global/BackButton";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { PostContext } from "@/providers/Context/context";
-
-interface FileInput {
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
-  name: string;
-  value?: any;
-  label: string;
-  accept: string;
-}
-
-export const FileInput = (props: FileInput) => {
-  const {
-    onChange,
-    name,
-    value,
-    accept,
-    label
-  } = props;
-
-  return (
-    <div>
-      <p className="font-medium">
-        {label} <span className="text-danger">*</span>
-      </p>
-      <section className='flex flex-col items-center mt-1'>
-        <label htmlFor="fileInput" className='px-28 py-10 rounded-xl border-2 border-dashed'>
-          <input type="file" multiple id="fileInput" accept={accept} onChange={onChange} name={name} value={value}
-            style={{ display: "none" }} required />
-          <ImageUp size={92} color="#D2D2D2" />
-        </label>
-      </section>
-    </div>
-  )
-}
+import CustomImageInput from "./components/CustomImageInput";
 
 const initialPost: Partial<Post> = {
   userId: 1,
   isLiked: false,
   likeCount: 0,
   images: [],
-  caption: "gfgkj",
-  season: "gfhj",
-  transportation: "jklh",
-  temperature: "hfhgfh",
-  activities: "hffuyfkgjgh",
-  location: "nbfhgffgh",
+  caption: "",
+  season: "",
+  transportation: "",
+  temperature: "",
+  activities: "",
+  location: "",
 }
 
 export default function NormalPostForm() {
   const navigate = useNavigate();
   const [normalPost, setNormalPost] = useState<Partial<Post>>(initialPost);
-  const [postImages, setPostImages] = useState<string[]>([]);
   const { postDispatch } = useContext(PostContext)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -67,13 +33,19 @@ export default function NormalPostForm() {
     }))
   }
 
-  const handleFlieChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, files } = e.target;
-    setNormalPost((prev) => ({
-      ...prev,
-      [name]: [files![0].name]
-    }))
-  }
+  const handleFileChange = (base64Images: PostImage[], isAdd: boolean = true) => {
+    if (isAdd) {
+      setNormalPost((prev) => ({
+        ...prev,
+        images: [...prev.images!, ...base64Images.map((i) => i.base64)]
+      }));
+    } else {
+      setNormalPost((prev) => ({
+        ...prev,
+        images: prev.images?.filter((im) => im !== base64Images[0].base64)
+      }));
+    }
+  };
 
   const handlePostAdd = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -107,12 +79,11 @@ export default function NormalPostForm() {
             value={normalPost.caption}
             onChange={handleChange}
           />
-          <FileInput
-            accept=".png,.jpg,.jpeg"
+          <CustomImageInput
+            accept="image/*"
             label="Images"
-            onChange={handleFlieChange}
             name="images"
-          // value={normalPost.images}
+            onChange={handleFileChange}
           />
 
           <section>

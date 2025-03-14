@@ -1,7 +1,7 @@
 import Input from "@/components/form/input/Input";
 import { PostHeading } from "./AddPostPage";
 import Button from "@/components/form/button/Button";
-import { FileInput } from "./NormalPostForm";
+import CustomImageInput from "./components/CustomImageInput";
 import { useNavigate } from "react-router-dom";
 import BackButton from "@/components/global/BackButton";
 
@@ -25,10 +25,10 @@ export default function ReelPostFrom() {
             label="Caption"
           />
 
-          <FileInput
+          <CustomImageInput
             label="Video"
             name="video"
-            accept=".mp4,.mov,.avi"
+            accept="video/*"
           />
 
           <section className="flex justify-between w-full absolute bottom-10 px-5">
