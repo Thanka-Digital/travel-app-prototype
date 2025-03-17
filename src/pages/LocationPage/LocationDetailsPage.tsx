@@ -1,6 +1,5 @@
 import BackButton from "@/components/global/BackButton";
 import Tabs from "@/components/global/tabs/CustomTab";
-import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { locationDetailsTabsData, locationInfo } from "@/utils/locationDetailsData";
 import { useParams } from "react-router-dom";
 
@@ -9,19 +8,15 @@ export default function LocationDetailsPage() {
   const location = locationInfo.find((l) => l.id === Number(id))
 
   return (
-    <div className=" bg-white h-screen text-black">
+    <div className="relative bg-white h-screen text-black">
       <BackButton />
-      <div className="relative">
-        <img src={location?.image} alt="location images" className="w-full h-56 absolute" />
-        <div className='absolute top-1 mask min-h-[50px] bg-white' />
-      </div>
-      <div>
-        <div className="text-center mb-4">
-          <p className="text-xl font-medium my-1">{location?.placeName}</p>
-          <p className="text-center text-sm">
-            {location?.description}
-          </p>
-        </div>
+      <img src={location?.image} alt="location images" className="w-full h-56" />
+      <div className='absolute mask min-h-[49px] w-full bg-white top-44 z-10' />
+      <div className="text-center mb-4">
+        <p className="text-xl font-medium my-1">{location?.placeName}</p>
+        <p className="text-center text-sm">
+          {location?.description}
+        </p>
       </div>
 
       <div className="flex flex-col">

@@ -17,7 +17,7 @@ export default function BoardingPage4() {
 
   return (
     <main className="relative bg-splash4 h-screen">
-      <div className='flex flex-col absolute bottom-0'>
+      <div className='absolute bottom-0'>
         <div className='mask min-h-[120px] bg-white' />
         <div className='flex flex-col gap-10 bottom-0 bg-white pb-14 px-8'>
           <section className="flex flex-col items-center">
