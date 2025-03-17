@@ -23,7 +23,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.mask-gradient {
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+.mask {
+  -webkit-mask-image: linear-gradient(to top, white 50%, transparent);
+  mask-image: linear-gradient(to top, white 50%, transparent);
+}
+
+.mask-zero {
+  -webkit-mask-image: linear-gradient(to top, white 30%, transparent);
+  mask-image: linear-gradient(to top, white 20%, transparent);
 }

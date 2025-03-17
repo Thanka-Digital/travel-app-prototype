@@ -17,31 +17,34 @@ export default function BoardingPage2() {
   }
 
   return (
-    <main className='bg-splash2 h-screen'>
-      <div className='mask-gradient flex flex-col gap-10 absolute bottom-0 bg-white py-12 px-8'>
-        <section className='flex flex-col items-center'>
-          <SplashScreenHeader
-            text='What Kind of Places'
-          />
-          <SplashScreenHeader
-            text='you like to visit?'
-          />
-        </section>
-        <section className='flex items-center justify-center flex-wrap gap-3 mb-20'>
-          {
-            SplashScreen2Info.map((object) => (
-              <SplashScreenTags
-                icon={object.icon}
-                text={object.text}
-                key={object.id}
-                handleClick={handleClick}
-              />
-            ))
-          }
-        </section>
+    <main className='relative bg-splash2 h-screen'>
+      <div className='flex flex-col absolute bottom-0'>
+        <div className='mask min-h-[120px] bg-white'></div>
+        <div className='flex flex-col gap-10 bottom-0 bg-white pb-14 px-8'>
+          <section className='flex flex-col items-center'>
+            <SplashScreenHeader
+              text='What Kind of Places'
+            />
+            <SplashScreenHeader
+              text='you like to visit?'
+            />
+          </section>
+          <section className='flex items-center justify-center flex-wrap gap-2 mb-24'>
+            {
+              SplashScreen2Info.map((object) => (
+                <SplashScreenTags
+                  icon={object.icon}
+                  text={object.text}
+                  key={object.id}
+                  handleClick={handleClick}
+                />
+              ))
+            }
+          </section>
+        </div>
       </div>
 
-      <section className='flex w-full px-8 justify-between items-center absolute bottom-2'>
+      <section className='flex w-full px-8 justify-between items-center absolute bottom-3'>
         <p className='text-secondary'>2 of 4 steps</p>
         <Button
           className='rounded-3xl'

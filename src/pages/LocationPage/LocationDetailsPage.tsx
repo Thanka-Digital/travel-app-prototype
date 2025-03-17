@@ -9,17 +9,20 @@ export default function LocationDetailsPage() {
   const location = locationInfo.find((l) => l.id === Number(id))
 
   return (
-    <div className="relative bg-white h-screen text-black">
+    <div className=" bg-white h-screen text-black">
       <BackButton />
-      <img src={location?.image} alt="location images" className="w-full h-56" />
-      <MaxWidthWrapper>
+      <div className="relative">
+        <img src={location?.image} alt="location images" className="w-full h-56 absolute" />
+        <div className='absolute top-1 mask min-h-[50px] bg-white' />
+      </div>
+      <div>
         <div className="text-center mb-4">
           <p className="text-xl font-medium my-1">{location?.placeName}</p>
           <p className="text-center text-sm">
             {location?.description}
           </p>
         </div>
-      </MaxWidthWrapper>
+      </div>
 
       <div className="flex flex-col">
         <hr className=" bg-black/35" />

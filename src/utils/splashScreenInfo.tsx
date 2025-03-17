@@ -41,13 +41,13 @@ export const SplashScreen2Info = [
   },
   {
     id: 3,
-    text: "Urban",
-    icon: <Building2 />
+    text: "Mountains",
+    icon: <Mountain />
   },
   {
     id: 4,
-    text: "Mountains",
-    icon: <Mountain />
+    text: "Urban",
+    icon: <Building2 />
   },
   {
     id: 5,
