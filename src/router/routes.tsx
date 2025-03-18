@@ -24,6 +24,7 @@ import CreatePlanStep3 from "@/pages/PlansPage/steps/CreatePlanStep3";
 import CreatePlanStep4 from "@/pages/PlansPage/steps/CreatePlanStep4";
 import CreatePlanStep5 from "@/pages/PlansPage/steps/CreatePlanStep5";
 import CreatePlanStep6 from "@/pages/PlansPage/steps/CreatePlanStep6";
+import PlanPageDetails from "@/pages/PlansPage/PlanDetails";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -98,6 +99,10 @@ const routes: RouteObject[] = [
       {
         path: "all",
         element: <AllPlansPage />
+      },
+      {
+        path: "details",
+        element: <PlanPageDetails />
       },
       {
         path: "create/step-1",

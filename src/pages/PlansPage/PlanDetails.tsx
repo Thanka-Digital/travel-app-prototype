@@ -5,7 +5,7 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { viewTripPlanDetailsDatas } from "@/utils/tripPlanData";
 import { useNavigate } from "react-router-dom";
 
-export default function ViewTripPlanDetailsPage() {
+export default function PlanPageDetails() {
   const navigate = useNavigate();
 
   return (

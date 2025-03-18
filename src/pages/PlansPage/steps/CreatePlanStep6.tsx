@@ -7,12 +7,12 @@ export default function CreatePlanStep6() {
   const navigate = useNavigate();
 
   return (
-    <main className=" h-screen bg-white">
+    <main className=" h-screen bg-white text-black">
       <BackButton />
       <img src="/SplashImg/s5.png" alt="img" />
       <MaxWidthWrapper>
         <div className=" flex flex-col gap-10 my-8 bg-white">
-          <p className="font-semibold text-2xl text-center">
+          <p className="font-medium text-2xl text-center">
             Give your trip a name
           </p>
           <input
@@ -26,7 +26,7 @@ export default function CreatePlanStep6() {
           <Button
             className="rounded-full text-white px-8"
             onClick={() => {
-              navigate("trip-plan/create");
+              navigate("/trip-plan/create");
             }}
           >
             Create my trip

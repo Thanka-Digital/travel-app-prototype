@@ -18,7 +18,7 @@ export default function BoardingPage2() {
       handleAction={handleClick}
       link='/2'
       splashInfo={SplashScreen1Info}
-      steps='2 of 4 steps'
+      steps='1 of 4 steps'
       disabled={toggledArr.length <= 0}
       titles={title}
     />
