@@ -1,53 +1,30 @@
-import Button from "@/components/form/button/Button";
-import { SplashScreen4Info } from "@/utils/splashScreenInfo";
-import { ChevronsRight } from "lucide-react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { SplashScreenHeader, SplashScreenTags } from "./BoardingPage1";
+import { SplashScreen4Info } from '@/utils/splashScreenInfo';
+import { useState } from 'react';
+import { BoardingPageLayout } from './components/BoardingPageLayout';
 
 export default function BoardingPage4() {
-  const navigate = useNavigate();
-  const [toggledArr, setToggleArr] = useState<string[]>([]);
+  const [toggledArr, setToggleArr] = useState<string[]>([])
 
   function handleClick(val: string, isSelected: boolean) {
-    isSelected
-      ? setToggleArr((prev) => [...prev, val])
-      : setToggleArr((prev) => prev.filter((t) => t !== val));
+    isSelected ?
+      setToggleArr(prev => ([...prev, val]))
+      :
+      setToggleArr((prev) => prev.filter(t => t !== val))
   }
 
   return (
-    <main className="relative bg-splash4 h-screen">
-      <div className='absolute bottom-0'>
-        <div className='mask min-h-[120px] bg-white' />
-        <div className='flex flex-col gap-10 bottom-0 bg-white pb-14 px-8'>
-          <section className="flex flex-col items-center">
-            <SplashScreenHeader text="How often do you" />
-            <SplashScreenHeader text="travel?" />
-          </section>
-          <section className="flex items-center justify-center flex-wrap gap-2 mb-24">
-            {SplashScreen4Info.map((object) => (
-              <SplashScreenTags
-                text={object.text}
-                key={object.id}
-                handleClick={handleClick}
-              />
-            ))}
-          </section>
-        </div>
-      </div>
-
-      <section className='flex w-full px-8 justify-between items-center absolute bottom-3'>
-        <p className='text-secondary'>Last step to go</p>
-        <Button
-          className="rounded-3xl"
-          disabled={toggledArr.length <= 0}
-          onClick={() => {
-            navigate('/explore-page/all')
-          }}
-        >
-          Complete <ChevronsRight />
-        </Button>
-      </section>
-    </main>
-  );
+    <BoardingPageLayout
+      bg='bg-splash1'
+      handleAction={handleClick}
+      link='/explore-page/all'
+      splashInfo={SplashScreen4Info}
+      steps='Last step to go'
+      disabled={toggledArr.length <= 0}
+      titles={title}
+    />
+  )
 }
+
+const title = [
+  { titleO: "How often do you", titleT: "travel?" }
+]

@@ -1,8 +1,8 @@
 import { SplashScreen1Info } from '@/utils/splashScreenInfo';
 import { useState } from 'react';
-import { BoardingPageLayout } from './components/BoardingPageLayout';
+import { BoardingPageLayout } from '@/pages/Splash-Screen/components/BoardingPageLayout';
 
-export default function BoardingPage2() {
+export default function CreatePlanStep1() {
   const [toggledArr, setToggleArr] = useState<string[]>([])
 
   function handleClick(val: string, isSelected: boolean) {
@@ -16,9 +16,9 @@ export default function BoardingPage2() {
     <BoardingPageLayout
       bg='bg-splash1'
       handleAction={handleClick}
-      link='/2'
+      link='/trip-plan/create/step-2'
       splashInfo={SplashScreen1Info}
-      steps='2 of 4 steps'
+      steps='1 of 6 steps'
       disabled={toggledArr.length <= 0}
       titles={title}
     />
@@ -26,5 +26,5 @@ export default function BoardingPage2() {
 }
 
 const title = [
-  { titleO: "What kind of traveler", titleT: "are you?" }
+  { titleO: "What kind of travel", titleT: "are you planning?" }
 ]

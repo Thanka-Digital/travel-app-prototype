@@ -7,7 +7,7 @@ export const navLinks = [
   },
   {
     icon: <NotebookPen />,
-    path: "/post"
+    path: "/trip-plan/create"
   },
   {
     icon: <MapPinPlus />,

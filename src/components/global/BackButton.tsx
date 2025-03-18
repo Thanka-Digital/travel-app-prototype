@@ -4,7 +4,7 @@ export default function BackButton() {
   const navigate = useNavigate();
   return (
     <div
-      className="absolute p-2 rounded-full bg-gray-50 flex justify-center items-center left-[3%] top-[2%] cursor-pointer"
+      className="absolute p-2 rounded-full bg-gray-50 text-black flex justify-center items-center left-[3%] top-[2%] cursor-pointer"
       onClick={() => navigate(-1)}
     >
       <ArrowLeft />
