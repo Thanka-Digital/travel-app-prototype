@@ -4,7 +4,7 @@ export default function BoardingPage0() {
   return (
     <main className="relative bg-splash0 h-screen">
       <div className='absolute bottom-0 w-full'>
-        <div className='mask-zero min-h-[50px] bg-white' />
+        <div className='mask-zero min-h-[60px] bg-white -mb-1' />
         <div className='flex flex-col items-center gap-1 bg-white pb-8 text-black'>
           <section className="flex flex-col items-center font-bold text-2xl">
             <p>Let's get to know you</p>

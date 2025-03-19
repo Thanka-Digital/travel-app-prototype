@@ -2,14 +2,14 @@ import Button from "@/components/form/button/Button";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { ChevronsRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import BackButton from "@/components/global/BackButton";
+import CancelButton from "../components/CancelButton";
 
 export default function CreatePlanStep5() {
   const navigate = useNavigate();
 
   return (
     <main className=" h-screen bg-white text-black">
-      <BackButton />
+      <CancelButton />
       <img src="/SplashImg/s2.png" alt="img" />
       <MaxWidthWrapper>
         <div className=" flex flex-col gap-10 my-8 bg-white">

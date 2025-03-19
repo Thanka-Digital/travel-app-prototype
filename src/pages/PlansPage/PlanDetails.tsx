@@ -9,7 +9,7 @@ export default function PlanPageDetails() {
   const navigate = useNavigate();
 
   return (
-    <div className="relative bg-white h-screen">
+    <div className="relative bg-white h-screen text-black">
       <BackButton />
       {viewTripPlanDetailsDatas?.map((viewTripPlanDetailsData) => (
         <div key={viewTripPlanDetailsData.id}>
@@ -26,7 +26,7 @@ export default function PlanPageDetails() {
                 {viewTripPlanDetailsData.visitPlaceName}
               </p>
               {viewTripPlanDetailsData.isTripSucess ? (
-                <p className="text-neutral_gray font-medium">
+                <p className="text-gray-400">
                   {viewTripPlanDetailsData.tripTimeStatus}
                 </p>
               ) : (

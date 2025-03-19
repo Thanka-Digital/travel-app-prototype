@@ -1,6 +1,7 @@
 import { SplashScreen3Info } from '@/utils/splashScreenInfo';
 import { useState } from 'react';
 import { BoardingPageLayout } from '@/pages/Splash-Screen/components/BoardingPageLayout';
+import CancelButton from '../components/CancelButton';
 
 export default function CreatePlanStep1() {
   const [toggledArr, setToggleArr] = useState<string[]>([])
@@ -13,15 +14,18 @@ export default function CreatePlanStep1() {
   }
 
   return (
-    <BoardingPageLayout
-      bg='bg-splash3'
-      handleAction={handleClick}
-      link='/trip-plan/create/step-4'
-      splashInfo={SplashScreen3Info}
-      steps='3 of 6 steps'
-      disabled={toggledArr.length <= 0}
-      titles={title}
-    />
+    <div>
+      <CancelButton />
+      <BoardingPageLayout
+        bg='bg-splash3'
+        handleAction={handleClick}
+        link='/trip-plan/create/step-4'
+        splashInfo={SplashScreen3Info}
+        steps='3 of 6 steps'
+        disabled={toggledArr.length <= 0}
+        titles={title}
+      />
+    </div>
   )
 }
 

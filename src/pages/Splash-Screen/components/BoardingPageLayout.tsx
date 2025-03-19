@@ -39,7 +39,7 @@ export const BoardingPageLayout = (props: BoardingPageLayoutProps) => {
   return (
     <main className={`relative ${bg} h-screen`}>
       <div className='absolute bottom-0'>
-        <div className='mask min-h-[100px] bg-white' />
+        <div className='mask min-h-[100px] bg-white -mb-2' />
         <div className='flex flex-col gap-10 bg-white pb-10 px-8'>
           {
             titles.map((t, i) => (

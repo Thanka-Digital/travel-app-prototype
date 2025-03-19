@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BackButton from "@/components/global/BackButton";
 import { locationInfo } from "@/utils/locationDetailsData";
+import CancelButton from "../components/CancelButton";
 
 export default function CreatePlanStep4() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function CreatePlanStep4() {
 
   return (
     <main className="bg-white text-black">
-      <BackButton />
+      <CancelButton />
       <MaxWidthWrapper>
         <div className=" flex flex-col gap-6 pt-8 pb-24 bg-white">
           <p className="font-medium text-2xl text-center">

@@ -1,14 +1,14 @@
 import Button from "@/components/form/button/Button";
-import BackButton from "@/components/global/BackButton";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { useNavigate } from "react-router-dom";
+import CancelButton from "../components/CancelButton";
 
 export default function CreatePlanStep6() {
   const navigate = useNavigate();
 
   return (
     <main className=" h-screen bg-white text-black">
-      <BackButton />
+      <CancelButton />
       <img src="/SplashImg/s5.png" alt="img" />
       <MaxWidthWrapper>
         <div className=" flex flex-col gap-10 my-8 bg-white">
@@ -17,7 +17,7 @@ export default function CreatePlanStep6() {
           </p>
           <input
             placeholder="Trip name"
-            className="p-3 border-2 border-neutral_gray2 rounded-md"
+            className="p-3 border-2 border-neutral_gray2 rounded-md bg-white"
             required
           />
         </div>
