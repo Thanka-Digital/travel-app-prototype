@@ -1,4 +1,4 @@
-import { createTripPlanListData } from "@/utils/tripPlanData";
+import { tripPlanData } from "@/utils/tripPlanData";
 import PlanCard from "./components/PlanCard";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/global/Navbar";
@@ -25,15 +25,15 @@ export default function CreatePlansPage() {
           </Link>
         </div>
 
-        {createTripPlanListData?.map((tripPlanData) => (
+        {tripPlanData.filter((i) => i.id < 3).map((trip) => (
           <PlanCard
-            key={tripPlanData.id}
-            id={tripPlanData.id}
-            image={tripPlanData.image}
-            name={tripPlanData.name}
-            isTripSuccess={tripPlanData.isTripSuccess}
-            tripTimeStatus={tripPlanData.tripTimeStatus}
-            hashTags={tripPlanData.hashTags}
+            key={trip.id}
+            id={trip.id}
+            image={trip.image}
+            name={trip.name}
+            isTripSuccess={trip.isTripSuccess}
+            tripTimeStatus={trip.tripTimeStatus}
+            hashTags={trip.hashTags}
           />
         ))}
       </div>

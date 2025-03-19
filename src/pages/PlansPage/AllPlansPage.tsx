@@ -1,5 +1,5 @@
 import BackButton from "@/components/global/BackButton";
-import { tripPlanListData } from "@/utils/tripPlanData";
+import { tripPlanData } from "@/utils/tripPlanData";
 import PlanCard from "./components/PlanCard";
 
 export default function AllPlansPage() {
@@ -14,7 +14,7 @@ export default function AllPlansPage() {
       </div>
 
       <div className="my-5">
-        {tripPlanListData?.map((tripPlanData) => (
+        {tripPlanData?.map((tripPlanData) => (
           <PlanCard
             key={tripPlanData.id}
             id={tripPlanData.id}

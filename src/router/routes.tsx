@@ -101,7 +101,7 @@ const routes: RouteObject[] = [
         element: <AllPlansPage />
       },
       {
-        path: "details",
+        path: "details/:id",
         element: <PlanPageDetails />
       },
       {

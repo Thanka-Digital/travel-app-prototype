@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface LocationCardProps {
-  image: string;
+  image?: string;
   visitorsCount: string;
   placeName: string;
   location: string;

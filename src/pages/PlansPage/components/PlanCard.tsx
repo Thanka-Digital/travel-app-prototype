@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
 interface TripPlanCardProps {
-  id: string;
+  id: number;
   image: string;
   name: string;
   isTripSuccess: boolean;
   tripTimeStatus: string;
   hashTags?: {
-    id: string;
+    id: number;
     label: string;
   }[];
 }
@@ -27,9 +27,7 @@ export default function PlanCard(props: TripPlanCardProps) {
         <div className="flex flex-col justify-between py-2">
           <div className="text-sm">
             <p className="font-medium">{name}</p>
-            <p
-              className={`${isTripSuccess ? "text-gray-400" : "text-danger"}`}
-            >
+            <p className={`${isTripSuccess ? "text-gray-400" : "text-danger"}`}>
               {tripTimeStatus}
             </p>
           </div>
@@ -45,7 +43,7 @@ export default function PlanCard(props: TripPlanCardProps) {
       </div>
       <button
         className="absolute bottom-2 right-0 rounded-full px-4 py-1 bg-black text-white text-sm"
-        onClick={() => navigate("/trip-plan/details")}
+        onClick={() => navigate(`/trip-plan/details/${id}`)}
       >
         Details
       </button>

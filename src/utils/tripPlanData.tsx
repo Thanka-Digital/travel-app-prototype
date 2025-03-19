@@ -1,152 +1,175 @@
 import { BaggageClaim, Mountain, Snowflake } from "lucide-react";
 
-export const tripPlanListData = [
+export const tripPlanData = [
   {
-    id: "tpl1",
+    id: 1,
     image: "/SplashImg/s1.png",
     name: "Trip to Everest",
     isTripSuccess: true,
     tripTimeStatus: "4 weeks ago",
     hashTags: [
       {
-        id: "ht1",
+        id: 1,
         label: "#natures",
       },
       {
-        id: "ht2",
+        id: 2,
         label: "#snowy",
       },
     ],
+    tripTypes: [
+      {
+        id: 1,
+        text: "Trekker",
+        icon: <BaggageClaim />,
+      },
+      {
+        id: 2,
+        text: "Mountains",
+        icon: <Mountain />,
+      },
+      {
+        id: 3,
+        text: "Snowy",
+        icon: <Snowflake />,
+      },
+    ],
   },
+
   {
-    id: "tpl2",
+    id: 2,
     image: "/SplashImg/s2.png",
     name: "Bali Trip",
     tripTimeStatus: "cancelled",
     isTripSuccess: false,
     hashTags: [
       {
-        id: "ht1",
+        id: 1,
         label: "#natures",
       },
       {
-        id: "ht2",
+        id: 2,
         label: "#winter",
       },
     ],
+    tripTypes: [
+      {
+        id: 1,
+        text: "Trekker",
+        icon: <BaggageClaim />,
+      },
+      {
+        id: 2,
+        text: "Mountains",
+        icon: <Mountain />,
+      },
+      {
+        id: 3,
+        text: "Snowy",
+        icon: <Snowflake />,
+      },
+    ],
   },
+
   {
-    id: "tpl3",
+    id: 3,
     image: "/SplashImg/s3.png",
     name: "LA Doentown",
     tripTimeStatus: "month ago",
     isTripSuccess: true,
     hashTags: [
       {
-        id: "ht1",
+        id: 1,
         label: "#urban",
       },
       {
-        id: "ht2",
+        id: 2,
         label: "#sunny",
       },
     ],
+    tripTypes: [
+      {
+        id: 1,
+        text: "Trekker",
+        icon: <BaggageClaim />,
+      },
+      {
+        id: 2,
+        text: "Mountains",
+        icon: <Mountain />,
+      },
+      {
+        id: 3,
+        text: "Snowy",
+        icon: <Snowflake />,
+      },
+    ],
   },
+
   {
-    id: "tpl4",
+    id: 4,
     image: "/SplashImg/s4.png",
     name: "Phewa Lake",
     tripTimeStatus: "a year ago",
     isTripSuccess: true,
     hashTags: [
       {
-        id: "ht1",
+        id: 1,
         label: "#natures",
       },
       {
-        id: "ht2",
+        id: 2,
         label: "#sunny",
       },
     ],
+    tripTypes: [
+      {
+        id: 1,
+        text: "Trekker",
+        icon: <BaggageClaim />,
+      },
+      {
+        id: 2,
+        text: "Mountains",
+        icon: <Mountain />,
+      },
+      {
+        id: 3,
+        text: "Snowy",
+        icon: <Snowflake />,
+      },
+    ],
   },
+
   {
-    id: "tpl5",
+    id: 5,
     image: "/SplashImg/s5.png",
     name: "Paris Visit",
     tripTimeStatus: "cancelled",
     isTripSuccess: false,
     hashTags: [
       {
-        id: "ht1",
+        id: 1,
         label: "#urban",
       },
       {
-        id: "ht2",
+        id: 2,
         label: "#winter",
       },
     ],
-  },
-];
-
-export const createTripPlanListData = [
-  {
-    id: "tpl1",
-    image: "/SplashImg/s1.png",
-    name: "Trip to Everest",
-    isTripSuccess: true,
-    tripTimeStatus: "4 weeks ago",
-    hashTags: [
+    tripTypes: [
       {
-        id: "ht1",
-        label: "#natures",
-      },
-      {
-        id: "ht2",
-        label: "#snowy",
-      },
-    ],
-  },
-  {
-    id: "tpl2",
-    image: "/SplashImg/s2.png",
-    name: "Bali Trip",
-    tripTimeStatus: "cancelled",
-    isTripSuccess: false,
-    hashTags: [
-      {
-        id: "ht1",
-        label: "#natures",
-      },
-      {
-        id: "ht2",
-        label: "#winter",
-      },
-    ],
-  },
-];
-
-export const viewTripPlanDetailsDatas = [
-  {
-    id: 1,
-    image: "/SplashImg/s5.png",
-    visitPlaceName: "Trip to Everest",
-    visitPlaceLocation: "Nepal",
-    tripTimeStatus: "4 weeks ago",
-    numberOfVisitors: "143k",
-    isTripSucess: true,
-    chooseTripTypes: [
-      {
-        id: "ctt1",
+        id: 1,
         text: "Trekker",
         icon: <BaggageClaim />,
       },
       {
-        id: "ctt2",
+        id: 2,
         text: "Mountains",
         icon: <Mountain />,
       },
       {
-        id: "ctt3",
+        id: 3,
         text: "Snowy",
         icon: <Snowflake />,
       },
