@@ -4,15 +4,14 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import { ChevronsRight } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import BackButton from "@/components/global/BackButton";
 import { locationInfo } from "@/utils/locationDetailsData";
 import CancelButton from "../components/CancelButton";
 
 export default function CreatePlanStep4() {
   const navigate = useNavigate();
-  const [locationId, setLocationId] = useState<String | null>();
+  const [locationId, setLocationId] = useState<Number | null>();
 
-  function handleClick(id: String) {
+  function handleClick(id: Number) {
     if (id === locationId) {
       setLocationId(null);
       return;
@@ -30,22 +29,23 @@ export default function CreatePlanStep4() {
           </p>
           <section className="flex flex-col gap-4">
             {locationInfo?.map((locationInfo) => (
-              // <div
-              //   onClick={() => handleClick(locationInfo.id)}
-              //   key={locationInfo.id}
-              //   className={`${locationId === locationInfo.id
-              //     ? "outline outline-primary rounded-xl outline-offset-2"
-              //     : ""
-              //     }`}
-              // >
-              <LocationCard
-                id={locationInfo.id}
-                image={locationInfo.image}
-                placeName={locationInfo.placeName}
-                location={locationInfo.location}
-                visitorsCount={locationInfo.visitorsCount}
-              />
-              // </div>
+              <div
+                onClick={() => handleClick(locationInfo.id)}
+                key={locationInfo.id}
+                className={`${locationId === locationInfo.id
+                  ? "outline outline-primary rounded-xl outline-offset-2"
+                  : ""
+                  }`}
+              >
+                <LocationCard
+                  key={locationInfo.id}
+                  id={locationInfo.id}
+                  image={locationInfo.image}
+                  placeName={locationInfo.placeName}
+                  location={locationInfo.location}
+                  visitorsCount={locationInfo.visitorsCount}
+                />
+              </div>
             ))}
           </section>
         </div>

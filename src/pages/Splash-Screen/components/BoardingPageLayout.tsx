@@ -72,18 +72,18 @@ export const BoardingPageLayout = (props: BoardingPageLayoutProps) => {
             }
           </section>
         </div>
-
-        <section className='flex w-full px-8 justify-between items-center absolute bottom-3'>
-          <p className='text-secondary'>{steps}</p>
-          <Button
-            className='rounded-3xl'
-            disabled={disabled}
-            onClick={() => {
-              navigate(link)
-            }}
-          >Next <ChevronsRight /></Button>
-        </section>
       </div>
+
+      <section className='flex w-full px-8 justify-between items-center absolute bottom-3'>
+        <p className='text-secondary'>{steps}</p>
+        <Button
+          className='rounded-3xl'
+          disabled={disabled}
+          onClick={() => {
+            navigate(link)
+          }}
+        >Next <ChevronsRight /></Button>
+      </section>
     </main>
   )
 }
