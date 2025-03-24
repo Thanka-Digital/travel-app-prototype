@@ -3,9 +3,17 @@ import { initialAppState } from "../reducers/AppReducer";
 import { AppContextAction, AppContextState } from "../reducers/type";
 import { initialReels, ReelContextAction } from "../reducers/ReelReducer";
 import { initialPosts, PostContextAction } from "../reducers/PostsReducer";
+import { initialPrefs, PrefContextAction } from "../reducers/PrefReducer";
 
 export const AppContext = createContext<AppContextState>(initialAppState);
 export const AppStateDispatch = createContext<Dispatch<AppContextAction>>(() => { });
+export const UserPrefContext = createContext<{
+  pref: Preference,
+  prefDispatch: Dispatch<PrefContextAction>
+}>({
+  pref: initialPrefs,
+  prefDispatch: () => { }
+});
 
 export const ReelContext = createContext<{
   reels: Reel[],

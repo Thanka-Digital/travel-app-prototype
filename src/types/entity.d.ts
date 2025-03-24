@@ -6,7 +6,7 @@ interface Reel {
   likes: number;
   saves: number;
   comments: {
-    [key: string]: any
+    [key: string]: unknown;
   }[];
   shares: number;
   isLiked: boolean;
@@ -34,4 +34,11 @@ interface Post {
 interface PostImage {
   id: number;
   base64: string;
+}
+
+interface Preference {
+  type: string[];
+  weather: string[];
+  place: string[];
+  frequency: string;
 }

@@ -1,10 +1,10 @@
 import { postList } from "@/utils/postList";
 export type PostContextAction = {
-  type: "LIKE" | "UNLIKE" | "ADD"
+  type: "LIKE" | "UNLIKE" | "ADD";
   payload: number | Post;
-}
+};
 
-export const initialPosts: Post[] = postList
+export const initialPosts: Post[] = postList;
 
 export function postReducer(
   state: typeof initialPosts,
@@ -18,7 +18,7 @@ export function postReducer(
             ...post,
             isLiked: true,
             likeCount: post.likeCount + 1,
-          }
+          };
         }
         return post;
       });
@@ -29,14 +29,15 @@ export function postReducer(
             ...post,
             isLiked: false,
             likeCount: post.likeCount - 1,
-          }
+          };
         }
         return post;
       });
-    case "ADD":
+    case "ADD": {
       const newPosts = [...state];
-      newPosts.push(action.payload as Post)
+      newPosts.push(action.payload as Post);
       return newPosts;
+    }
     default:
       return state;
   }

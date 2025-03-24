@@ -50,11 +50,11 @@ const routes: RouteObject[] = [
   },
   {
     path: "/reels-page",
-    element: <ReelsPage />
+    element: <ReelsPage />,
   },
   {
     path: "/user-profile",
-    element: <ProfileDetailsPage />
+    element: <ProfileDetailsPage />,
   },
   {
     path: "/location-details/:id",
@@ -69,66 +69,66 @@ const routes: RouteObject[] = [
     children: [
       {
         path: "all",
-        element: <AllExplorePage />
+        element: <AllExplorePage />,
       },
       {
         path: "hills",
-        element: <HillsExplorePage />
+        element: <HillsExplorePage />,
       },
       {
         path: "urban",
-        element: <UrbanExplorePage />
+        element: <UrbanExplorePage />,
       },
       {
         path: "mountains",
-        element: <MountainsExplorePage />
+        element: <MountainsExplorePage />,
       },
       {
         path: "ocean",
-        element: <OceanExplorePage />
+        element: <OceanExplorePage />,
       },
-    ]
+    ],
   },
   {
     path: "/trip-plan",
     children: [
       {
         path: "create",
-        element: <CreatePlansPage />
+        element: <CreatePlansPage />,
       },
       {
         path: "all",
-        element: <AllPlansPage />
+        element: <AllPlansPage />,
       },
       {
         path: "details/:id",
-        element: <PlanPageDetails />
+        element: <PlanPageDetails />,
       },
       {
         path: "create/step-1",
-        element: <CreatePlanStep1 />
+        element: <CreatePlanStep1 />,
       },
       {
         path: "create/step-2",
-        element: <CreatePlanStep2 />
+        element: <CreatePlanStep2 />,
       },
       {
         path: "create/step-3",
-        element: <CreatePlanStep3 />
+        element: <CreatePlanStep3 />,
       },
       {
         path: "create/step-4",
-        element: <CreatePlanStep4 />
+        element: <CreatePlanStep4 />,
       },
       {
         path: "create/step-5",
-        element: <CreatePlanStep5 />
+        element: <CreatePlanStep5 />,
       },
       {
         path: "create/step-6",
-        element: <CreatePlanStep6 />
+        element: <CreatePlanStep6 />,
       },
-    ]
+    ],
   },
   {
     path: "/add-post",

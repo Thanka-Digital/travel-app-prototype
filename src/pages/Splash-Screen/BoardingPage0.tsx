@@ -2,21 +2,25 @@ import { Link } from "react-router-dom";
 
 export default function BoardingPage0() {
   return (
-    <main className="relative bg-splash0 h-screen">
-      <div className='absolute bottom-0 w-full'>
-        <div className='mask-zero min-h-[60px] bg-white -mb-1' />
-        <div className='flex flex-col items-center gap-1 bg-white pb-8 text-black'>
-          <section className="flex flex-col items-center font-bold text-2xl">
+    <main className="relative h-screen bg-splash0">
+      <div className="absolute bottom-0 w-full">
+        <div className="mask-zero min-h-[60px] bg-white -mb-1" />
+        <div className="flex flex-col items-center gap-1 pb-8 text-black bg-white">
+          <section className="flex flex-col items-center text-2xl font-bold">
             <p>Let's get to know you</p>
             <p>better</p>
           </section>
-          <section className="flex flex-col items-center text-md text-secondary mb-4">
+          <section className="flex flex-col items-center mb-4 text-md text-secondary">
             <p>Explore locations all around the globe as</p>
             <p> per your preferences</p>
           </section>
           <section>
-            <Link to={"/1"}
-              className="bg-primary text-white rounded-3xl px-10 py-2">Get Started</Link>
+            <Link
+              to={"/1"}
+              className="px-10 py-2 text-white bg-primary rounded-3xl"
+            >
+              Get Started
+            </Link>
           </section>
         </div>
       </div>
