@@ -1,24 +1,30 @@
-import { MapPinPlus, NotebookPen, Play, Telescope, UserRound } from "lucide-react";
+import {
+  MapPinPlus,
+  NotebookPen,
+  Play,
+  Telescope,
+  UserRound,
+} from "lucide-react";
 
 export const navLinks = [
   {
     icon: <Telescope />,
-    path: "/explore-page/all"
+    path: "/explore-page",
   },
   {
     icon: <NotebookPen />,
-    path: "/trip-plan/create"
+    path: "/trip-plan/create",
   },
   {
     icon: <MapPinPlus />,
-    path: "/add-post"
+    path: "/add-post",
   },
   {
     icon: <Play />,
-    path: "/reels-page"
+    path: "/reels-page",
   },
   {
     icon: <UserRound />,
-    path: "/user-profile"
+    path: "/user-profile",
   },
-]
+];
