@@ -66,28 +66,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/explore-page",
-    children: [
-      {
-        path: "all",
-        element: <AllExplorePage />,
-      },
-      {
-        path: "hills",
-        element: <HillsExplorePage />,
-      },
-      {
-        path: "urban",
-        element: <UrbanExplorePage />,
-      },
-      {
-        path: "mountains",
-        element: <MountainsExplorePage />,
-      },
-      {
-        path: "ocean",
-        element: <OceanExplorePage />,
-      },
-    ],
+    element: <AllExplorePage />,
   },
   {
     path: "/trip-plan",

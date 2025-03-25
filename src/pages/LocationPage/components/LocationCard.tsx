@@ -3,47 +3,39 @@ import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 interface LocationCardProps {
-  image?: string;
-  visitorsCount: string;
-  placeName: string;
-  location: string;
-  id: number;
+  location: LocationInfo;
 }
 
 export default function LocationCard(props: LocationCardProps) {
   const navigate = useNavigate();
-  const {
-    image,
-    visitorsCount,
-    placeName,
-    location,
-    id
-  } = props;
+  const { location } = props;
 
   return (
     <div className="relative h-[40vh] shadow-sm">
       <img
-        src={image}
+        src={location.imageUrl}
         alt="hotel image"
-        className="h-full w-full rounded-xl brightness-50"
+        className="object-cover h-full rounded-xl brightness-50"
       />
-      <div className="absolute top-3 left-3 py-2 px-4 rounded-full bg-white flex items-center opacity-70">
-        <p className=" text-black text-md font-semibold ">{visitorsCount}</p>
+      <div className="absolute flex items-center px-4 py-2 bg-white rounded-full top-3 left-3 opacity-70">
+        <p className="font-semibold text-black text-md">
+          {location.visitorsCount} Visitors
+        </p>
       </div>
-      <div className="absolute bottom-3 flex w-full justify-between px-4">
+      <div className="absolute flex justify-between w-full px-4 bottom-3">
         <div>
-          <p className="text-xl text-white font-semibold">{placeName}</p>
-          <p className="text-[#FF7920] font-medium">{location}</p>
+          <p className="text-xl font-semibold text-white">{location.name}</p>
+          <p className="text-[#FF7920] font-medium">{location.city}</p>
         </div>
         <Button
           variant="solid"
-          className="h-11 rounded-full bg-white flex items-center"
+          className="flex items-center bg-white rounded-full h-11"
           onClick={() => {
-            navigate(`/location-details/${id}`)
+            navigate(`/location-details/${location.id}`);
           }}
         >
-          <p className=" text-black text-md font-semibold ">View</p>
-          <div className="bg-black px-2 py-1 rounded-2xl flex justify-center items-center">
+          <p className="font-semibold text-black text-md">View</p>
+          <div className="flex items-center justify-center px-2 py-1 bg-black rounded-2xl">
             <ArrowRight color="white" />
           </div>
         </Button>

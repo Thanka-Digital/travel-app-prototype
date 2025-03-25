@@ -1,19 +1,23 @@
 import Input from "@/components/form/input/Input";
 import Navbar from "@/components/global/Navbar";
 import { Search } from "lucide-react";
-import { NavLink } from "react-router-dom";
 
-interface ExploreTagsProps {
-  path: string;
-  name: string;
-}
+const exploreTags = ["all", "mountains", "urban", "nature", "river"];
 
-export const ExplorePageLayout = ({ children }: { children: React.ReactNode }) => {
+export const ExplorePageLayout = ({
+  children,
+  currentTag,
+  setCurrentTag,
+}: {
+  children: React.ReactNode;
+  currentTag: string;
+  setCurrentTag: React.Dispatch<React.SetStateAction<string>>;
+}) => {
   return (
     <div className="bg-white">
       <section className="px-3">
         <Input
-          className="bg-transparent outline-none text-black"
+          className="text-black bg-transparent outline-none"
           placeholder="Search..."
           icon={<Search color="gray" />}
           variant={"unstyled"}
@@ -22,57 +26,22 @@ export const ExplorePageLayout = ({ children }: { children: React.ReactNode }) =
       </section>
 
       <section className="flex gap-2 mx-4 overflow-x-scroll no-scrollbar">
-        {
-          exploreTags.map((object, index) => (
-            <ExploreTags
-              {...object}
-              key={index}
-            />
-          ))
-        }
+        {exploreTags.map((tag, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentTag(tag)}
+            className={`rounded-2xl text-sm border-2 text-gray-700 px-6 py-1 my-2 capitalize
+            ${
+              currentTag === tag ? "bg-primary text-white border-primary" : null
+            }`}
+          >
+            {tag}
+          </button>
+        ))}
       </section>
 
-      <section className="pb-24">
-        {children}
-      </section>
+      <section className="pb-24">{children}</section>
       <Navbar />
-    </div >
-  )
-}
-
-export const ExploreTags = (props: ExploreTagsProps) => {
-  const {
-    path,
-    name,
-  } = props;
-
-  return (
-    <NavLink to={path} className={({ isActive }) =>
-      `rounded-2xl text-sm border-2 text-gray-700 px-6 py-1 my-2
-    ${isActive ? "bg-primary text-white border-primary" : null}`}>
-      {name}</NavLink>
-  )
-}
-
-export const exploreTags = [
-  {
-    name: "All",
-    path: "/explore-page/all"
-  },
-  {
-    name: "Hills",
-    path: "/explore-page/hills"
-  },
-  {
-    name: "Mountains",
-    path: "/explore-page/mountains"
-  },
-  {
-    name: "Urban",
-    path: "/explore-page/urban"
-  },
-  {
-    name: "Ocean",
-    path: "/explore-page/ocean"
-  },
-]
+    </div>
+  );
+};

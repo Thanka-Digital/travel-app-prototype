@@ -42,3 +42,30 @@ interface Preference {
   place: string[];
   frequency: string;
 }
+
+interface HotelInfo {
+  id: number;
+  name: string;
+  imageUrl: string;
+  summary: string;
+  perDayPrice: number;
+}
+
+interface LocationInfo {
+  id: number;
+  name: string;
+  city: string;
+  visitorsCount: number;
+  imageUrl: string;
+  summary: string;
+  tags: string[];
+  averageCost: number;
+  hotels: number[];
+  extraInfo: {
+    averageTemperature: string;
+    altitude: number;
+    transportationModes: string[];
+    activities: string[];
+  };
+  type: string;
+}

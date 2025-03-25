@@ -5,7 +5,7 @@ export default function BoardingPage4() {
   return (
     <BoardingPageLayout
       bg="bg-splash1"
-      link="/explore-page/all"
+      link="/explore-page"
       splashInfo={SplashScreen4Info}
       step={4}
       prefKey="frequency"
