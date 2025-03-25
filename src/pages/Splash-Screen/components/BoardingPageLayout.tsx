@@ -31,7 +31,7 @@ export const BoardingPageLayout = (props: BoardingPageLayoutProps) => {
   const navigate = useNavigate();
 
   return (
-    <main className={`relative ${bg} h-screen`}>
+    <main className={`relative ${bg} h-[100svh] overflow-hidden`}>
       <div className="absolute bottom-0">
         <div className="mask min-h-[100px] bg-white -mb-2" />
         <div className="flex flex-col gap-10 px-8 pb-10 bg-white">
