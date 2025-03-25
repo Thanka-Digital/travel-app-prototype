@@ -193,113 +193,89 @@ export const locationInfo: LocationInfo[] = [
 
 export const hotelInfo: HotelInfo[] = [
   {
-    id: 1,
+    id: 101,
+    name: "Hotel Yak & Yeti",
     imageUrl:
       "https://images.unsplash.com/photo-1599495111218-0f679723087b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWx8ZW58MHx8MHx8fDA%3D",
-    name: "Hotel Royal",
-    perDayPrice: 440,
-    summary:
-      "This hotel offers luxurious rooms with stunning city views and exceptional service.",
+    summary: "A luxury five-star hotel in the heart of Kathmandu.",
+    perDayPrice: 15000,
   },
   {
-    id: 2,
+    id: 102,
+    name: "Temple Tree Resort & Spa",
     imageUrl:
       "https://images.unsplash.com/photo-1719855412960-3c83f413e3b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVscyUyMGluJTIwbmVwYWx8ZW58MHx8MHx8fDA%3D",
-    name: "Bikash Hotel",
-    perDayPrice: 900,
-    summary:
-      "A perfect blend of comfort and elegance, ideal for both business and leisure travelers.",
+    summary: "A serene resort near Phewa Lake in Pokhara.",
+    perDayPrice: 12000,
   },
   {
-    id: 3,
+    id: 103,
+    name: "Everest View Hotel",
     imageUrl:
       "https://images.unsplash.com/photo-1669206766475-b60cb9680cf8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWwlMjB2aWxsYWdlfGVufDB8fDB8fHww",
-    name: "Lumbini Guest House",
-    perDayPrice: 690,
-    summary:
-      "Experience world-class amenities, including a rooftop pool, spa, and fine dining.",
+    summary: "A high-altitude hotel with stunning Everest views.",
+    perDayPrice: 25000,
   },
   {
-    id: 4,
+    id: 104,
+    name: "Waterfront Resort",
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1697729729075-3e56242aef49?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGhvdGVscyUyMGluJTIwbmVwYWx8ZW58MHx8MHx8fDA%3D",
-    name: "Fula Guest House",
-    perDayPrice: 350,
-    summary:
-      "This boutique hotel boasts stylish interiors and personalized guest services.",
+    summary: "A lakeside retreat offering picturesque views of Phewa Lake.",
+    perDayPrice: 10000,
   },
   {
-    id: 5,
+    id: 105,
+    name: "Muktinath Inn",
     imageUrl:
       "https://images.unsplash.com/photo-1669206766475-b60cb9680cf8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWwlMjB2aWxsYWdlfGVufDB8fDB8fHww",
-    name: "Kola Hotel",
-    perDayPrice: 540,
-    summary:
-      "Nestled in a prime location, it offers easy access to popular attractions and vibrant nightlife.",
+    summary: "A cozy inn near the sacred Muktinath Temple.",
+    perDayPrice: 8000,
   },
   {
-    id: 6,
+    id: 106,
+    name: "Rara Paradise Lodge",
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1697729729075-3e56242aef49?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGhvdGVscyUyMGluJTIwbmVwYWx8ZW58MHx8MHx8fDA%3D",
-    name: "Lakepari Guest House",
-    perDayPrice: 1280,
-    summary:
-      "Relax in spacious rooms with modern decor and breathtaking ocean views.",
+    summary: "A peaceful lodge near Rara Lake with stunning scenery.",
+    perDayPrice: 7000,
   },
   {
-    id: 7,
+    id: 107,
+    name: "Lumbini Heritage Hotel",
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1661952578770-79010299a9f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWxzJTIwaW4lMjBuZXBhbCUyMHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D",
-    name: "Hotel Niwas",
-    perDayPrice: 790,
-    summary: "Renowned for its impeccable hospitality and serene ambiance.",
+    summary: "A cultural hotel in Lumbini, the birthplace of Buddha.",
+    perDayPrice: 9000,
   },
   {
-    id: 8,
+    id: 108,
+    name: "Baglung Hilltop Retreat",
     imageUrl:
       "https://images.unsplash.com/photo-1719855412960-3c83f413e3b2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVscyUyMGluJTIwbmVwYWx8ZW58MHx8MHx8fDA%3D",
-    name: "Bandhu Hotel",
-    perDayPrice: 905,
-    summary:
-      "Enjoy gourmet cuisine, state-of-the-art fitness facilities, and a peaceful spa retreat.",
+    summary: "A peaceful retreat with breathtaking hilltop views.",
+    perDayPrice: 6000,
   },
   {
-    id: 9,
+    id: 109,
+    name: "Thamel Grand Hotel",
     imageUrl:
       "https://images.unsplash.com/photo-1669206766475-b60cb9680cf8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWwlMjB2aWxsYWdlfGVufDB8fDB8fHww",
-    name: "Basanti Guest House",
-    perDayPrice: 1000,
-    summary:
-      "A family-friendly hotel featuring kid-friendly activities and spacious suites.",
+    summary: "A convenient stay in the bustling Thamel area of Kathmandu.",
+    perDayPrice: 7500,
   },
   {
-    id: 10,
+    id: 110,
+    name: "Chitwan Jungle Lodge",
     imageUrl:
       "https://images.unsplash.com/photo-1599495111218-0f679723087b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWx8ZW58MHx8MHx8fDA%3D",
-    name: "Gurung Lodge",
-    perDayPrice: 200,
-    summary:
-      "This eco-friendly hotel combines sustainability with luxury for a guilt-free stay.",
-  },
-  {
-    id: 11,
-    imageUrl:
-      "https://plus.unsplash.com/premium_photo-1661952578770-79010299a9f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWxzJTIwaW4lMjBuZXBhbCUyMHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D",
-    name: "Myagdi Niwas",
-    perDayPrice: 750,
-    summary:
-      "An elegant retreat offering cozy rooms, artisanal breakfasts, and exceptional concierge service.",
-  },
-  {
-    id: 12,
-    imageUrl:
-      "https://images.unsplash.com/photo-1669206766475-b60cb9680cf8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWwlMjB2aWxsYWdlfGVufDB8fDB8fHww",
-    name: "Kori Lodge",
-    perDayPrice: 1500,
-    summary:
-      "Featuring contemporary design, seamless technology, and a vibrant social atmosphere.",
+    summary: "An eco-lodge offering wildlife safaris in Chitwan National Park.",
+    perDayPrice: 8500,
   },
 ];
+
+// "https://plus.unsplash.com/premium_photo-1661952578770-79010299a9f9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWxzJTIwaW4lMjBuZXBhbCUyMHZpbGxhZ2V8ZW58MHx8MHx8fDA%3D",
+// "https://images.unsplash.com/photo-1669206766475-b60cb9680cf8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVscyUyMGluJTIwbmVwYWwlMjB2aWxsYWdlfGVufDB8fDB8fHww",
 
 export const locationDetailsData = [
   {
