@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function BoardingPage0() {
   return (
-    <main className="relative h-[100svh] bg-splash0 overflow-hidden">
+    <main className="relative h-[100svh] bg-splash0">
       <div className="absolute bottom-0 w-full">
         <div className="mask-zero min-h-[60px] bg-white -mb-1" />
         <div className="flex flex-col items-center gap-1 pb-8 text-black bg-white">
