@@ -57,11 +57,14 @@ interface LocationInfo {
 interface User {
   id: number;
   name: string;
+  username: string;
   email: string;
+  profilePic: string;
   city: string;
   country: string;
-  pref: Preference;
-  posts: number[];
+  savedPosts: number[];
+  following: number[];
+  followers: number[];
 }
 
 interface Plan {

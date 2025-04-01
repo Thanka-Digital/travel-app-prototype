@@ -1,9 +1,9 @@
 import {
   MapPinPlus,
   NotebookPen,
-  Play,
   Telescope,
   UserRound,
+  UserRoundSearch,
 } from "lucide-react";
 
 export const navLinks = [
@@ -20,8 +20,8 @@ export const navLinks = [
     path: "/add-post/normal-post",
   },
   {
-    icon: <Play />,
-    path: "/reels-page",
+    icon: <UserRoundSearch />,
+    path: "/services/find-friends",
   },
   {
     icon: <UserRound />,

@@ -19,6 +19,9 @@ import CreatePlanStep4 from "@/pages/PlansPage/steps/CreatePlanStep4";
 import CreatePlanStep5 from "@/pages/PlansPage/steps/CreatePlanStep5";
 import CreatePlanStep6 from "@/pages/PlansPage/steps/CreatePlanStep6";
 import PlanPageDetails from "@/pages/PlansPage/PlanDetails";
+import FriendSearchPage from "@/pages/FindFriends/FriendSearchPage";
+import FriendsNearYou from "@/pages/FindFriends/FriendsNearYou";
+import FriendsWithSimilarInterests from "@/pages/FindFriends/FriendsWithSimilarInterests";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -96,6 +99,23 @@ const routes: RouteObject[] = [
       {
         path: "create/step-6",
         element: <CreatePlanStep6 />,
+      },
+    ],
+  },
+  {
+    path: "/services",
+    children: [
+      {
+        path: "find-friends",
+        element: <FriendSearchPage />,
+      },
+      {
+        path: "friends-near-you",
+        element: <FriendsNearYou />,
+      },
+      {
+        path: "friends-with-similar-interests",
+        element: <FriendsWithSimilarInterests />,
       },
     ],
   },
