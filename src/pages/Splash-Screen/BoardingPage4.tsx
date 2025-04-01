@@ -4,7 +4,7 @@ import { BoardingPageLayout } from "./components/BoardingPageLayout";
 export default function BoardingPage4() {
   return (
     <BoardingPageLayout
-      bg="bg-splash1"
+      bg="bg-splash4"
       link="/explore-page"
       splashInfo={SplashScreen4Info}
       step={4}

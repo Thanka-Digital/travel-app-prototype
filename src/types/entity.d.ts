@@ -63,3 +63,13 @@ interface User {
   pref: Preference;
   posts: number[];
 }
+
+interface Plan {
+  id: number;
+  name: string;
+  imageUrl: string;
+  tags: string[];
+  date: Date;
+  locationId: number;
+  status: "planning" | "visited" | "cancelled";
+}

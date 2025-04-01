@@ -34,7 +34,7 @@ export const BoardingPageLayout = (props: BoardingPageLayoutProps) => {
     <main className={`relative ${bg} h-[100svh] overflow-hidden`}>
       <div className="absolute bottom-0">
         <div className="mask min-h-[100px] bg-white -mb-2" />
-        <div className="flex flex-col gap-10 px-8 pb-10 bg-white">
+        <div className="flex flex-col gap-10 px-8 pb-10 bg-white h-[60svh]">
           {titles.map((t, i) => (
             <section className="flex flex-col items-center" key={i}>
               <p className="text-2xl font-medium text-black">{t.titleO}</p>

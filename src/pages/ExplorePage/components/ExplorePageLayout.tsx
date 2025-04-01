@@ -11,11 +11,11 @@ export const ExplorePageLayout = ({
 }: {
   children: React.ReactNode;
   currentTag: string;
-  setCurrentTag: React.Dispatch<React.SetStateAction<string>>;
+  setCurrentTag: (tag: string) => void;
 }) => {
   return (
-    <div className="bg-white">
-      <section className="px-3">
+    <div>
+      <section className="px-3 py-6">
         <Input
           className="text-black bg-transparent outline-none"
           placeholder="Search..."

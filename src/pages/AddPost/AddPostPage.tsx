@@ -5,7 +5,7 @@ function PostNavigate({ text, path }: { text: string; path: string }) {
   return (
     <Link
       to={path}
-      className="px-6 py-12 font-medium border-2 w-36 rounded-xl text-secondary"
+      className="px-6 py-12 font-medium text-center border-2 w-36 rounded-xl text-secondary"
     >
       {text}
     </Link>
@@ -38,7 +38,7 @@ export default function AddPostPage() {
           bio="Share your joy with everyone else"
         />
 
-        <section className="flex justify-between mx-6">
+        <section className="flex justify-center mx-6">
           <PostNavigate text="Add Normal Post" path="/add-post/normal-post" />
         </section>
       </div>
