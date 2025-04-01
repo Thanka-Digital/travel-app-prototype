@@ -59,7 +59,7 @@ export default forwardRef<HTMLInputElement, InputProps>(function Input(
       <label htmlFor={id} className="font-medium">
         {label} {required && <span className="text-danger">*</span>}
       </label>
-      <div className="flex items-center gap-1 p-2 border rounded-md">
+      <div className="flex items-center gap-1 px-2 border rounded-md">
         {icon}
         <input
           ref={ref}

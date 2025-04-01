@@ -1,7 +1,7 @@
 export const userList = [
   {
     userId: 1,
-    userImage: "/logo.png",
+    userImage: "https://api.dicebear.com/9.x/initials/png?seed=Thanka Digital",
     userName: "Thanka Digital",
     savedPost: [3, 4, 5, 6, 9, 2],
   },

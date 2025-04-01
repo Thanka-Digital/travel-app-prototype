@@ -4,7 +4,7 @@ interface Post {
   locationId: number;
   season: string;
   transportation: string,
-  temperature: string,
+  temperature: number,
   activities: string,
   location: string,
   caption: string;
