@@ -1,19 +1,3 @@
-interface Reel {
-  id: number;
-  path: string;
-  user: string;
-  description: string;
-  likes: number;
-  saves: number;
-  comments: {
-    [key: string]: unknown;
-  }[];
-  shares: number;
-  isLiked: boolean;
-  isSaved: boolean;
-  isLoading: boolean;
-}
-
 interface Post {
   id: number;
   userId: number;
@@ -68,4 +52,14 @@ interface LocationInfo {
     activities: string[];
   };
   type: string;
+}
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  city: string;
+  country: string;
+  pref: Preference;
+  posts: number[];
 }

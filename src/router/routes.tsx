@@ -6,10 +6,8 @@ import BoardingPage3 from "@/pages/Splash-Screen/BoardingPage3";
 import BoardingPage4 from "@/pages/Splash-Screen/BoardingPage4";
 import AllExplorePage from "@/pages/ExplorePage/AllExplorePage";
 import LocationDetailsPage from "@/pages/LocationPage/LocationDetailsPage";
-import ReelsPage from "@/pages/ReelsPage/ReelsPage";
 import AddPostPage from "@/pages/AddPost/AddPostPage";
 import NormalPostForm from "@/pages/AddPost/NormalPostForm";
-import ReelPostFrom from "@/pages/AddPost/ReelPostFrom";
 import ProfileDetailsPage from "@/pages/ProfilePage/ProfileDetailsPage";
 import PostDetailsPage from "@/pages/post/PostDetailsPage";
 import CreatePlansPage from "@/pages/PlansPage/CreatePlansPage";
@@ -43,10 +41,6 @@ const routes: RouteObject[] = [
   {
     path: "/4",
     element: <BoardingPage4 />,
-  },
-  {
-    path: "/reels-page",
-    element: <ReelsPage />,
   },
   {
     path: "/user-profile",
@@ -115,10 +109,6 @@ const routes: RouteObject[] = [
       {
         path: "normal-post",
         element: <NormalPostForm />,
-      },
-      {
-        path: "reel-post",
-        element: <ReelPostFrom />,
       },
     ],
   },
