@@ -3,6 +3,7 @@ import Button from "@/components/form/button/Button";
 import BackButton from "@/components/global/BackButton";
 import { locationInfo } from "@/utils/locationDetailsData";
 import { tripPlanData } from "@/utils/tripPlanData";
+import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
@@ -12,34 +13,36 @@ export default function PlanPageDetails() {
   const plans = tripPlanData.find((t) => t.id === Number(id));
 
   return (
-    <div className="relative flex flex-col items-center justify-center pb-8 text-black bg-white">
+    <div className="relative flex flex-col items-end w-full pb-8 text-black bg-white">
       <BackButton />
       <img
-        src={plans?.image}
+        src={plans?.imageUrl}
         alt="location images"
         className="object-cover w-full h-44"
       />
 
-      <div className="max-w-[90%] mx-auto">
+      <div className="w-full px-4">
         <div className="mask min-h-[100px] bg-white -mb-2" />
         <p className="text-2xl font-medium">{plans?.name}</p>
-        {plans?.isTripSuccess ? (
-          <p className="text-gray-400">{plans.tripTimeStatus}</p>
+        {plans?.status === "visited" ? (
+          <p className="text-gray-400">{moment(plans.date).fromNow()}</p>
         ) : (
-          <p className="font-medium text-danger">{plans?.tripTimeStatus}</p>
+          <p className="font-medium text-danger">
+            {moment(plans?.date).fromNow()}
+          </p>
         )}
 
-        <div className="flex flex-wrap gap-3 py-4">
-          {plans?.tripTypes.map((object) => (
+        {/* <div className="flex flex-wrap gap-3 py-4">
+          {Object.keys(plans?.prefData).map((object) => (
             <GhostButton
               icon={object.icon}
               text={object.text}
               key={object.id}
             />
           ))}
-        </div>
+        </div> */}
 
-        <div className="pb-6">
+        <div className="w-full pb-6">
           <p className="py-1 text-xl font-medium">Location</p>
           {locationInfo
             .filter((l) => l.id === Number(id))
@@ -52,14 +55,16 @@ export default function PlanPageDetails() {
       <Button
         onClick={() =>
           navigate(
-            `${plans?.isTripSuccess ? "/add-post" : "/trip-plan/create"}/`
+            `${
+              plans?.status === "visited" ? "/add-post" : "/trip-plan/create"
+            }/`
           )
         }
-        className={`rounded-3xl py-3 text-sm text-white ${
-          plans?.isTripSuccess ? "bg-primary" : "bg-black"
+        className={`rounded-3xl py-3 mr-4 text-sm text-white ${
+          plans?.status === "visited" ? "bg-primary" : "bg-black"
         }`}
       >
-        {plans?.isTripSuccess ? (
+        {plans?.status === "visited" ? (
           <p>Create a post for this trip?</p>
         ) : (
           <p>Replan this trip?</p>

@@ -11,11 +11,11 @@ export default function LocationCard(props: LocationCardProps) {
   const { location } = props;
 
   return (
-    <div className="relative h-[40vh] shadow-sm">
+    <div className="relative h-[40vh] shadow-sm w-full">
       <img
         src={location.imageUrl}
         alt="hotel image"
-        className="object-cover h-full rounded-xl brightness-50"
+        className="object-cover w-full h-full rounded-xl brightness-50"
       />
       <div className="absolute flex items-center px-4 py-2 bg-white rounded-full top-3 left-3 opacity-70">
         <p className="font-semibold text-black text-md">

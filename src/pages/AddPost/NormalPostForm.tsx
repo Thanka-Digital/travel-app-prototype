@@ -18,31 +18,34 @@ const initialPost: Partial<Post> = {
   temperature: "",
   activities: "",
   location: "",
-}
+};
 
 export default function NormalPostForm() {
   const navigate = useNavigate();
   const [normalPost, setNormalPost] = useState<Partial<Post>>(initialPost);
-  const { postDispatch } = useContext(PostContext)
+  const { postDispatch } = useContext(PostContext);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
     setNormalPost((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
-  const handleFileChange = (base64Images: PostImage[], isAdd: boolean = true) => {
+  const handleFileChange = (
+    base64Images: PostImage[],
+    isAdd: boolean = true
+  ) => {
     if (isAdd) {
       setNormalPost((prev) => ({
         ...prev,
-        images: [...prev.images!, ...base64Images.map((i) => i.base64)]
+        images: [...prev.images!, ...base64Images.map((i) => i.base64)],
       }));
     } else {
       setNormalPost((prev) => ({
         ...prev,
-        images: prev.images?.filter((im) => im !== base64Images[0].base64)
+        images: prev.images?.filter((im) => im !== base64Images[0].base64),
       }));
     }
   };
@@ -50,18 +53,19 @@ export default function NormalPostForm() {
   const handlePostAdd = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const p = {
-      ...normalPost, id: Math.floor(Math.random() * 100)
-    } as Post
+      ...normalPost,
+      id: Math.floor(Math.random() * 100),
+    } as Post;
     postDispatch({
       type: "ADD",
       payload: p,
-    })
+    });
     setNormalPost(initialPost);
-    navigate('/user-profile');
-  }
+    navigate("/user-profile");
+  };
 
   return (
-    <form className="bg-white text-black py-4" onSubmit={handlePostAdd}>
+    <form className="py-4 text-black bg-white" onSubmit={handlePostAdd}>
       <BackButton />
 
       <div className="mt-6">
@@ -70,9 +74,10 @@ export default function NormalPostForm() {
           bio="Share your joy with everyone else"
         />
 
-        <section className="mx-6 flex flex-col gap-4 items-center">
+        <section className="flex flex-col items-center gap-4 mx-6">
           <Input
-            className="bg-white"
+            className="outline-none"
+            variant={"unstyled"}
             placeholder="Caption"
             label="Caption"
             name="caption"
@@ -88,10 +93,14 @@ export default function NormalPostForm() {
 
           <section>
             <p className="text-xl font-semibold">Extra Information</p>
-            <p className="text-[#7E7E7E] font-medium text-sm">This part will help the comunity to grow but you can skip it if you aren't interested.</p>
+            <p className="text-[#7E7E7E] font-medium text-sm">
+              This part will help the comunity to grow but you can skip it if
+              you aren't interested.
+            </p>
           </section>
           <Input
-            className="bg-white"
+            className="outline-none"
+            variant={"unstyled"}
             placeholder="Recommended season"
             label="Best season to visit"
             name="season"
@@ -99,7 +108,8 @@ export default function NormalPostForm() {
             onChange={handleChange}
           />
           <Input
-            className="bg-white"
+            className="outline-none"
+            variant={"unstyled"}
             placeholder="Available mode of transport"
             label="Transportation facility"
             name="transportation"
@@ -107,7 +117,8 @@ export default function NormalPostForm() {
             onChange={handleChange}
           />
           <Input
-            className="bg-white"
+            className="outline-none"
+            variant={"unstyled"}
             placeholder="Temperature of the place"
             label="Temperature"
             name="temperature"
@@ -115,7 +126,8 @@ export default function NormalPostForm() {
             onChange={handleChange}
           />
           <Input
-            className="bg-white"
+            className="outline-none"
+            variant={"unstyled"}
             placeholder="List of activities to do"
             label="Activities to do"
             name="activities"
@@ -123,7 +135,8 @@ export default function NormalPostForm() {
             onChange={handleChange}
           />
           <Input
-            className="bg-white"
+            className="outline-none"
+            variant={"unstyled"}
             placeholder="Location Name"
             label="Location"
             name="location"
@@ -132,12 +145,14 @@ export default function NormalPostForm() {
           />
 
           <Button
-            className="rounded-3xl mt-4 px-10 py-3 text-white"
+            className="px-10 py-3 mt-4 text-white rounded-3xl"
             type="submit"
             onClick={() => handlePostAdd}
-          >Create Post</Button>
+          >
+            Create Post
+          </Button>
         </section>
       </div>
     </form>
-  )
+  );
 }

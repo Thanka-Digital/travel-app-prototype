@@ -7,44 +7,37 @@ export default function CreatePlansPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white text-black h-screen px-4 py-4 ">
+    <div className="h-screen px-4 py-4 text-black bg-white ">
       <div>
         <p className="text-2xl font-medium">Create plans</p>
-        <p className="text-sm text-gray-400 font-semibold">
-          Plan trips you will likely able to go </p>
+        <p className="text-sm font-semibold text-gray-400">
+          Plan trips you will likely able to go{" "}
+        </p>
       </div>
 
       <div className="my-4">
-        <div className="flex w-full justify-between items-center">
+        <div className="flex items-center justify-between w-full">
           <p className="font-medium">Plans till now</p>
           <Link
             to="/trip-plan/all"
-            className="underline text-gray-400 font-medium text-sm"
+            className="text-sm font-medium text-gray-400 underline"
           >
             View all
           </Link>
         </div>
 
-        {tripPlanData.filter((i) => i.id < 3).map((trip) => (
-          <PlanCard
-            key={trip.id}
-            id={trip.id}
-            image={trip.image}
-            name={trip.name}
-            isTripSuccess={trip.isTripSuccess}
-            tripTimeStatus={trip.tripTimeStatus}
-            hashTags={trip.hashTags}
-          />
+        {tripPlanData.slice(0, 3).map((trip) => (
+          <PlanCard key={trip.id} plan={trip} />
         ))}
       </div>
 
-      <div className="text-md font-medium">
-        <p className="my-3">Start new search</p>
+      <div className="font-medium text-md">
+        <p className="my-3">Start new trip</p>
         <section
-          className="w-full border-2 border-primary rounded-md p-7"
+          className="w-full border-2 rounded-md border-primary p-7"
           onClick={() => navigate("/trip-plan/create/step-1")}
         >
-          <p className="text-primary text-center">
+          <p className="text-center text-primary">
             Plan new trip with new <br /> attitude
           </p>
         </section>

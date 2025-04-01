@@ -1,178 +1,78 @@
-import { BaggageClaim, Mountain, Snowflake } from "lucide-react";
+// import { BaggageClaim, Mountain, Snowflake } from "lucide-react";
 
-export const tripPlanData = [
+export const tripPlanData: Plan[] = [
   {
     id: 1,
-    image: "/SplashImg/s1.png",
+    imageUrl: "/SplashImg/s1.png",
     name: "Trip to Everest",
-    isTripSuccess: true,
-    tripTimeStatus: "4 weeks ago",
-    hashTags: [
-      {
-        id: 1,
-        label: "#natures",
-      },
-      {
-        id: 2,
-        label: "#snowy",
-      },
-    ],
-    tripTypes: [
-      {
-        id: 1,
-        text: "Trekker",
-        icon: <BaggageClaim />,
-      },
-      {
-        id: 2,
-        text: "Mountains",
-        icon: <Mountain />,
-      },
-      {
-        id: 3,
-        text: "Snowy",
-        icon: <Snowflake />,
-      },
-    ],
+    status: "visited",
+    date: new Date("2025-01-03"),
+    tags: ["natures", "snowy"],
+    prefData: {
+      type: ["Trekker"],
+      weather: ["Snowy"],
+      place: ["Mountains"],
+    },
+    locationId: 1,
   },
 
   {
     id: 2,
-    image: "/SplashImg/s2.png",
+    imageUrl: "/SplashImg/s2.png",
     name: "Bali Trip",
-    tripTimeStatus: "cancelled",
-    isTripSuccess: false,
-    hashTags: [
-      {
-        id: 1,
-        label: "#natures",
-      },
-      {
-        id: 2,
-        label: "#winter",
-      },
-    ],
-    tripTypes: [
-      {
-        id: 1,
-        text: "Trekker",
-        icon: <BaggageClaim />,
-      },
-      {
-        id: 2,
-        text: "Mountains",
-        icon: <Mountain />,
-      },
-      {
-        id: 3,
-        text: "Snowy",
-        icon: <Snowflake />,
-      },
-    ],
+    status: "cancelled",
+    date: new Date("2024-09-23"),
+    tags: ["natures", "beach"],
+    prefData: {
+      type: ["Travel"],
+      weather: ["Summer"],
+      place: ["Beach"],
+    },
+    locationId: 2,
   },
 
   {
     id: 3,
-    image: "/SplashImg/s3.png",
-    name: "LA Doentown",
-    tripTimeStatus: "month ago",
-    isTripSuccess: true,
-    hashTags: [
-      {
-        id: 1,
-        label: "#urban",
-      },
-      {
-        id: 2,
-        label: "#sunny",
-      },
-    ],
-    tripTypes: [
-      {
-        id: 1,
-        text: "Trekker",
-        icon: <BaggageClaim />,
-      },
-      {
-        id: 2,
-        text: "Mountains",
-        icon: <Mountain />,
-      },
-      {
-        id: 3,
-        text: "Snowy",
-        icon: <Snowflake />,
-      },
-    ],
+    imageUrl: "/SplashImg/s3.png",
+    name: "LA downtown",
+    status: "visited",
+    date: new Date("2024-05-01"),
+    tags: ["global", "LA"],
+    prefData: {
+      type: ["Global"],
+      weather: ["Summer"],
+      place: ["Urban"],
+    },
+    locationId: 3,
   },
 
   {
     id: 4,
-    image: "/SplashImg/s4.png",
+    imageUrl: "/SplashImg/s4.png",
     name: "Phewa Lake",
-    tripTimeStatus: "a year ago",
-    isTripSuccess: true,
-    hashTags: [
-      {
-        id: 1,
-        label: "#natures",
-      },
-      {
-        id: 2,
-        label: "#sunny",
-      },
-    ],
-    tripTypes: [
-      {
-        id: 1,
-        text: "Trekker",
-        icon: <BaggageClaim />,
-      },
-      {
-        id: 2,
-        text: "Mountains",
-        icon: <Mountain />,
-      },
-      {
-        id: 3,
-        text: "Snowy",
-        icon: <Snowflake />,
-      },
-    ],
+    status: "visited",
+    date: new Date("2024-02-13"),
+    tags: ["natures", "lake"],
+    prefData: {
+      type: ["Nature"],
+      weather: ["Summer"],
+      place: ["Cultural"],
+    },
+    locationId: 4,
   },
 
   {
     id: 5,
-    image: "/SplashImg/s5.png",
+    imageUrl: "/SplashImg/s5.png",
     name: "Paris Visit",
-    tripTimeStatus: "cancelled",
-    isTripSuccess: false,
-    hashTags: [
-      {
-        id: 1,
-        label: "#urban",
-      },
-      {
-        id: 2,
-        label: "#winter",
-      },
-    ],
-    tripTypes: [
-      {
-        id: 1,
-        text: "Trekker",
-        icon: <BaggageClaim />,
-      },
-      {
-        id: 2,
-        text: "Mountains",
-        icon: <Mountain />,
-      },
-      {
-        id: 3,
-        text: "Snowy",
-        icon: <Snowflake />,
-      },
-    ],
+    status: "planning",
+    date: new Date("2025-05-08"),
+    tags: ["tower", "paris"],
+    prefData: {
+      type: ["Global"],
+      weather: ["Summer"],
+      place: ["Urban"],
+    },
+    locationId: 5,
   },
 ];

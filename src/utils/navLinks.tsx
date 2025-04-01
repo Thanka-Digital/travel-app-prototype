@@ -17,7 +17,7 @@ export const navLinks = [
   },
   {
     icon: <MapPinPlus />,
-    path: "/add-post",
+    path: "/add-post/normal-post",
   },
   {
     icon: <Play />,

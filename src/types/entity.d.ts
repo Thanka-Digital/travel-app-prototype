@@ -72,4 +72,5 @@ interface Plan {
   date: Date;
   locationId: number;
   status: "planning" | "visited" | "cancelled";
+  prefData: Omit<Preference, "frequency">;
 }

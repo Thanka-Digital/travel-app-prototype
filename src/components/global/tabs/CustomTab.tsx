@@ -20,19 +20,18 @@ export default function CustomTab({
   return (
     <div className="flex flex-col gap-2 bg-white">
       <hr className=" bg-black/35" />
-      <div className="flex justify-around items-center text-sm">
-        {
-          tabsData.map((tab) => (
-            <button
-              key={tab.id}
-              className={`font-semibold uppercase ${activeTab === tab.id ? "text-[#FF7920]" : ""
-                }`}
-              onClick={() => setActiveTab(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))
-        }
+      <div className="flex items-center justify-around text-sm">
+        {tabsData.map((tab) => (
+          <button
+            key={tab.id}
+            className={`font-semibold uppercase ${
+              activeTab === tab.id ? "text-[#FF7920]" : ""
+            }`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
       </div>
 
       <div className="relative">
@@ -44,20 +43,18 @@ export default function CustomTab({
               activeTab === tabsData[0].id
                 ? "0%"
                 : activeTab === tabsData[1].id
-                  ? "29%"
-                  : "66%",
+                ? "33%"
+                : "66%",
           }}
         />
       </div>
 
       <div>
-        {
-          ActiveTabComponent ? (
-            <ActiveTabComponent />
-          ) : (
-            <p>No content available</p>
-          )
-        }
+        {ActiveTabComponent ? (
+          <ActiveTabComponent />
+        ) : (
+          <p>No content available</p>
+        )}
       </div>
     </div>
   );

@@ -4,26 +4,18 @@ import PlanCard from "./components/PlanCard";
 
 export default function AllPlansPage() {
   return (
-    <div className="bg-white text-black px-4 py-14">
+    <div className="px-4 text-black bg-white py-14">
       <BackButton />
       <div>
         <p className="text-2xl font-medium">All your trip plans</p>
-        <p className="text-gray-400 text-sm font-medium">
+        <p className="text-sm font-medium text-gray-400">
           Enjoy your life to fullest
         </p>
       </div>
 
       <div className="my-5">
         {tripPlanData?.map((tripPlanData) => (
-          <PlanCard
-            key={tripPlanData.id}
-            id={tripPlanData.id}
-            image={tripPlanData.image}
-            name={tripPlanData.name}
-            isTripSuccess={tripPlanData.isTripSuccess}
-            tripTimeStatus={tripPlanData.tripTimeStatus}
-            hashTags={tripPlanData.hashTags}
-          />
+          <PlanCard key={tripPlanData.id} plan={tripPlanData} />
         ))}
       </div>
     </div>
