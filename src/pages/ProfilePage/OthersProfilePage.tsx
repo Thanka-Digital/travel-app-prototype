@@ -3,13 +3,15 @@ import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
 import Tabs from "@/components/global/tabs/CustomTab";
 import Navbar from "@/components/global/Navbar";
 import { userList } from "@/utils/userList";
+import { useParams } from "react-router-dom";
 
 interface ProfileStatCardProps {
   profilePic: string;
 }
 
-export default function ProfileDetailsPage() {
-  const user = userList.find((u) => u.id === 1);
+export default function OthersProfilePage() {
+  const { id } = useParams();
+  const user = userList.find((u) => u.id === Number(id));
 
   return (
     <main className="text-black bg-white">
@@ -17,7 +19,7 @@ export default function ProfileDetailsPage() {
         <div className="pt-8">
           <div className="relative flex flex-col items-center gap-1">
             <img
-              src="https://api.dicebear.com/9.x/initials/png?seed=Thanka Digital"
+              src={`https://api.dicebear.com/9.x/initials/png?seed=${user?.name}`}
               alt="profile image"
               className="h-[10vh] w-[10vh] rounded-full"
             />
@@ -29,7 +31,8 @@ export default function ProfileDetailsPage() {
             <div>
               <section className="flex">
                 {userList
-                  .filter((u) => u.id !== 1 && u.following.includes(1))
+                  .filter((u) => u.id !== Number(id))
+                  .slice(0, 5)
                   .map((object) => (
                     <ProfileStatCard {...object} key={object.id} />
                   ))}
@@ -51,9 +54,8 @@ export default function ProfileDetailsPage() {
             <div>
               <section className="flex">
                 {userList
-                  .filter(
-                    (u) => u.id !== 1 && userList[0].following.includes(u.id)
-                  )
+                  .filter((u) => u.id !== Number(id))
+                  .slice(5, 10)
                   .map((object) => (
                     <ProfileStatCard {...object} key={object.id} />
                   ))}

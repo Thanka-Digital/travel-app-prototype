@@ -25,6 +25,6 @@ export const navLinks = [
   },
   {
     icon: <UserRound />,
-    path: "/user-profile",
+    path: "/user-profile/1",
   },
 ];

@@ -72,7 +72,7 @@ export default function FriendSearchPage() {
           </div>
         </MaxWidthWrapper>
       </div>
-      <div>
+      {/* <div>
         <MaxWidthWrapper>
           <p className="text-sm font-semibold ">Your friends</p>
         </MaxWidthWrapper>
@@ -95,7 +95,7 @@ export default function FriendSearchPage() {
               </div>
             ))}
         </TASlider>
-      </div>
+      </div> */}
       <MaxWidthWrapper>
         <Navbar />
       </MaxWidthWrapper>

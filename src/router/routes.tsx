@@ -22,6 +22,7 @@ import PlanPageDetails from "@/pages/PlansPage/PlanDetails";
 import FriendSearchPage from "@/pages/FindFriends/FriendSearchPage";
 import FriendsNearYou from "@/pages/FindFriends/FriendsNearYou";
 import FriendsWithSimilarInterests from "@/pages/FindFriends/FriendsWithSimilarInterests";
+import OthersProfilePage from "@/pages/ProfilePage/OthersProfilePage";
 
 // Routes in application
 const routes: RouteObject[] = [
@@ -46,7 +47,7 @@ const routes: RouteObject[] = [
     element: <BoardingPage4 />,
   },
   {
-    path: "/user-profile",
+    path: "/user-profile/:id",
     element: <ProfileDetailsPage />,
   },
   {
@@ -131,6 +132,10 @@ const routes: RouteObject[] = [
         element: <NormalPostForm />,
       },
     ],
+  },
+  {
+    path: "/profile/:id",
+    element: <OthersProfilePage />,
   },
 ];
 

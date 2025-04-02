@@ -11,7 +11,7 @@ export default function HotelCard(props: HotelCardProps) {
         <img
           src={hotel.imageUrl}
           alt="hotel image"
-          className="object-cover h-24 rounded-xl"
+          className="object-cover w-24 h-24 rounded-xl"
         />
         <div className="flex flex-col">
           <p className="text-sm font-medium">{hotel.name}</p>

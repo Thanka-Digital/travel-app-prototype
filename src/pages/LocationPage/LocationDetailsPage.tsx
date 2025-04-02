@@ -18,7 +18,7 @@ export default function LocationDetailsPage() {
         alt="location images"
         className="object-cover w-full h-56"
       />
-      <div className="absolute mask min-h-[49px] w-full bg-white top-44 z-10" />
+      <div className="absolute mask min-h-[60px] w-full bg-white top-44 z-10" />
       <div className="mb-4 text-center">
         <p className="my-1 text-xl font-medium">{location?.name}</p>
         <p className="text-sm text-center">{location?.summary}</p>

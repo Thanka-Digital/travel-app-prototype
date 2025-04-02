@@ -36,7 +36,7 @@ export default function PostCard(props: PostCardProps) {
 
   const [bookmark, setBookmark] = useState(false);
 
-  const user = userList.find((user) => user.userId === userId);
+  const user = userList.find((user) => user.id === userId);
 
   const handleBookmark = () => {
     setBookmark(!bookmark);
@@ -49,12 +49,12 @@ export default function PostCard(props: PostCardProps) {
     >
       <div className="flex items-center gap-2">
         <img
-          src={user?.userImage}
+          src={user?.profilePic}
           alt="profile image"
           className="object-cover rounded-full w-9 h-9"
         />
         <div className="flex flex-col">
-          <p className="font-medium">{user?.userName}</p>
+          <p className="font-medium">@{user?.username}</p>
           <p className="text-sm font-medium text-gray-500">
             Posted : 3 days ago
           </p>

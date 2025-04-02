@@ -6,7 +6,7 @@ export const userList: User[] = [
     username: "thankadigital",
     savedPosts: [3, 4, 5, 6, 9, 2],
     followers: [2, 5, 6],
-    following: [2, 6, 9],
+    following: [2, 6, 9, 5, 10],
     city: "Pokhara",
     country: "Nepal",
     email: "thankadigital@gmail.com",

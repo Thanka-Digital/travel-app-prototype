@@ -12,7 +12,7 @@ export default function FindFriendCard(props: FindFriendiCardProps) {
     <div
       className="relative w-fit min-w-[120px] max-w-[140px] p-2 aspect-square"
       key={id}
-      onClick={() => navigate("/profile")}
+      onClick={() => navigate(`/profile/${id}`)}
     >
       <img
         src={image}

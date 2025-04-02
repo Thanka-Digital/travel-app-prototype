@@ -13,7 +13,7 @@ export default function PostDetailsPage() {
   const { id } = useParams();
   const { posts, postDispatch } = useContext(PostContext);
   const post = posts.find((p) => p.id === Number(id));
-  const user = userList.find((user) => user.userId === post?.userId);
+  const user = userList.find((user) => user.id === post?.userId);
 
   const handleLike = () => {
     if (post) {
@@ -39,12 +39,12 @@ export default function PostDetailsPage() {
         <div className="flex flex-col gap-3 pt-16">
           <div className="flex items-center gap-2">
             <img
-              src={user?.userImage}
+              src={user?.profilePic}
               alt="profile image"
               className="object-cover w-12 h-12 rounded-full"
             />
             <div className="flex flex-col">
-              <p className="font-medium">{user?.userName}</p>
+              <p className="font-medium">@{user?.username}</p>
               <p className="text-sm font-medium text-gray-500">
                 Posted : 3 days ago
               </p>
@@ -99,7 +99,7 @@ export default function PostDetailsPage() {
         <div className="flex flex-col gap-4 py-4">
           <h1 className="text-lg font-medium">Posted About</h1>
           {locationInfo
-            .filter((l) => l.id === Number(id))
+            .filter((l) => l.id === post?.locationId)
             .map((object) => (
               <LocationCard location={object} key={object.id} />
             ))}
@@ -114,12 +114,19 @@ export default function PostDetailsPage() {
             <div className="flex items-start gap-2" key={index}>
               <span className="text-gray-500">{locationData.icon}</span>
               <ul className="text-left list-disc">
-                <p className="text-sm font-medium ">{locationData.label}</p>
-                {locationData.types?.map((type) => (
-                  <li key={type.id} className="ml-4">
-                    {type.label}
-                  </li>
-                ))}
+                <p className="text-sm font-medium ">
+                  {locationData.label === "altitude"
+                    ? ["700m", "1300m", "865m", "1200m", "4000m"][
+                        Math.floor(Math.random() * 5) + 1
+                      ]
+                    : post?.[
+                        locationData.label as
+                          | "temperature"
+                          | "season"
+                          | "transportation"
+                          | "activities"
+                      ]}
+                </p>
               </ul>
             </div>
           ))}
