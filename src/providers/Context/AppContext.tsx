@@ -4,6 +4,7 @@ import {
   AppContext,
   AppStateDispatch,
   PostContext,
+  UserPlanPrefContext,
   UserPrefContext,
 } from "./context";
 import { appReducer, initialAppState } from "../reducers/AppReducer";
@@ -14,6 +15,7 @@ export default function AppProvider({ children }: PropsWithChildren) {
   const [appState, appStateDispatch] = useReducer(appReducer, initialAppState);
   const [postState, postStateDispatch] = useReducer(postReducer, initialPosts);
   const [pref, prefDispatch] = useReducer(prefReducer, initialPrefs);
+  const [planPref, planPrefDispatch] = useReducer(prefReducer, initialPrefs);
 
   return (
     <AppContext.Provider value={appState}>
@@ -30,7 +32,11 @@ export default function AppProvider({ children }: PropsWithChildren) {
               postDispatch: postStateDispatch,
             }}
           >
-            {children}
+            <UserPlanPrefContext.Provider
+              value={{ pref: planPref, prefDispatch: planPrefDispatch }}
+            >
+              {children}
+            </UserPlanPrefContext.Provider>
           </PostContext.Provider>
         </UserPrefContext.Provider>
       </AppStateDispatch.Provider>

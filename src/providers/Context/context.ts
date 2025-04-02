@@ -21,3 +21,11 @@ export const PostContext = createContext<{
   posts: initialPosts,
   postDispatch: () => { }
 });
+
+export const UserPlanPrefContext = createContext<{
+  pref: Preference,
+  prefDispatch: Dispatch<PrefContextAction>
+}>({
+  pref: initialPrefs,
+  prefDispatch: () => { }
+})

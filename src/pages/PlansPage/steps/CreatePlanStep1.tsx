@@ -1,12 +1,12 @@
 import { SplashScreen1Info } from "@/utils/splashScreenInfo";
-import { BoardingPageLayout } from "@/pages/Splash-Screen/components/BoardingPageLayout";
 import CancelButton from "../components/CancelButton";
+import { CreatePlanLayout } from "../components/CreatePlanLayout";
 
 export default function CreatePlanStep1() {
   return (
     <div>
       <CancelButton />
-      <BoardingPageLayout
+      <CreatePlanLayout
         bg="bg-splash1"
         link="/trip-plan/create/step-2"
         splashInfo={SplashScreen1Info}

@@ -1,34 +1,23 @@
-import { SplashScreen3Info } from '@/utils/splashScreenInfo';
-import { useState } from 'react';
-import { BoardingPageLayout } from '@/pages/Splash-Screen/components/BoardingPageLayout';
-import CancelButton from '../components/CancelButton';
+import { SplashScreen3Info } from "@/utils/splashScreenInfo";
+import CancelButton from "../components/CancelButton";
+import { CreatePlanLayout } from "../components/CreatePlanLayout";
 
 export default function CreatePlanStep1() {
-  const [toggledArr, setToggleArr] = useState<string[]>([])
-
-  function handleClick(val: string, isSelected: boolean) {
-    isSelected ?
-      setToggleArr(prev => ([...prev, val]))
-      :
-      setToggleArr((prev) => prev.filter(t => t !== val))
-  }
-
   return (
     <div>
       <CancelButton />
-      <BoardingPageLayout
-        bg='bg-splash3'
-        handleAction={handleClick}
-        link='/trip-plan/create/step-4'
+      <CreatePlanLayout
+        prefKey="weather"
+        bg="bg-splash3"
+        link="/trip-plan/create/step-4"
         splashInfo={SplashScreen3Info}
-        steps='3 of 6 steps'
-        disabled={toggledArr.length <= 0}
+        step={3}
         titles={title}
       />
     </div>
-  )
+  );
 }
 
 const title = [
-  { titleO: "What sort of weather", titleT: "are you looking at?" }
-]
+  { titleO: "What sort of weather", titleT: "are you looking at?" },
+];
