@@ -4,6 +4,7 @@ import Tabs from "@/components/global/tabs/CustomTab";
 import Navbar from "@/components/global/Navbar";
 import { userList } from "@/utils/userList";
 import { useParams } from "react-router-dom";
+import BackButton from "@/components/global/BackButton";
 
 interface ProfileStatCardProps {
   profilePic: string;
@@ -15,13 +16,14 @@ export default function OthersProfilePage() {
 
   return (
     <main className="text-black bg-white">
+      <BackButton />
       <MaxWidthWrapper>
-        <div className="pt-8">
+        <div className="pt-12">
           <div className="relative flex flex-col items-center gap-1">
             <img
-              src={`https://api.dicebear.com/9.x/initials/png?seed=${user?.name}`}
+              src={`${user?.profilePic}`}
               alt="profile image"
-              className="h-[10vh] w-[10vh] rounded-full"
+              className="h-[10vh] w-[10vh] rounded-full object-cover"
             />
             <p className="mt-1 font-semibold">{user?.name}</p>
             <p className="text-xs text-gray-500">@{user?.username}</p>

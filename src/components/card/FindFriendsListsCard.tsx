@@ -36,7 +36,7 @@ export default function FindFriendsListsCard(props: FindFriendsListsCardProps) {
       </div>
       <Button
         className="absolute bottom-2 right-0 h-fit rounded-full px-[6vw] bg-black text-white"
-        onClick={() => navigate("/user-profile")}
+        onClick={() => navigate(`/profile/${id}`)}
       >
         Profile
       </Button>

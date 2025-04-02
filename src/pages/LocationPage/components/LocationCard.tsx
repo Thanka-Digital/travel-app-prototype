@@ -1,5 +1,6 @@
 import Button from "../../../components/form/button/Button";
 import { ArrowRight } from "lucide-react";
+import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface LocationCardProps {
@@ -10,6 +11,19 @@ export default function LocationCard(props: LocationCardProps) {
   const navigate = useNavigate();
   const { location } = props;
 
+  const visitorsCount = useCallback(() => {
+    const hasOverthousand = location.visitorsCount / 1000;
+    if (parseInt(hasOverthousand.toString()) !== 0) {
+      const hasOverMillion = location.visitorsCount / 1000000;
+      if (parseInt(hasOverMillion.toString()) !== 0) {
+        return `${hasOverMillion}M+`;
+      }
+      return `${hasOverthousand}K+`;
+    }
+
+    return location.visitorsCount;
+  }, [location.visitorsCount]);
+
   return (
     <div className="relative h-[40vh] shadow-sm w-full">
       <img
@@ -19,7 +33,7 @@ export default function LocationCard(props: LocationCardProps) {
       />
       <div className="absolute flex items-center px-4 py-2 bg-white rounded-full top-3 left-3 opacity-70">
         <p className="font-semibold text-black text-md">
-          {location.visitorsCount} Visitors
+          {visitorsCount()} visitors
         </p>
       </div>
       <div className="absolute flex justify-between w-full px-4 bottom-3">
