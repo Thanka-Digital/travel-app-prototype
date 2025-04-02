@@ -43,10 +43,12 @@ export const BoardingPageLayout = (props: BoardingPageLayoutProps) => {
           ))}
           <section className="flex flex-wrap items-center justify-center gap-2 mb-24">
             {splashInfo.map((object) => (
-              <label className="inline-flex" key={object.id}>
+              <label className="inline-flex" tabIndex={0} key={object.id}>
                 <input
                   type="checkbox"
                   className="hidden peer"
+                  tabIndex={0}
+                  aria-checked={pref[prefKey]?.includes(object.text)}
                   checked={pref[prefKey]?.includes(object.text)}
                   onChange={() => {
                     prefDispatch({
