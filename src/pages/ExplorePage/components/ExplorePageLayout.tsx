@@ -9,7 +9,6 @@ const exploreTags = [
   "Adventure",
   "Upcoming",
   "Nature",
-  "Cultural & Religious",
 ];
 
 export const ExplorePageLayout = ({
@@ -33,12 +32,12 @@ export const ExplorePageLayout = ({
         />
       </section>
 
-      <section className="flex gap-2 mx-4 overflow-x-scroll no-scrollbar">
+      <section className="flex gap-2 mx-4 mb-4 overflow-x-scroll no-scrollbar">
         {exploreTags.map((tag, index) => (
           <button
             key={index}
             onClick={() => setCurrentTag(tag)}
-            className={`rounded-2xl text-sm border-2 text-gray-700 px-6 capitalize h-fit
+            className={`rounded-2xl text-sm border-2 py-1 text-gray-700 px-6 capitalize h-fit
             ${
               currentTag === tag ? "bg-primary text-white border-primary" : null
             }`}

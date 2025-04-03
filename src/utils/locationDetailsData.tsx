@@ -1,7 +1,13 @@
 import LocationExtraInfo from "@/pages/LocationPage/components/LocationExtraInfo";
 import LocationHotels from "@/pages/LocationPage/components/LocationHotels";
 import LocationPosts from "@/pages/LocationPage/components/LocationPosts";
-import { AudioWaveform, Bike, SunSnow, Thermometer, TrendingUp } from "lucide-react";
+import {
+  AudioWaveform,
+  Bike,
+  SunSnow,
+  Thermometer,
+  TrendingUp,
+} from "lucide-react";
 
 export const locationInfo: LocationInfo[] = [
   {
@@ -174,6 +180,121 @@ export const locationInfo: LocationInfo[] = [
       activities: ["tea tasting", "hiking", "sightseeing"],
     },
     type: ["Nature"],
+  },
+  {
+    id: 10,
+    name: "Everest Base Camp",
+    city: "Solukhumbu",
+    visitorsCount: 400000,
+    imageUrl:
+      "https://ichef.bbci.co.uk/news/1024/cpsprodpb/841A/production/_129881833_gettyimages-1188124902.jpg",
+    summary: "A bucket-list destination for trekkers and mountaineers.",
+    type: ["Mountains", "Adventure", "Trekking"],
+    averageCost: 5000,
+    hotels: [23],
+    extraInfo: {
+      averageTemperature: "-5°C",
+      altitude: 5364,
+      transportationModes: ["trekking", "helicopter"],
+      activities: ["trekking", "mountaineering", "camping"],
+    },
+    tags: ["Adventure", "Trekking"],
+  },
+  {
+    id: 11,
+    name: "Langtang Valley",
+    city: "Rasuwa",
+    visitorsCount: 300000,
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.BZsxbumic0DY_PXlsY40cgHaEr?rs=1&pid=ImgDetMain",
+    summary: "A picturesque Himalayan valley with stunning landscapes.",
+    type: ["Mountains", "Trekking", "Nature"],
+    averageCost: 2800,
+    hotels: [24],
+    extraInfo: {
+      averageTemperature: "8°C",
+      altitude: 3500,
+      transportationModes: ["trekking", "bus"],
+      activities: ["trekking", "photography", "wildlife viewing"],
+    },
+    tags: ["Nature", "Trekking"],
+  },
+  {
+    id: 12,
+    name: "Annapurna Base Camp",
+    city: "Kaski",
+    visitorsCount: 500000,
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.Vay8TZJ8oBzKkLNQTB5DDQHaE7?rs=1&pid=ImgDetMain",
+    summary: "A famous trekking route leading to the base of Annapurna.",
+    type: ["Adventure", "Mountains", "Trekking"],
+    averageCost: 3500,
+    hotels: [22],
+    extraInfo: {
+      averageTemperature: "5°C",
+      altitude: 4130,
+      transportationModes: ["trekking"],
+      activities: ["trekking", "camping", "glacier viewing"],
+    },
+    tags: ["Adventure", "Trekking"],
+  },
+  {
+    id: 13,
+    name: "Rara National Park",
+    city: "Mugu",
+    visitorsCount: 150000,
+    imageUrl:
+      "https://mlupntr8jlvr.i.optimole.com/KdAswag-vbNCMmCA/w:auto/h:auto/q:auto/https://everesttravel.co.nz/wp-content/uploads/2020/07/Rara-lake-990x490-Minimised.jpg",
+    summary: "A remote paradise with Nepal's largest lake.",
+    type: ["Lake", "Wildlife", "Upcoming"],
+    averageCost: 3000,
+    hotels: [25],
+    extraInfo: {
+      averageTemperature: "10°C",
+      altitude: 2990,
+      transportationModes: ["plane", "trekking"],
+      activities: ["boating", "hiking", "wildlife viewing"],
+    },
+    tags: ["Nature", "Relaxation"],
+  },
+  {
+    id: 14,
+    name: "Khopra Ridge",
+    city: "Myagdi",
+    visitorsCount: 120000,
+    imageUrl:
+      "https://th.bing.com/th/id/OIP.lZYqzHzfwwaMoBUs9dqnSwHaFj?rs=1&pid=ImgDetMain",
+    summary: "A hidden gem in the Annapurna region with breathtaking views.",
+    type: ["Adventure", "Trekking", "Mountains", "Upcoming"],
+    averageCost: 2800,
+    hotels: [],
+    extraInfo: {
+      averageTemperature: "7°C",
+      altitude: 3660,
+      transportationModes: ["trekking"],
+      activities: ["trekking", "camping", "village exploration"],
+    },
+    tags: ["Upcoming", "Trekking"],
+  },
+  {
+    id: 15,
+    name: "Shey Phoksundo National Park",
+    city: "Dolpa",
+    visitorsCount: 100000,
+    imageUrl:
+      "https://th.bing.com/th/id/R.b6b1fc4d418dce81153f7cd1058e3194?rik=6l1larxyj%2f53Qw&pid=ImgRaw&r=0",
+    summary:
+      "A mesmerizing turquoise lake surrounded by the Dolpo region's rugged beauty.",
+    type: ["Nature", "Remote", "Trekking", "Upcoming"],
+    averageCost: 3200,
+    hotels: [],
+    extraInfo: {
+      averageTemperature: "5°C",
+      altitude: 3611,
+      transportationModes: ["trekking", "plane"],
+      activities: ["hiking", "wildlife spotting", "camping"],
+    },
+    tags: ["Upcoming", "Nature"],
   },
   // {
   //   id: 1,
