@@ -21,7 +21,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "plane", "car"],
       activities: ["sightseeing", "shopping", "temple visits"],
     },
-    type: "Urban & Cultural",
+    type: ["Urban", "Cultural"],
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "plane"],
       activities: ["boating", "paragliding", "trekking"],
     },
-    type: "City & Nature",
+    type: ["Urban", "Nature"],
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "car"],
       activities: ["jungle safari", "bird watching", "canoeing"],
     },
-    type: "Wildlife & Nature",
+    type: ["Nature"],
   },
   {
     id: 4,
@@ -78,7 +78,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "car"],
       activities: ["monastery visits", "meditation", "sightseeing"],
     },
-    type: "Historical & Spiritual",
+    type: ["Cultural"],
   },
   {
     id: 5,
@@ -97,7 +97,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "car"],
       activities: ["hiking", "sunrise viewing", "photography"],
     },
-    type: "Scenic & Relaxation",
+    type: ["Nature"],
   },
   {
     id: 6,
@@ -116,7 +116,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["plane", "trekking"],
       activities: ["boating", "hiking", "wildlife watching"],
     },
-    type: "Nature & Trekking",
+    type: ["Nature"],
   },
   {
     id: 7,
@@ -135,7 +135,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "car"],
       activities: ["hiking", "sightseeing", "cultural exploration"],
     },
-    type: "Cultural & Nature",
+    type: ["Cultural"],
   },
   {
     id: 8,
@@ -154,7 +154,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["trekking"],
       activities: ["trekking", "camping", "spiritual journey"],
     },
-    type: "Spiritual & Adventure",
+    type: ["Nature", "Cultural"],
   },
   {
     id: 9,
@@ -173,7 +173,7 @@ export const locationInfo: LocationInfo[] = [
       transportationModes: ["bus", "car"],
       activities: ["tea tasting", "hiking", "sightseeing"],
     },
-    type: "Nature & Culture",
+    type: ["Nature"],
   },
   // {
   //   id: 1,

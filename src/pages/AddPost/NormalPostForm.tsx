@@ -77,7 +77,7 @@ export default function NormalPostForm() {
       payload: p,
     });
     setNormalPost(initialPost);
-    navigate("/user-profile");
+    navigate("/user-profile/1");
   };
 
   return (

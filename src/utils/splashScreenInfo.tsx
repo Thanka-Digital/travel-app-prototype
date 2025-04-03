@@ -1,88 +1,111 @@
-import { Backpack, BaggageClaim, Building2, CloudSnow, Flower, Leaf, Luggage, Map, Mountain, Snowflake, Sun, TicketsPlane, TreePalm, Trees, Zap } from "lucide-react";
+import {
+  Amphora,
+  Backpack,
+  BaggageClaim,
+  Bird,
+  Building2,
+  CloudSnow,
+  Flower,
+  Leaf,
+  Luggage,
+  Map,
+  Mountain,
+  Snowflake,
+  Sun,
+  TicketsPlane,
+  TreePalm,
+  Trees,
+  Zap,
+} from "lucide-react";
 
 export const SplashScreen1Info = [
   {
     id: 1,
     text: "Trekker",
-    icon: <BaggageClaim />
+    icon: <BaggageClaim />,
   },
   {
     id: 2,
     text: "Camper",
-    icon: <Backpack />
+    icon: <Backpack />,
   },
   {
     id: 3,
     text: "Global",
-    icon: <TicketsPlane />
+    icon: <TicketsPlane />,
   },
   {
     id: 4,
     text: "Wonderer",
-    icon: <Map />
+    icon: <Map />,
   },
   {
     id: 5,
     text: "Others",
-    icon: <Luggage />
+    icon: <Luggage />,
   },
-]
+];
 
 export const SplashScreen2Info = [
   {
     id: 1,
     text: "Nature",
-    icon: <Trees />
+    icon: <Trees />,
   },
   {
     id: 2,
-    text: "Beach",
-    icon: <TreePalm />
+    text: "Cultural & Religious",
+    icon: <Amphora />,
   },
   {
     id: 3,
     text: "Mountains",
-    icon: <Mountain />
+    icon: <Mountain />,
   },
   {
     id: 4,
     text: "Urban",
-    icon: <Building2 />
+    icon: <Building2 />,
   },
   {
     id: 5,
-    text: "Extreme Adventure",
-    icon: <Zap />
+    text: "Adventure",
+    icon: <Zap />,
   },
-]
+  {
+    id: 6,
+    text: "Upcoming",
+    icon: <Bird />,
+  },
+];
 
 export const SplashScreen3Info = [
   {
     id: 1,
     text: "Sunny",
-    icon: <Sun />
+    icon: <Sun />,
   },
   {
     id: 2,
     text: "Rainy",
-    icon: <CloudSnow />
+    icon: <CloudSnow />,
   },
   {
     id: 3,
     text: "Snowy",
-    icon: <Snowflake />
+    icon: <Snowflake />,
   },
   {
     id: 4,
     text: "Spring",
-    icon: <Flower />
+    icon: <Flower />,
   },
   {
     id: 5,
     text: "Autumn",
-    icon: <Leaf />
+    icon: <Leaf />,
   },
-]
+];
 
 export const SplashScreen4Info = [
   {
@@ -105,4 +128,4 @@ export const SplashScreen4Info = [
     id: 5,
     text: "Depends",
   },
-]
+];

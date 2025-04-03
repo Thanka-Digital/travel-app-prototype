@@ -1,10 +1,12 @@
-import { tripPlanData } from "@/utils/tripPlanData";
 import PlanCard from "./components/PlanCard";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/global/Navbar";
+import { useContext } from "react";
+import { UserPlansContext } from "@/providers/Context/context";
 
 export default function CreatePlansPage() {
   const navigate = useNavigate();
+  const { plans } = useContext(UserPlansContext);
 
   return (
     <div className="h-screen px-4 py-4 text-black bg-white ">
@@ -25,17 +27,19 @@ export default function CreatePlansPage() {
             View all
           </Link>
         </div>
-
-        {tripPlanData.slice(0, 3).map((trip) => (
-          <PlanCard key={trip.id} plan={trip} />
-        ))}
+        {plans
+          .slice(-3)
+          .reverse()
+          .map((trip) => (
+            <PlanCard key={trip.id} plan={trip} />
+          ))}
       </div>
 
       <div className="font-medium text-md">
         <p className="my-3">Start new trip</p>
         <section
           className="w-full border-2 rounded-md border-primary p-7"
-          onClick={() => navigate("/trip-plan/create/step-1")}
+          onClick={() => navigate("/trip-plan/create/step-2")}
         >
           <p className="text-center text-primary">
             Plan new trip with new <br /> attitude

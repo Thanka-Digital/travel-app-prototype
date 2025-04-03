@@ -1,6 +1,6 @@
 import Button from "@/components/form/button/Button";
 import { UserPlanPrefContext } from "@/providers/Context/context";
-import { ChevronsRight } from "lucide-react";
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -73,10 +73,20 @@ export const CreatePlanLayout = (props: CreatePlanLayoutProps) => {
 
       <section className="absolute flex items-center justify-between w-full px-8 bottom-3">
         <p className="text-secondary">
-          {step === 4 ? "Last step to go" : step + " of 4 steps"}
+          {step === 5 ? "Last step to go" : step + " of 5 steps"}
         </p>
+        {step !== 1 && (
+          <Button
+            className="text-sm text-white bg-blue-700 rounded-3xl"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            <ChevronsLeft /> NextPrev
+          </Button>
+        )}
         <Button
-          className="rounded-3xl"
+          className="text-white rounded-3xl"
           disabled={pref[prefKey]?.length <= 0}
           onClick={() => {
             navigate(link);

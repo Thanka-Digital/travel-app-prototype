@@ -20,7 +20,7 @@ export default function AllExplorePage() {
         if (type === "all") {
           setLocations(locationInfo);
         } else {
-          setLocations(locationInfo.filter((l) => l.type === type));
+          setLocations(locationInfo.filter((l) => l.type.includes(type)));
         }
         setIsLoading(false);
       }, [750, 1000, 1200][Math.floor(Math.random() * 3)]);

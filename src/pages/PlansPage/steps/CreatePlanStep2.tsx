@@ -11,7 +11,7 @@ export default function CreatePlanStep1() {
         bg="bg-splash2"
         link="/trip-plan/create/step-3"
         splashInfo={SplashScreen2Info}
-        step={2}
+        step={1}
         titles={title}
       />
     </div>

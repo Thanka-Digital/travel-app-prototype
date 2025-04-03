@@ -6,7 +6,7 @@ interface TripPlanCardProps {
 }
 
 export default function PlanCard(props: TripPlanCardProps) {
-  const { id, imageUrl, name, date, tags, status } = props.plan;
+  const { id, imageUrl, prefData, tags, status } = props.plan;
   const navigate = useNavigate();
 
   return (
@@ -19,7 +19,7 @@ export default function PlanCard(props: TripPlanCardProps) {
         />
         <div className="flex flex-col justify-between py-2">
           <div className="text-sm">
-            <p className="font-medium">{name}</p>
+            <p className="font-medium">{prefData.name}</p>
             <p
               className={`${
                 status === "visited"
@@ -29,7 +29,7 @@ export default function PlanCard(props: TripPlanCardProps) {
                   : "text-warning"
               }`}
             >
-              {moment(date).fromNow()}{" "}
+              {moment(prefData.date).fromNow()}{" "}
               {status !== "visited" && (
                 <>({status === "cancelled" ? "Cancelled" : "Planning"})</>
               )}

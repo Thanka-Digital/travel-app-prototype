@@ -1,58 +1,77 @@
 import LocationCard from "../LocationPage/components/LocationCard";
-import Button from "@/components/form/button/Button";
+// import Button from "@/components/form/button/Button";
 import BackButton from "@/components/global/BackButton";
+import { UserPlansContext } from "@/providers/Context/context";
 import { locationInfo } from "@/utils/locationDetailsData";
-import { tripPlanData } from "@/utils/tripPlanData";
+import { Map, SunSnow } from "lucide-react";
 import moment from "moment";
-import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+// import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 export default function PlanPageDetails() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { id } = useParams();
-  const plans = tripPlanData.find((t) => t.id === Number(id));
+  const { plans } = useContext(UserPlansContext);
+
+  const plan = plans.find((t) => t.id === Number(id));
 
   return (
-    <div className="relative flex flex-col items-end w-full pb-8 text-black bg-white">
+    <div className="relative flex flex-col items-end w-full text-black bg-white">
       <BackButton />
       <img
-        src={plans?.imageUrl}
+        src={plan?.imageUrl}
         alt="location images"
         className="object-cover w-full h-44"
       />
 
-      <div className="w-full px-4">
-        <div className="mask min-h-[100px] bg-white -mb-2" />
-        <p className="text-2xl font-medium">{plans?.name}</p>
-        {plans?.status === "visited" ? (
-          <p className="text-gray-400">{moment(plans.date).fromNow()}</p>
+      <div className="relative w-full px-4">
+        <div className="mask min-h-[30px] bg-white -mb-2" />
+        <p className="text-2xl font-medium">{plan?.prefData.name}</p>
+        {plan?.status === "visited" ? (
+          <p className="text-gray-400">
+            {moment(plan.prefData.date).fromNow()}
+          </p>
         ) : (
           <p className="font-medium text-danger">
-            {moment(plans?.date).fromNow()}
+            {moment(plan?.prefData.date).fromNow()}
           </p>
         )}
 
-        {/* <div className="flex flex-wrap gap-3 py-4">
-          {Object.keys(plans?.prefData).map((object) => (
-            <GhostButton
-              icon={object.icon}
-              text={object.text}
-              key={object.id}
-            />
-          ))}
-        </div> */}
+        {plan && (
+          <div className="flex flex-wrap gap-3 py-4">
+            {Object.keys(plan.prefData).map((object, i) => {
+              if (["place", "weather"].includes(object)) {
+                return (
+                  <GhostButton
+                    icon={
+                      {
+                        place: <Map />,
+                        weather: <SunSnow />,
+                      }[object]
+                    }
+                    text={plan.prefData[
+                      object as keyof typeof plan.prefData
+                    ]!.toString()}
+                    key={i}
+                  />
+                );
+              }
+            })}
+          </div>
+        )}
 
         <div className="w-full pb-6">
           <p className="py-1 text-xl font-medium">Location</p>
           {locationInfo
-            .filter((l) => l.id === Number(id))
+            .filter((l) => l.id === plan?.prefData.locationId)
             .map((object) => (
               <LocationCard location={object} key={object.id} />
             ))}
         </div>
       </div>
 
-      <Button
+      {/* <Button
         onClick={() =>
           navigate(
             `${
@@ -69,7 +88,7 @@ export default function PlanPageDetails() {
         ) : (
           <p>Replan this trip?</p>
         )}
-      </Button>
+      </Button> */}
     </div>
   );
 }

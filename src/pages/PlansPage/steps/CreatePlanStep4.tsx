@@ -1,8 +1,8 @@
 import LocationCard from "@/pages/LocationPage/components/LocationCard";
 import Button from "@/components/form/button/Button";
 import MaxWidthWrapper from "@/layout/wrapper/MaxWidthWrapper";
-import { ChevronsRight } from "lucide-react";
-import { useContext, useState } from "react";
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { locationInfo } from "@/utils/locationDetailsData";
 import CancelButton from "../components/CancelButton";
@@ -10,32 +10,34 @@ import { UserPlanPrefContext } from "@/providers/Context/context";
 
 export default function CreatePlanStep4() {
   const navigate = useNavigate();
-  const [locationId, setLocationId] = useState<number | null>();
-  const { pref } = useContext(UserPlanPrefContext);
+  const { pref, prefDispatch } = useContext(UserPlanPrefContext);
 
   function handleClick(id: number) {
-    if (id === locationId) {
-      setLocationId(null);
+    if (id === pref.locationId) {
+      prefDispatch({
+        type: "REMOVE",
+        payload: { key: "locationId", value: null },
+      });
       return;
     }
-    setLocationId(id);
+    prefDispatch({ type: "ADD", payload: { key: "locationId", value: id } });
   }
 
   return (
-    <main className="text-black bg-white">
+    <main className="text-black bg-white h-[100svh] overflow-y-scroll">
       <CancelButton />
       <MaxWidthWrapper>
         <div className="flex flex-col gap-6 pt-8 pb-24 bg-white ">
           <p className="text-2xl font-medium text-center">Select a location</p>
           <section className="flex flex-col gap-4">
             {locationInfo
-              ?.filter((l) => pref.type.includes(l.type))
+              ?.filter((l) => pref.place.some((pt) => l.type.includes(pt)))
               .map((locationInfo) => (
                 <div
                   onClick={() => handleClick(locationInfo.id)}
                   key={locationInfo.id}
                   className={`${
-                    locationId === locationInfo.id
+                    pref.locationId === locationInfo.id
                       ? "outline outline-primary rounded-xl outline-offset-2"
                       : ""
                   }`}
@@ -46,11 +48,19 @@ export default function CreatePlanStep4() {
           </section>
         </div>
 
-        <section className="mask flex w-full justify-between items-center fixed bottom-0 left-0 px-6 min-h-[80px] bg-white">
+        <section className="mask flex w-full justify-between items-center fixed bottom-0 left-0 px-6 min-h-[100px] bg-white">
           <p className="font-medium text-neutral_gray">4 of 6 steps</p>
           <Button
+            className="text-sm text-white bg-blue-700 rounded-3xl"
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            <ChevronsLeft /> NextPrev
+          </Button>
+          <Button
             className="h-8 text-white rounded-full"
-            disabled={!locationId}
+            disabled={!pref.locationId}
             onClick={() => {
               navigate("/trip-plan/create/step-5");
             }}

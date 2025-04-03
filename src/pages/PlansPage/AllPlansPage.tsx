@@ -1,8 +1,11 @@
 import BackButton from "@/components/global/BackButton";
-import { tripPlanData } from "@/utils/tripPlanData";
 import PlanCard from "./components/PlanCard";
+import { useContext } from "react";
+import { UserPlansContext } from "@/providers/Context/context";
 
 export default function AllPlansPage() {
+  const { plans } = useContext(UserPlansContext);
+
   return (
     <div className="px-4 text-black bg-white py-14">
       <BackButton />
@@ -14,7 +17,7 @@ export default function AllPlansPage() {
       </div>
 
       <div className="my-5">
-        {tripPlanData?.map((tripPlanData) => (
+        {plans.reverse().map((tripPlanData) => (
           <PlanCard key={tripPlanData.id} plan={tripPlanData} />
         ))}
       </div>

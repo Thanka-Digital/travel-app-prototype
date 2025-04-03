@@ -27,6 +27,12 @@ interface Preference {
   frequency: string;
 }
 
+interface PlanPreference extends Omit<Preference, "frequency" | "type"> {
+  locationId: number | null;
+  name: string;
+  date: string | null;
+}
+
 interface HotelInfo {
   id: number;
   name: string;
@@ -51,7 +57,7 @@ interface LocationInfo {
     transportationModes: string[];
     activities: string[];
   };
-  type: string;
+  type: string[];
 }
 
 interface User {
@@ -69,11 +75,8 @@ interface User {
 
 interface Plan {
   id: number;
-  name: string;
   imageUrl: string;
   tags: string[];
-  date: Date;
-  locationId: number;
   status: "planning" | "visited" | "cancelled";
-  prefData: Omit<Preference, "frequency">;
+  prefData: PlanPreference;
 }

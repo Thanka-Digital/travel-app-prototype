@@ -1,8 +1,16 @@
-import Input from "@/components/form/input/Input";
-import Navbar from "@/components/global/Navbar";
 import { Search } from "lucide-react";
+import Navbar from "@/components/global/Navbar";
+import Input from "@/components/form/input/Input";
 
-const exploreTags = ["all", "mountains", "urban", "nature", "river"];
+const exploreTags = [
+  "all",
+  "Mountains",
+  "Urban",
+  "Adventure",
+  "Upcoming",
+  "Nature",
+  "Cultural & Religious",
+];
 
 export const ExplorePageLayout = ({
   children,
@@ -30,7 +38,7 @@ export const ExplorePageLayout = ({
           <button
             key={index}
             onClick={() => setCurrentTag(tag)}
-            className={`rounded-2xl text-sm border-2 text-gray-700 px-6 py-1 my-2 capitalize
+            className={`rounded-2xl text-sm border-2 text-gray-700 px-6 capitalize h-fit
             ${
               currentTag === tag ? "bg-primary text-white border-primary" : null
             }`}
