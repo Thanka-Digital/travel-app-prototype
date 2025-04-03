@@ -13,7 +13,6 @@ import {
   Snowflake,
   Sun,
   TicketsPlane,
-  TreePalm,
   Trees,
   Zap,
 } from "lucide-react";

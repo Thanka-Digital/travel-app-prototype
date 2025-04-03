@@ -21,7 +21,7 @@ interface CreatePlanLayoutProps {
   bg: string;
   splashInfo: splashTypes[];
   step: number;
-  prefKey: keyof Preference;
+  prefKey: keyof PlanPreference;
 }
 
 export const CreatePlanLayout = (props: CreatePlanLayoutProps) => {
@@ -48,11 +48,13 @@ export const CreatePlanLayout = (props: CreatePlanLayoutProps) => {
                   type="checkbox"
                   className="hidden peer"
                   tabIndex={0}
-                  aria-checked={pref[prefKey]?.includes(object.text)}
-                  checked={pref[prefKey]?.includes(object.text)}
+                  aria-checked={(pref[prefKey] as string[])?.includes(
+                    object.text
+                  )}
+                  checked={(pref[prefKey] as string[])?.includes(object.text)}
                   onChange={() => {
                     prefDispatch({
-                      type: pref[prefKey]?.includes(object.text)
+                      type: (pref[prefKey] as string[])?.includes(object.text)
                         ? "REMOVE"
                         : "ADD",
                       payload: { key: prefKey, value: object.text },
@@ -87,7 +89,7 @@ export const CreatePlanLayout = (props: CreatePlanLayoutProps) => {
         )}
         <Button
           className="text-white rounded-3xl"
-          disabled={pref[prefKey]?.length <= 0}
+          disabled={(pref[prefKey] as string[])?.length <= 0}
           onClick={() => {
             navigate(link);
           }}

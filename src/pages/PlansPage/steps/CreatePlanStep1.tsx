@@ -10,7 +10,7 @@ export default function CreatePlanStep1() {
         bg="bg-splash1"
         link="/trip-plan/create/step-2"
         splashInfo={SplashScreen1Info}
-        prefKey="type"
+        prefKey="weather"
         step={1}
         titles={title}
       />

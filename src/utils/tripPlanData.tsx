@@ -9,7 +9,7 @@ export const tripPlanData: Plan[] = [
     prefData: {
       weather: ["Snowy"],
       place: ["Mountains"],
-      date: new Date("2025-01-03"),
+      date: "2025-01-03",
       locationId: 1,
       name: "Trip to Everest",
     },
@@ -22,7 +22,7 @@ export const tripPlanData: Plan[] = [
     tags: ["natures", "beach"],
     prefData: {
       name: "Bali Trip",
-      date: new Date("2024-09-23"),
+      date: "2024-09-23",
       weather: ["Summer"],
       place: ["Beach"],
       locationId: 2,
@@ -36,7 +36,7 @@ export const tripPlanData: Plan[] = [
     tags: ["global", "LA"],
     prefData: {
       name: "LA downtown",
-      date: new Date("2024-05-01"),
+      date: "2024-05-01",
       weather: ["Summer"],
       place: ["Urban"],
       locationId: 3,
@@ -50,7 +50,7 @@ export const tripPlanData: Plan[] = [
     tags: ["natures", "lake"],
     prefData: {
       name: "Phewa Lake",
-      date: new Date("2024-02-13"),
+      date: "2024-02-13",
       weather: ["Summer"],
       place: ["Cultural"],
       locationId: 4,
@@ -64,7 +64,7 @@ export const tripPlanData: Plan[] = [
     tags: ["tower", "paris"],
     prefData: {
       name: "Paris Visit",
-      date: new Date("2025-05-08"),
+      date: "2025-05-08",
       weather: ["Summer"],
       place: ["Urban"],
       locationId: 5,
